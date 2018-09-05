@@ -1,2 +1,2 @@
 # cookie-commerce
-An e-commerce application to sell cookies online!
+An e-commerce application made to sell cookies online
