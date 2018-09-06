@@ -1,0 +1,21 @@
+:root {
+    --pink: #FF9683;
+    --light-blue: #9BE5F3;
+    --blue: #1850A5;
+    --light-green: #C3EAE3;
+}
+
+.first-banner {
+    background-color: var(--light-blue);
+}
+
+/*images*/
+.image-300 {
+    width: auto;
+    height: 300px;
+}
+
+/*wrappers*/
+.wrap-30 {
+    padding: 30px;
+}
