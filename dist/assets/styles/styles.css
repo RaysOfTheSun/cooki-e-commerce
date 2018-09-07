@@ -1,21 +1,219 @@
 :root {
+    --white: #FFFFFF;
     --pink: #FF9683;
     --light-blue: #9BE5F3;
     --blue: #1850A5;
+    --cookie-monster-blue: #009ED9;
     --light-green: #C3EAE3;
+    --canary-yellow: #FFF663;
+    --apple-green: #AFD854;
+    --apple-green-light: #81BB29;
+    --navy-blue: #4C586F;
+    --kinda-blue: #01395E;
+    --red: #993233;
+    --cyber: #FFD300;
+    --golden-rod: #DBA521;
+    --dijon: #CFA634;
+    --fire: #FDB73F;
+    --dirty-white: #F3F3F5;
+}
+
+@font-face {
+    font-family: KR;
+    src: url('/assets/fonts/KR-Bite-Me.ttf');
+}
+
+body {
+    font-family: 'Francois One', sans-serif;
+}
+
+footer {
+    background-color: #181818;
+    color: white;
+    width: 100%;
+    height: 500px;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+}
+
+.body-content {
+    height: 100%;
+    width: 100%;
+    background-color: #fff;
+    z-index: 1;
+    position: relative;
+    margin-bottom: 500px;
 }
 
 .first-banner {
-    background-color: var(--light-blue);
+    background-color: var(--cyber);
+    color: var(--dijon);
+}
+
+.fourth-banner {
+    background-color: var(--dirty-white);
+}
+
+.color-cookie-blue {
+    color: var(--cookie-monster-blue);
+}
+
+.color-pink {
+    color: var(--pink);
 }
 
 /*images*/
-.image-300 {
+.image-500-200 {
     width: auto;
-    height: 300px;
+    height: 500px;
 }
 
 /*wrappers*/
+.wrap-20 {
+    padding: 20px;
+}
+
 .wrap-30 {
     padding: 30px;
+}
+
+.wrap-50 {
+    padding: 50px;
+}
+
+.wrap-100 {
+    padding: 100px;
+}
+
+.torn-paper-cyber {
+    height: 10vh;
+    width: 100vw;
+    background: var(--cyber);
+    -webkit-clip-path: polygon(0% 0%, 0% 97%, 2% 95%, 6% 99%, 12% 88%, 18% 92%, 27% 90%, 31% 97%, 39% 91%, 47% 95%, 60% 83%, 62% 81%, 69% 93%, 72% 96%, 79% 87%, 100% 99%, 100% 0%);
+    clip-path: polygon(0% 0%, 0% 97%, 2% 95%, 6% 99%, 12% 88%, 18% 92%, 27% 90%, 31% 97%, 39% 91%, 47% 95%, 60% 83%, 62% 81%, 69% 93%, 72% 96%, 79% 87%, 100% 99%, 100% 0%);
+}
+
+/*margins and paddings*/
+.m-5-1r {
+    margin: 5rem;
+}
+
+/*typography*/
+.text-cookie {
+    font-family: KR;
+    font-size: 2rem;
+}
+
+.text-emphasize-large {
+    font-size: 5rem;
+    line-height: 5rem;
+}
+
+.text-emphasize-medium {
+    font-size: 3rem;
+    line-height: 3rem;
+}
+
+.text-emphasize-small {
+    font-size: 1.5rem;
+    line-height: 1.5rem;
+}
+
+/*background colors*/
+.bg-kinda-blue {
+    background-color: var(--kinda-blue);
+}
+
+/*inputs*/
+.form-control-round {
+    border-radius: 0.5;
+    border: none;
+    padding: 0.8em;
+    color: #A2A2A2;
+    font-size: 1.1em;
+    padding-left: 1.5em;
+    outline: none;
+    box-shadow: 0 4px 6px -5px hsl(0, 0%, 40%), inset 0px 4px 6px -5px hsl(0, 0%, 2%)
+}
+
+.btn-round {
+    background-color: var(--white);
+    border-radius: 1.5em;
+    text-align: center;
+    padding: 0.8em;
+    margin-top: 2em;
+    margin-bottom: 2em;
+    font-size: 1.1em;
+    padding-left: 5em;
+    padding-right: 5em;
+    outline: none;
+    text-transform: uppercase;
+}
+
+.btn-outline-blue {
+    border: 0.15em;
+    border-style: solid;
+    border-color: var(--kinda-blue);
+}
+
+.btn-outline-blue:hover {
+    color: var(--white);
+    background-color: var(--kinda-blue);
+}
+
+/*Parallax*/
+.MainContainer {
+    perspective: 1px;
+    transform-style: preserve-3d;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.ParallaxContainer {
+    display: flex;
+    flex: 1 0 auto;
+    position: relative;
+    height: 100vh;
+    transform: translateZ(-1px) scale(2);
+    z-index: -1;
+}
+
+.ContentContainer {
+    display: block;
+    position: relative;
+    background-color: white;
+    z-index: 1;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 723px) {
+    .text-emphasize-large {
+        font-size: 1.5rem;
+        line-height: 1.5rem;
+    }
+
+    .text-emphasize-small {
+        font-size: 0.75rem;
+        line-height: 0.75rem;
+    }
+
+    .btn-round {
+        font-size: 0.5rem;
+    }
+
+    .form-control-round {
+        font-size: 0.8rem;
+        padding: 0.1em;
+    }
+
+    .image-500-200 {
+        width: auto;
+        height: 200px;
+    }
+
+    .m-5-1r {
+        margin: 1rem;
+    }
 }
