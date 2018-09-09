@@ -16,6 +16,8 @@
     --dijon: #CFA634;
     --fire: #FDB73F;
     --dirty-white: #F3F3F5;
+    --kinda-green: #EBEAE8;
+    --white-white: #F7F7F7;
 }
 
 @font-face {
@@ -23,19 +25,49 @@
     src: url('/assets/fonts/KR-Bite-Me.ttf');
 }
 
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Francois One', sans-serif;
+    background-color: var(--dirty-white);
 }
 
 footer {
-    background-color: #181818;
-    color: white;
     width: 100%;
     height: 500px;
     position: fixed;
     bottom: 0;
     z-index: -1;
     overflow: hidden;
+    color: black;
+    padding-top: 50px;
+}
+
+footer ul {
+    padding: 0;
+    list-style: none;
+    line-height: 2em;
+}
+
+footer ul>li {
+    font-family: 'Open Sans', sans-serif;
+}
+
+footer .lead {
+    color: var(--cookie-monster-blue);
+    text-transform: uppercase;
+}
+
+a {
+    color: var(--kinda-blue);
+}
+
+a:hover {
+    text-decoration: none;
 }
 
 .body-content {
@@ -54,6 +86,8 @@ footer {
 
 .fourth-banner {
     background-color: var(--dirty-white);
+    box-shadow: 0 10px 30px -5px gray;
+    height: 40vh;
 }
 
 .color-cookie-blue {
@@ -88,11 +122,11 @@ footer {
 }
 
 .torn-paper-cyber {
-    height: 10vh;
+    height: 5vh;
     width: 100vw;
     background: var(--cyber);
-    -webkit-clip-path: polygon(0% 0%, 0% 97%, 2% 95%, 6% 99%, 12% 88%, 18% 92%, 27% 90%, 31% 97%, 39% 91%, 47% 95%, 60% 83%, 62% 81%, 69% 93%, 72% 96%, 79% 87%, 100% 99%, 100% 0%);
-    clip-path: polygon(0% 0%, 0% 97%, 2% 95%, 6% 99%, 12% 88%, 18% 92%, 27% 90%, 31% 97%, 39% 91%, 47% 95%, 60% 83%, 62% 81%, 69% 93%, 72% 96%, 79% 87%, 100% 99%, 100% 0%);
+    -webkit-clip-path: polygon(0% -2%, 0% 97%, 2% 95%, 6% 99%, 12% 88%, 18% 92%, 27% 90%, 31% 97%, 39% 91%, 47% 95%, 60% 83%, 62% 81%, 69% 93%, 72% 96%, 79% 87%, 100% 99%, 100% 0%);
+    clip-path: polygon(0% -2%, 0% 97%, 2% 95%, 6% 99%, 12% 88%, 18% 92%, 27% 90%, 31% 97%, 39% 91%, 47% 95%, 60% 83%, 62% 81%, 69% 93%, 72% 96%, 79% 87%, 100% 99%, 100% -18%);
 }
 
 /*margins and paddings*/
@@ -190,6 +224,11 @@ footer {
 
 @media only screen and (min-width: 320px) and (max-width: 723px) {
     .text-emphasize-large {
+        font-size: 2rem;
+        line-height: 2rem;
+    }
+
+    .text-emphasize-medium {
         font-size: 1.5rem;
         line-height: 1.5rem;
     }
@@ -200,12 +239,11 @@ footer {
     }
 
     .btn-round {
-        font-size: 0.5rem;
+        font-size: .75rem;
     }
 
     .form-control-round {
         font-size: 0.8rem;
-        padding: 0.1em;
     }
 
     .image-500-200 {
@@ -215,5 +253,25 @@ footer {
 
     .m-5-1r {
         margin: 1rem;
+    }
+
+    .taber.collapsed p:after {
+        content: "+";
+        float: right;
+    }
+
+    .taber p:after {
+        content: "-";
+        float: right;
+    }
+
+    .taber {
+        border-bottom: 1px solid #ccc;
+        cursor: pointer;
+        padding-top: 1.5vh;
+    }
+
+    .fourth-banner {
+        height: 35vh;
     }
 }
