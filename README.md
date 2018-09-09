@@ -5,6 +5,7 @@
 In case you want to play around with the project on your own machine, you would have to:
 * Install the latest version of [`node.js`](https://nodejs.org/en/) 
 * Open up a terminal window and navigate to the directory where the project is stored
+
 Once all that is taken care of, follow the steps below to set up the project and have it running.
 1. In your terminal, run `npm install` to install all of the project's dependencies. This is needed so it would have all the files it'll need to work, run properly and look fancy.
 2. If desired, edit the following files:
