@@ -16,8 +16,7 @@ app.set('views', path.join(__dirname, './views/'));
 // routes
 app.use('/', rootRoutes);
 // where we'll be getting our assets
-app.use(express.static('dist'));
-app.use(express.static('node_modules'));
+app.use(express.static('./dist/app/'));
 
 app.listen(3000, () => {
     console.log('Now listening on port 3000.');
