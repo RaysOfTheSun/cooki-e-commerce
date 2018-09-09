@@ -1,11 +1,15 @@
 # About The Project
-`cooki-e-commerce` is a web app built using a bunch of web frameworks such as `react`, `node` and `expressJS` to sell a variety of cookies for an imaginary business with the name of "Cookie Stop".
+`cooki-e-commerce` is a web app built using a bunch of javascript frameworks or web technologies such as `react`, `node` and `expressJS` to sell a variety of cookies for an imaginary business with the name of "Cookie Stop".
 
 # Set it Up
-In case you want to play around with the project on your own machine, just follow the steps below:
-* install the latest version of [`node.js`](https://nodejs.org/en/).
-* Install all the dependencies. This can be done by running `npm install` using your terminal.
-* If desired, modify the paths and the port number used when hosting the app. All this stuff can be found in `server.js`.
-* Once you're done with your edits, do run `npm run-script build` on your terminal to rebuild the bundle that the project uses to serve its styles and other assets.
-* Start up the application by running `npm start` or `node server` using your terminal.
-* To view the app, navigate to `localhost:[port number]/index` using your favorite web browser. Do take note that `port number` refers to the number you provided as a parameter for _listen(port,callback)_ found in __server.js__.
+In case you want to play around with the project on your own machine, you would have to:
+* Install the latest version of [`node.js`](https://nodejs.org/en/) 
+* Open up a terminal window and navigate to the directory where the project is stored
+Once all that is taken care of, follow the steps below to set up the project and have it running.
+1. In your terminal, run `npm install` to install all of the project's dependencies. This is needed so it would have all the files it'll need to work, run properly and look fancy.
+2. If desired, edit the following files:
+* __server.js__: In the call to the function `listen`, change the port number (currently 3000) to a desired port number.
+* __webpack.config.js__: If you want to include other css stylesheets, import them in `styles.scss` found in the _src_ directory.
+3. Once all desired edits are compeleted, on your terminal, run `npm run-script build` to build the webpack bundle used by the project to compress its assets into one file.
+4. Start up the server by running `npm start` or `node server` using your terminal.
+5. View the application by navigating to `http://localhost:[port number]/index`. Where `port number` is the value you passed to _listen_ in __server.js__. Alternatively, it is __3000__ by default.
