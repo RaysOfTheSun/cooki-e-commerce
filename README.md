@@ -1,4 +1,4 @@
-# cookie-commerce
+# About The Project
 `cooki-e-commerce` is a web app built using a bunch of web frameworks such as `react`, `node` and `expressJS` to sell a variety of cookies for an imaginary business with the name of "Cookie Stop".
 
 # Set it Up
