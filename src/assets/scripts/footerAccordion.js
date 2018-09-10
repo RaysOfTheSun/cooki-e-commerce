@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-    var mql = window.matchMedia("screen and (max-width: 768px)")
+    var mql = window.matchMedia("screen and (max-width: 375px)")
     mediaqueryresponse(mql) // call listener function explicitly at run time
     mql.addListener(mediaqueryresponse) // attach listener function to listen in on state changes
 
