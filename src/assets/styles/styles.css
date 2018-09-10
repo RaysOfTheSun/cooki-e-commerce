@@ -191,8 +191,8 @@ a:hover {
 }
 
 .text-emphasize-small {
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    font-size: 1.2rem;
+    line-height: 1.2rem;
 }
 
 /*background colors*/
@@ -262,7 +262,7 @@ a:hover {
     z-index: 1;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 723px) {
+@media only screen and (min-width: 320px) and (max-width: 723px) and (orientation:portrait) {
     .text-emphasize-large {
         font-size: 2rem;
         line-height: 2rem;
@@ -312,6 +312,6 @@ a:hover {
     }
 
     .fourth-banner {
-        height: 35vh;
+        height: 32vh;
     }
 }
