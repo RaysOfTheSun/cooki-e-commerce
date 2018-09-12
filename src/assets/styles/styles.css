@@ -1,5 +1,4 @@
 :root {
-    --white: #ffffff;
     --pink: #ff9683;
     --light-blue: #9be5f3;
     --blue: #1850a5;
@@ -208,39 +207,32 @@ a:hover {
         100% -18%
     );
 }
-
-/*margins and paddings*/
+/* margins and paddings */
 .m-5-1r {
     margin: 5rem;
 }
-
-/*typography*/
+/* typography */
 .text-cookie {
     font-family: KR;
     font-size: 2rem;
 }
-
 .text-emphasize-large {
     font-size: 5rem;
     line-height: 5rem;
 }
-
 .text-emphasize-medium {
     font-size: 3rem;
     line-height: 3rem;
 }
-
 .text-emphasize-small {
     font-size: 1.2rem;
     line-height: 1.2rem;
 }
-
-/*background colors*/
+/* background colors */
 .bg-kinda-blue {
     background-color: var(--kinda-blue);
 }
-
-/*inputs*/
+/* inputs */
 .form-control-round {
     border-radius: 0.5;
     border: none;
@@ -252,9 +244,8 @@ a:hover {
     box-shadow: 0 4px 6px -5px hsl(0, 0%, 40%),
         inset 0px 4px 6px -5px hsl(0, 0%, 2%);
 }
-
 .btn-round {
-    background-color: var(--white);
+    background-color: white;
     border-radius: 1.5em;
     text-align: center;
     padding: 0.8em;
@@ -266,19 +257,16 @@ a:hover {
     outline: none;
     text-transform: uppercase;
 }
-
 .btn-outline-blue {
     border: 0.15em;
     border-style: solid;
     border-color: var(--kinda-blue);
 }
-
 .btn-outline-blue:hover {
-    color: var(--white);
+    color: white;
     background-color: var(--kinda-blue);
 }
-
-/*Parallax*/
+/* Parallax */
 .MainContainer {
     perspective: 1px;
     transform-style: preserve-3d;
@@ -286,7 +274,6 @@ a:hover {
     overflow-x: hidden;
     overflow-y: scroll;
 }
-
 .ParallaxContainer {
     display: flex;
     flex: 1 0 auto;
@@ -295,64 +282,62 @@ a:hover {
     transform: translateZ(-1px) scale(2);
     z-index: -1;
 }
-
 .ContentContainer {
     display: block;
     position: relative;
     background-color: white;
     z-index: 1;
 }
-
 @media only screen and (min-width: 320px) and (max-width: 723px) {
     .text-emphasize-large {
         font-size: 2rem;
         line-height: 2rem;
     }
-
     .text-emphasize-medium {
         font-size: 1.35rem;
         line-height: 1.35rem;
     }
-
     .text-emphasize-small {
         font-size: 0.75rem;
         line-height: 0.75rem;
     }
-
     .btn-round {
         font-size: 0.75rem;
     }
-
     .form-control-round {
         font-size: 0.8rem;
     }
-
     .image-500-200 {
         width: auto;
         height: 200px;
     }
-
     .m-5-1r {
         margin: 1rem;
     }
-
     .taber.collapsed p:after {
         content: "+";
         float: right;
     }
-
     .taber p:after {
         content: "-";
         float: right;
     }
-
     .taber {
         border-bottom: 1px solid #ccc;
         cursor: pointer;
         padding-top: 1.5vh;
     }
-
     .fourth-banner {
         height: 32vh;
+    }
+    .body-content {
+        margin-bottom: 1px;
+    }
+    footer {
+        width: 100%;
+        height: auto;
+        z-index: 1;
+        position: relative;
+        padding-top: 30px;
     }
 }
