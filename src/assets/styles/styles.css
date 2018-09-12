@@ -1,68 +1,72 @@
 :root {
-    --white: #FFFFFF;
-    --pink: #FF9683;
-    --light-blue: #9BE5F3;
-    --blue: #1850A5;
-    --cookie-monster-blue: #009ED9;
-    --light-green: #C3EAE3;
-    --canary-yellow: #FFF663;
-    --apple-green: #AFD854;
-    --apple-green-light: #81BB29;
-    --navy-blue: #4C586F;
-    --kinda-blue: #01395E;
+    --white: #ffffff;
+    --pink: #ff9683;
+    --light-blue: #9be5f3;
+    --blue: #1850a5;
+    --cookie-monster-blue: #009ed9;
+    --light-green: #c3eae3;
+    --canary-yellow: #fff663;
+    --apple-green: #afd854;
+    --apple-green-light: #81bb29;
+    --navy-blue: #4c586f;
+    --kinda-blue: #01395e;
     --red: #993233;
-    --cyber: #FFD300;
-    --golden-rod: #DBA521;
-    --dijon: #CFA634;
-    --fire: #FDB73F;
-    --dirty-white: #F3F3F5;
-    --kinda-green: #EBEAE8;
-    --white-white: #F7F7F7;
+    --cyber: #ffd300;
+    --golden-rod: #dba521;
+    --dijon: #cfa634;
+    --fire: #fdb73f;
+    --dirty-white: #f3f3f5;
+    --kinda-green: #ebeae8;
+    --white-white: #f7f7f7;
 }
 
 /* open-sans-regular - latin */
 @font-face {
-    font-family: 'Open Sans';
+    font-family: "Open Sans";
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/open-sans-v15-latin-regular.eot');
+    src: url("../fonts/open-sans-v15-latin-regular.eot");
     /* IE9 Compat Modes */
-    src: local('Open Sans Regular'), local('OpenSans-Regular'),
-        url('../fonts/open-sans-v15-latin-regular.eot?#iefix') format('embedded-opentype'),
-        /* IE6-IE8 */
-        url('../fonts/open-sans-v15-latin-regular.woff2') format('woff2'),
+    src: local("Open Sans Regular"), local("OpenSans-Regular"),
+        url("../fonts/open-sans-v15-latin-regular.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("../fonts/open-sans-v15-latin-regular.woff2")
+            format("woff2"),
         /* Super Modern Browsers */
-        url('../fonts/open-sans-v15-latin-regular.woff') format('woff'),
-        /* Modern Browsers */
-        url('../fonts/open-sans-v15-latin-regular.ttf') format('truetype'),
+            url("../fonts/open-sans-v15-latin-regular.woff") format("woff"),
+        /* Modern Browsers */ url("../fonts/open-sans-v15-latin-regular.ttf")
+            format("truetype"),
         /* Safari, Android, iOS */
-        url('../fonts/open-sans-v15-latin-regular.svg#OpenSans') format('svg');
+            url("../fonts/open-sans-v15-latin-regular.svg#OpenSans")
+            format("svg");
     /* Legacy iOS */
 }
 
 /* francois-one-regular - latin */
 @font-face {
-    font-family: 'Francois One';
+    font-family: "Francois One";
     font-style: normal;
     font-weight: 400;
-    src: url('../fonts/francois-one-v11-latin-regular.eot');
+    src: url("../fonts/francois-one-v11-latin-regular.eot");
     /* IE9 Compat Modes */
-    src: local('Francois One Regular'), local('FrancoisOne-Regular'),
-        url('../fonts/francois-one-v11-latin-regular.eot?#iefix') format('embedded-opentype'),
-        /* IE6-IE8 */
-        url('../fonts/francois-one-v11-latin-regular.woff2') format('woff2'),
+    src: local("Francois One Regular"), local("FrancoisOne-Regular"),
+        url("../fonts/francois-one-v11-latin-regular.eot?#iefix")
+            format("embedded-opentype"),
+        /* IE6-IE8 */ url("../fonts/francois-one-v11-latin-regular.woff2")
+            format("woff2"),
         /* Super Modern Browsers */
-        url('../fonts/francois-one-v11-latin-regular.woff') format('woff'),
-        /* Modern Browsers */
-        url('../fonts/francois-one-v11-latin-regular.ttf') format('truetype'),
+            url("../fonts/francois-one-v11-latin-regular.woff") format("woff"),
+        /* Modern Browsers */ url("../fonts/francois-one-v11-latin-regular.ttf")
+            format("truetype"),
         /* Safari, Android, iOS */
-        url('../fonts/francois-one-v11-latin-regular.svg#FrancoisOne') format('svg');
+            url("../fonts/francois-one-v11-latin-regular.svg#FrancoisOne")
+            format("svg");
     /* Legacy iOS */
 }
 
 @font-face {
     font-family: KR;
-    src: url('../fonts/KR-Bite-Me.ttf');
+    src: url("../fonts/KR-Bite-Me.ttf");
 }
 
 * {
@@ -72,7 +76,7 @@
 }
 
 body {
-    font-family: 'Francois One', sans-serif;
+    font-family: "Francois One", sans-serif;
     background-color: var(--dirty-white);
 }
 
@@ -93,8 +97,8 @@ footer ul {
     line-height: 2em;
 }
 
-footer ul>li {
-    font-family: 'Open Sans', sans-serif;
+footer ul > li {
+    font-family: "Open Sans", sans-serif;
 }
 
 footer .lead {
@@ -165,8 +169,44 @@ a:hover {
     height: 5vh;
     width: 100vw;
     background: var(--cyber);
-    -webkit-clip-path: polygon(0% -2%, 0% 97%, 2% 95%, 6% 99%, 12% 88%, 18% 92%, 27% 90%, 31% 97%, 39% 91%, 47% 95%, 60% 83%, 62% 81%, 69% 93%, 72% 96%, 79% 87%, 100% 99%, 100% 0%);
-    clip-path: polygon(0% -2%, 0% 97%, 2% 95%, 6% 99%, 12% 88%, 18% 92%, 27% 90%, 31% 97%, 39% 91%, 47% 95%, 60% 83%, 62% 81%, 69% 93%, 72% 96%, 79% 87%, 100% 99%, 100% -18%);
+    -webkit-clip-path: polygon(
+        0% -2%,
+        0% 97%,
+        2% 95%,
+        6% 99%,
+        12% 88%,
+        18% 92%,
+        27% 90%,
+        31% 97%,
+        39% 91%,
+        47% 95%,
+        60% 83%,
+        62% 81%,
+        69% 93%,
+        72% 96%,
+        79% 87%,
+        100% 99%,
+        100% 0%
+    );
+    clip-path: polygon(
+        0% -2%,
+        0% 97%,
+        2% 95%,
+        6% 99%,
+        12% 88%,
+        18% 92%,
+        27% 90%,
+        31% 97%,
+        39% 91%,
+        47% 95%,
+        60% 83%,
+        62% 81%,
+        69% 93%,
+        72% 96%,
+        79% 87%,
+        100% 99%,
+        100% -18%
+    );
 }
 
 /*margins and paddings*/
@@ -205,11 +245,12 @@ a:hover {
     border-radius: 0.5;
     border: none;
     padding: 0.8em;
-    color: #A2A2A2;
+    color: #a2a2a2;
     font-size: 1.1em;
     padding-left: 1.5em;
     outline: none;
-    box-shadow: 0 4px 6px -5px hsl(0, 0%, 40%), inset 0px 4px 6px -5px hsl(0, 0%, 2%)
+    box-shadow: 0 4px 6px -5px hsl(0, 0%, 40%),
+        inset 0px 4px 6px -5px hsl(0, 0%, 2%);
 }
 
 .btn-round {
@@ -262,15 +303,15 @@ a:hover {
     z-index: 1;
 }
 
-@media only screen and (min-width: 320px) and (max-width: 723px) and (orientation:portrait) {
+@media only screen and (min-width: 320px) and (max-width: 723px) {
     .text-emphasize-large {
         font-size: 2rem;
         line-height: 2rem;
     }
 
     .text-emphasize-medium {
-        font-size: 1.5rem;
-        line-height: 1.5rem;
+        font-size: 1.35rem;
+        line-height: 1.35rem;
     }
 
     .text-emphasize-small {
@@ -279,7 +320,7 @@ a:hover {
     }
 
     .btn-round {
-        font-size: .75rem;
+        font-size: 0.75rem;
     }
 
     .form-control-round {
