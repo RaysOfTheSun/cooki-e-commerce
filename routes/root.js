@@ -20,4 +20,9 @@ router.get('/get-comments', (request, response, next) => {
     })
 });
 
+router.post('/index', (req, res, next) => {
+    console.log('A POST has been made!');
+    res.render('index');
+})
+
 module.exports = router;
