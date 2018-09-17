@@ -1,0 +1,26 @@
+@import "globals";
+
+#cart-side {
+  position: fixed;
+  z-index: 4;
+  right: -40vw;
+  width: 40vw;
+  padding: 20px 0;
+  height: 100%;
+  background: $material-darker-black;
+  transition: transform, 300ms ease-in-out;
+  &.active {
+    transform: translate3d(-40vw,0,0);
+    //right: 0;
+    -webkit-box-shadow: -10px 0 40px -2px black;
+    box-shadow: -10px 0 40px -2px black;
+  }
+}
+
+.near-sidebar {
+  transition: transform 300ms ease-in-out;
+  &.active {
+    transform: translate3d(-40vw,0,0);
+    //margin-left: -40vw;
+  }
+}

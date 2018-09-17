@@ -1,0 +1,60 @@
+@import "globals";
+
+.first-banner {
+  background-color: $cyber;
+  color: $dijon;
+}
+
+.torn-paper-cyber {
+  height: 5vh;
+  width: 100vw;
+  background: $cyber;
+  -webkit-clip-path: polygon(
+                  0% -2%,
+                  0% 97%,
+                  2% 95%,
+                  6% 99%,
+                  12% 88%,
+                  18% 92%,
+                  27% 90%,
+                  31% 97%,
+                  39% 91%,
+                  47% 95%,
+                  60% 83%,
+                  62% 81%,
+                  69% 93%,
+                  72% 96%,
+                  79% 87%,
+                  100% 99%,
+                  100% 0%
+  );
+  clip-path: polygon(
+                  0% -2%,
+                  0% 97%,
+                  2% 95%,
+                  6% 99%,
+                  12% 88%,
+                  18% 92%,
+                  27% 90%,
+                  31% 97%,
+                  39% 91%,
+                  47% 95%,
+                  60% 83%,
+                  62% 81%,
+                  69% 93%,
+                  72% 96%,
+                  79% 87%,
+                  100% 99%,
+                  100% -18%
+  );
+}
+
+.fourth-banner {
+  background-color: $dirty-white;
+  box-shadow: 0 10px 30px -5px gray;
+  height: 40vh;
+
+  @include respond-to(smartphones) {
+    height: 32vh;
+  }
+}

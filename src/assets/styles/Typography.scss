@@ -1,0 +1,34 @@
+@import "globals";
+
+/* typography */
+.text-cookie {
+  font-family: $font-family-KR;
+  font-size: 2rem;
+}
+
+.text-emphasize-large {
+  font-size: 5rem;
+  line-height: 5rem;
+  @include respond-to(smartphones) {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+}
+
+.text-emphasize-medium {
+  font-size: 3rem;
+  line-height: 3rem;
+  @include respond-to(smartphones) {
+    font-size: 1.35rem;
+    line-height: 1.35rem;
+  }
+}
+
+.text-emphasize-small {
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+  @include respond-to(smartphones) {
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}

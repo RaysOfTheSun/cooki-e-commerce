@@ -17,6 +17,7 @@ $(document).ready(function () {
 
     // global cart sidebar stuff
     $('#cart-button').on('click', () => {
-        $('#cart-side').toggleClass('sidenav-active');
+        $('#cart-side').toggleClass('active');
+        $('.near-sidebar').toggleClass('active');
     });
 });

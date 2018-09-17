@@ -1,0 +1,87 @@
+@import "globals";
+
+body {
+  font-family: $font-family-francois;
+  background-color: $dirty-white;
+}
+
+footer {
+  width: 100%;
+  height: 500px;
+  position: fixed;
+  bottom: 0;
+  z-index: -1;
+  overflow: hidden;
+  color: black;
+  padding-top: 50px;
+
+  ul {
+    padding: 0;
+    list-style: none;
+    line-height: 2em;
+
+    li {
+      font-family: $font-family-open-sans;
+    }
+  }
+
+  p {
+    &.lead {
+      color: $cookie-monster-blue;
+      text-transform: uppercase;
+    }
+  }
+
+  @include respond-to(smartphones) {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+    position: relative;
+    padding-top: 30px;
+  }
+}
+
+a {
+  color: $kinda-blue;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.body-content {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  z-index: 1;
+  position: relative;
+  margin-bottom: 500px;
+
+  @include respond-to(smartphones) {
+    margin-bottom: 1px;
+  }
+}
+
+.taber {
+  @include respond-to(smartphones) {
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    padding-top: 1.5vh;
+
+    p {
+      &:after {
+        content: "-";
+        float: right;
+      }
+    }
+
+    &.collapsed {
+      p {
+        &:after {
+          content: "+";
+          float: right;
+        }
+      }
+    }
+  }
+}
+

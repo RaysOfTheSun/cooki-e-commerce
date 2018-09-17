@@ -1,0 +1,38 @@
+@import "globals";
+
+.wrap-20 {
+  padding: 20px;
+}
+
+.wrap-30 {
+  padding: 30px;
+}
+
+.wrap-50 {
+  padding: 50px;
+}
+
+.wrap-100 {
+  padding: 100px;
+}
+
+.m-5-1r {
+  margin: 5rem;
+  @include respond-to(smartphones) {
+    margin: 1rem;
+  }
+}
+
+.image-500-200 {
+  width: auto;
+  height: 500px;
+  @include respond-to(smartphones) {
+    width: auto;
+    height: 200px;
+  }
+}
+
+.image-100-100 {
+  width: auto;
+  height: 100px;
+}

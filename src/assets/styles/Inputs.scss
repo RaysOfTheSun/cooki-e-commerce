@@ -1,0 +1,39 @@
+@import "globals";
+
+.form-control-round {
+  border-radius: 0.5em;
+  border: none;
+  color: #a2a2a2;
+  font-size: 1.1em;
+  padding: 0.8em 0.8em 0.8em 1.5em;
+  outline: none;
+  box-shadow: 0 4px 6px -5px hsl(0, 0%, 40%),
+  inset 0 4px 6px -5px hsl(0, 0%, 2%);
+
+  @include respond-to(smartphones) {
+    font-size: 0.8rem;
+  }
+}
+
+.btn-round {
+  background-color: white;
+  border-radius: 1.5em;
+  text-align: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  font-size: 1.1em;
+  padding: 0.8em 5em;
+  outline: none;
+  text-transform: uppercase;
+  @include respond-to(smartphones) {
+    font-size: 0.75rem;
+  }
+}
+
+.btn-outline-blue {
+  border: 0.15em solid $kinda-blue;
+  &:hover {
+    color: white;
+    background-color: $kinda-blue;
+  }
+}
