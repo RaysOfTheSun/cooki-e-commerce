@@ -147,6 +147,11 @@ a:hover {
     height: 500px;
 }
 
+.image-100-100 {
+    width: auto;
+    height: 100px;
+}
+
 /*wrappers*/
 .wrap-20 {
     padding: 20px;
@@ -266,28 +271,21 @@ a:hover {
     color: white;
     background-color: var(--kinda-blue);
 }
-/* Parallax */
-.MainContainer {
-    perspective: 1px;
-    transform-style: preserve-3d;
-    height: 100vh;
-    overflow-x: hidden;
-    overflow-y: scroll;
+
+#cart-side {
+    position: fixed;
+    z-index: 4;
+    left: -275px;
+    width: 275px;
+    padding: 20px 0px;
+    height: 100%;
+    background: var(--kinda-blue);
 }
-.ParallaxContainer {
-    display: flex;
-    flex: 1 0 auto;
-    position: relative;
-    height: 100vh;
-    transform: translateZ(-1px) scale(2);
-    z-index: -1;
+
+#cart-side.sidenav-active {
+    left: 0;
 }
-.ContentContainer {
-    display: block;
-    position: relative;
-    background-color: white;
-    z-index: 1;
-}
+
 @media only screen and (min-width: 320px) and (max-width: 723px) {
     .text-emphasize-large {
         font-size: 2rem;
