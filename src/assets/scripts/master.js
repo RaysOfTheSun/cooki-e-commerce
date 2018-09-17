@@ -19,5 +19,12 @@ $(document).ready(function () {
     $('#cart-button').on('click', () => {
         $('#cart-side').toggleClass('active');
         $('.near-sidebar').toggleClass('active');
+
+        $('#cart-side.active').on('click', (e) => {
+            if(e.target.id === "cart-side"){
+                $('#cart-side.active').toggleClass('active');
+                $('.near-sidebar.active').toggleClass('active');
+            }
+        });
     });
 });

@@ -79,10 +79,14 @@ $font-family-francois: "Francois One", sans-serif;
 
 $small-screen: 320px;
 $medium-screen: 723px;
+$big-screen: 1365px;
 
 @mixin respond-to($media) {
-  @if $media == smartphones {
-    @media only screen and (min-width:$small-screen) and (max-width: $medium-screen) {@content}
+  @if ($media == smartphones) {
+    @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {@content}
+  }
+  @else if($media == tablets) {
+    @media only screen and (min-width: $medium-screen + 1) and (max-width: $big-screen)  {@content}
   }
 }
 

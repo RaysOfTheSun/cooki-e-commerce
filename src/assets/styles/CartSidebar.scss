@@ -3,24 +3,56 @@
 #cart-side {
   position: fixed;
   z-index: 4;
-  right: -40vw;
-  width: 40vw;
+  right: -26vw;
+  width: 26vw;
   padding: 20px 0;
   height: 100%;
   background: $material-darker-black;
   transition: transform, 300ms ease-in-out;
   &.active {
-    transform: translate3d(-40vw,0,0);
-    //right: 0;
+    transform: translate3d(-26vw, 0, 0);
     -webkit-box-shadow: -10px 0 40px -2px black;
     box-shadow: -10px 0 40px -2px black;
+  }
+
+  @include respond-to(smartphones) {
+    right: -100vw;
+    width: 100vw;
+    &.active {
+      transform: translate3d(-100vw, 0, 0);
+      -webkit-box-shadow: none;
+      box-shadow: none;
+    }
+  }
+  @include respond-to(tablets) {
+    right: -45vw;
+    width: 45vw;
+    &.active {
+      transform: translate3d(-45vw, 0, 0);
+    }
   }
 }
 
 .near-sidebar {
   transition: transform 300ms ease-in-out;
   &.active {
-    transform: translate3d(-40vw,0,0);
+    transform: translate3d(-26vw, 0, 0);
     //margin-left: -40vw;
+  }
+
+  @include respond-to(smartphones) {
+    .near-sidebar {
+      &.active {
+        transform: translate3d(-100vw, 0, 0);
+      }
+    }
+  }
+
+  @include respond-to(tablets) {
+    .near-sidebar {
+      &.active {
+        transform: translate3d(-45w, 0, 0);
+      }
+    }
   }
 }
