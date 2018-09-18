@@ -26,5 +26,10 @@ $(document).ready(function () {
                 $('.near-sidebar.active').toggleClass('active');
             }
         });
+
+        $('.near-sidebar.active').on('click', (e) => {
+            $('#cart-side.active').toggleClass('active');
+            $('.near-sidebar.active').toggleClass('active');
+        });
     });
 });

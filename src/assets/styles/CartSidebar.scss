@@ -25,10 +25,10 @@
     }
   }
   @include respond-to(tablets) {
-    right: -45vw;
-    width: 45vw;
+    right: -60vw;
+    width: 60vw;
     &.active {
-      transform: translate3d(-45vw, 0, 0);
+      transform: translate3d(-60vw, 0, 0);
     }
   }
 }
