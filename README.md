@@ -10,7 +10,7 @@ Once all that is taken care of, follow the steps below to set up the project and
 1. In your terminal, run `npm install` to install all of the project's dependencies. This is needed so it would have all the files it'll need to work, run properly and look fancy.
 2. If desired, edit the following files:
    * __server.js__: In the call to the function `listen`, change the port number (currently 3000) to a desired port number.
-   * __webpack.config.js__: If you want to change the entry point where webpack will begin checking for dependencies, change the path to the script found at _entry_.
+   * __webpack.config.js__: If you want to change the entry point(s) where webpack will begin checking for dependencies, change the path to the script found at _entry_.
    * __styles.scss__: If you want to include other css stylesheets, import them in `styles.scss` found in the _src_ directory.
 t3. Once all desired edits are compeleted, on your terminal, run `npm run-script build` to build the webpack bundle used by the project to compress its assets into one file.
 4. Start up the server by running `npm start` or `node server` using your terminal.
