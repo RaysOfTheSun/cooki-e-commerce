@@ -51,7 +51,7 @@
   @include respond-to(tablets) {
     .near-sidebar {
       &.active {
-        transform: translate3d(-45w, 0, 0);
+        transform: translate3d(-45vw, 0, 0);
       }
     }
   }

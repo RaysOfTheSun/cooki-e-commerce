@@ -6,19 +6,22 @@ export class Carousel extends React.Component {
     constructor(props) {
         super(props);
         this.state = {comments: []};
-        this.getComments();
     }
 
     getComments() {
-        fetch('/get-comments')
+        fetch('/get-comments', {method: "GET"})
             .then(res => res.json())
             .then(data => this.setState({comments: data}));
     }
 
+    componentWillMount() {
+        this.getComments();
+    }
+
     render() {
         return (
-            <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-                <div class="carousel-inner">
+            <div id={"carouselExampleControls"} className={"carousel slide"} data-ride={"carousel"}>
+                <div className={"carousel-inner"}>
                     {this.state.comments.map((comment, i) => (
                         <CarouselItem
                             commenter={comment.commenter}
