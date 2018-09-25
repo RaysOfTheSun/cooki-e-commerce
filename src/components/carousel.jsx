@@ -19,6 +19,7 @@ export class Carousel extends React.Component {
     }
 
     render() {
+        console.log(this.state.comments);
         return (
             <div id={"carouselExampleControls"} className={"carousel slide"} data-ride={"carousel"}>
                 <div className={"carousel-inner"}>
@@ -39,4 +40,4 @@ export class Carousel extends React.Component {
     }
 }
 
-render(<Carousel/>, document.getElementById("fourth-banner-inner"));
+// render(<Carousel/>, document.getElementById("fourth-banner-inner"));

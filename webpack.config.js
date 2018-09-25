@@ -6,7 +6,7 @@ module.exports = {
     mode: "production",
     entry: {
         main: "./src/app.js",
-        react: ["./src/components/carousel.jsx", "./src/components/cartSidebar.jsx"]
+        react: ["./src/components/carousel.jsx", "./src/components/cartSidebar.jsx", "./src/components/catalog.jsx"]
     },
     output: {
         path: path.join(DIST_DIR, "app"),
@@ -60,5 +60,5 @@ module.exports = {
                 ]
             }
         ]
-    }
+    }, watch: true
 };
