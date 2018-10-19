@@ -1,4 +1,4 @@
-@import '../../../node_modules/font-awesome/css/font-awesome.css';
+@import '../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 @import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
@@ -22,6 +22,7 @@ $dirty-white: #f3f3f5;
 $kinda-green: #ebeae8;
 $white-white: #f7f7f7;
 $material-darker-black: #202020;
+$transparent: rgba(0, 0, 0, 0.7);
 
 /* open-sans-regular - latin */
 @font-face {
@@ -31,17 +32,15 @@ $material-darker-black: #202020;
   src: url("../fonts/open-sans-v15-latin-regular.eot");
   /* IE9 Compat Modes */
   src: local("Open Sans Regular"), local("OpenSans-Regular"),
-  url("../fonts/open-sans-v15-latin-regular.eot?#iefix")
-  format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/open-sans-v15-latin-regular.woff2")
-  format("woff2"),
+  url("../fonts/open-sans-v15-latin-regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+  url("../fonts/open-sans-v15-latin-regular.woff2") format("woff2"),
     /* Super Modern Browsers */
   url("../fonts/open-sans-v15-latin-regular.woff") format("woff"),
-    /* Modern Browsers */ url("../fonts/open-sans-v15-latin-regular.ttf")
-  format("truetype"),
+    /* Modern Browsers */
+  url("../fonts/open-sans-v15-latin-regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-  url("../fonts/open-sans-v15-latin-regular.svg#OpenSans")
-  format("svg");
+  url("../fonts/open-sans-v15-latin-regular.svg#OpenSans") format("svg");
   /* Legacy iOS */
 }
 
@@ -53,17 +52,15 @@ $material-darker-black: #202020;
   src: url("../fonts/francois-one-v11-latin-regular.eot");
   /* IE9 Compat Modes */
   src: local("Francois One Regular"), local("FrancoisOne-Regular"),
-  url("../fonts/francois-one-v11-latin-regular.eot?#iefix")
-  format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/francois-one-v11-latin-regular.woff2")
-  format("woff2"),
+  url("../fonts/francois-one-v11-latin-regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+  url("../fonts/francois-one-v11-latin-regular.woff2") format("woff2"),
     /* Super Modern Browsers */
   url("../fonts/francois-one-v11-latin-regular.woff") format("woff"),
-    /* Modern Browsers */ url("../fonts/francois-one-v11-latin-regular.ttf")
-  format("truetype"),
+    /* Modern Browsers */
+  url("../fonts/francois-one-v11-latin-regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-  url("../fonts/francois-one-v11-latin-regular.svg#FrancoisOne")
-  format("svg");
+  url("../fonts/francois-one-v11-latin-regular.svg#FrancoisOne") format("svg");
   /* Legacy iOS */
 }
 
@@ -83,10 +80,13 @@ $big-screen: 1365px;
 
 @mixin respond-to($media) {
   @if ($media == smartphones) {
-    @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {@content}
-  }
-  @else if($media == tablets) {
-    @media only screen and (min-width: $medium-screen + 1) and (max-width: $big-screen)  {@content}
+    @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {
+      @content
+    }
+  } @else if ($media == tablets) {
+    @media only screen and (min-width: $medium-screen + 1) and (max-width: $big-screen) {
+      @content
+    }
   }
 }
 

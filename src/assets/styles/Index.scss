@@ -1,14 +1,14 @@
 @import "globals";
 
 .first-banner {
-  background-color: $cyber;
-  color: $dijon;
+  background-size: cover;
+  background-image: url("../../../dist/app/images/b01.jpg");
+  height: 70vh;
+  width: auto;
 }
-
 .torn-paper-cyber {
   height: 5vh;
-  width: 100vw;
-  background: $cyber;
+  background-color: $cyber;
   -webkit-clip-path: polygon(
                   0% -2%,
                   0% 97%,
