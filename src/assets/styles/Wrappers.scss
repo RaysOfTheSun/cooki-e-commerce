@@ -16,6 +16,10 @@
   padding: 100px;
 }
 
+.-mt-30{
+  margin-top: -30px;
+}
+
 .m-5-1r {
   margin: 5rem;
   @include respond-to(smartphones) {
@@ -42,11 +46,11 @@
   height: 200px;
 }
 
-.image-350-200 {
+.image-350-270 {
   width: 350px;
   height: auto;
   @include respond-to(smartphones){
-    width: 200px;
+    width: 270px;
     height: auto;
   }
 }

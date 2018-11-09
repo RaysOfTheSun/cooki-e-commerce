@@ -22,6 +22,12 @@
   transition: opacity 3s ease-in-out;
 }
 
+#product-banner {
+  background-image: url('../../../dist/app/images/cw04-T.jpg');
+  background-size: cover;
+  height: 60vh;
+}
+
 .card-item-image {
   transition: border-width 0.2s ease-in-out;
   border: 10px solid white;

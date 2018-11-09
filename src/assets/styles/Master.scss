@@ -112,18 +112,23 @@ a {
 
 a {
   &.nav-link {
-    transition: border-bottom-width 0.2s ease-in-out;
+    border-bottom: 5px solid white;
+    transition: border-bottom-color 0.2s ease-in-out;
   }
 }
 
 .nav-item {
   &.active {
-    border-bottom: 5px solid black;
+    a {
+      &.nav-link {
+        border-bottom-color: black;
+      }
+    }
   }
   &:hover {
     a {
       &.nav-link {
-        border-bottom: 2px solid black;
+        border-bottom-color: black;
       }
     }
   }
