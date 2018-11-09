@@ -8,11 +8,11 @@ export class CatalogItem extends React.Component {
     render() {
         return (
             <td>
-                <div className='ml-5 mr-5'>
-                    <img className={"card-img-top image-200-200 card-item-image"} src={"./images/01.png"} alt={"Card image cap"} />
+                <div className='ml-3 mr-3'>
+                    <img className={"card-img-top image-350-200 card-item-image mb-3"} src={this.props.image} alt={"Card image cap"} />
                     <div className={'d-flex justify-content-center align-items-center flex-column h-100'}>
-                        <h3 className={'font-weight-light mb-0 text-center'}>{this.props.name}</h3>
-                        <p className={'text-extra-small'}>{this.props.description}</p>
+                        <h4 className={'font-weight-light mb-1 text-center'}>{this.props.name}</h4>
+                        <p className={'text-extra-small text-muted'}>{this.props.description}</p>
                     </div>
                 </div>
             </td>

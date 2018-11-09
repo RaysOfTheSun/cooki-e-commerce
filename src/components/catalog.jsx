@@ -48,7 +48,7 @@ export class Catalog extends React.Component {
                             <tr>
                                 {
                                     productCollection.map(product => (
-                                        <CatalogItem name={product.name} description={product.desc}/>
+                                        <CatalogItem name={product.name} description={product.desc} image={product.image}/>
                                     ))
 
                                 }

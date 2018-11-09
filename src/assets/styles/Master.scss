@@ -109,3 +109,22 @@ a {
   position: fixed;
   z-index: 9999999999999;
 }
+
+a {
+  &.nav-link {
+    transition: border-bottom-width 0.2s ease-in-out;
+  }
+}
+
+.nav-item {
+  &.active {
+    border-bottom: 5px solid black;
+  }
+  &:hover {
+    a {
+      &.nav-link {
+        border-bottom: 2px solid black;
+      }
+    }
+  }
+}
