@@ -11,7 +11,7 @@ export class Catalog extends React.Component {
     }
 
     GetCatalogItems() {
-        fetch('/get-products/cookies', {method: 'GET'})
+        fetch('/get-products/everyday', {method: 'GET'})
             .then(res => res.json())
             .then(items => this.GroupCollection(items));
     }
@@ -21,12 +21,12 @@ export class Catalog extends React.Component {
         let product_collections = [];
         // In case our number of products is not evenly divisible by 4,
         // put the items that will not make the cut into a separate array
-        let leftOver = collection.length % 4;
+        let leftOver = collection.length % 3;
         let leftOvers = collection.slice(collection.length - leftOver, collection.length);
 
         for (let i = 0; i < collection.length; i++) {
             product_collection.push(collection[i]);
-            if (((product_collection.length % 4 === 0))) {
+            if (((product_collection.length % 3 === 0))) {
                 product_collections.push(product_collection);
                 product_collection = [];
             }
@@ -41,15 +41,14 @@ export class Catalog extends React.Component {
     }
 
     render() {
-        console.log(this.state.products);
         return (
-            <table className={'table table-responsive table-borderless'}>
+            <table className={'table table-borderless'}>
                 {
                     this.state.products.map(productCollection => (
                             <tr>
                                 {
                                     productCollection.map(product => (
-                                        <CatalogItem name={product.name} description={product.description}/>
+                                        <CatalogItem name={product.name} description={product.desc}/>
                                     ))
 
                                 }
@@ -57,10 +56,9 @@ export class Catalog extends React.Component {
                         )
                     )
                 }
-
             </table>
         )
     }
 }
 
-render(<Catalog/>, document.getElementById('catalog-container'));
+render(<Catalog/>, document.getElementById('everyday-container'));

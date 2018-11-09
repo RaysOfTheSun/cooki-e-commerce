@@ -6,7 +6,8 @@ module.exports = {
     mode: "production",
     entry: {
         main: "./src/app.js",
-        react: ["./src/components/carousel.jsx", "./src/components/cartSidebar.jsx", "./src/components/catalog.jsx"]
+        rmain: ["./src/components/cartSidebar.jsx"],
+        rindex: "./src/components/catalog.jsx"
     },
     output: {
         path: path.join(DIST_DIR, "app"),

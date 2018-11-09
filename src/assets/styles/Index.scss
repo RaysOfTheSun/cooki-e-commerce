@@ -5,3 +5,23 @@
   background-image: url('../../../dist/app/images/cw03-T.jpg');
   background-size: cover;
 }
+
+#landing-inner {
+  width: 50%;
+  @include respond-to(smartphones){
+    width: 100%;
+  }
+}
+
+#everyday-cookies {
+  background-color: $dirty-white;
+  min-height: 80vh;
+}
+
+#landing-text {
+  transition: opacity 3s ease-in-out;
+}
+
+.hidden {
+  opacity: 0;
+}

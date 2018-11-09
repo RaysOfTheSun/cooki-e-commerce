@@ -1,7 +1,7 @@
 @import "globals";
 
 body {
-  font-family: $font-family-francois;
+  font-family: $font-family-roboto-slab;
   background-color: $dirty-white;
 }
 
@@ -86,8 +86,26 @@ a {
 }
 
 .nav-notch {
+  transition: top 2s ease-in-out;
   margin-left: 20rem;
   margin-right: 20rem;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
+  top: 0;
+}
+
+.nav-notch-hidden {
+  top: -150px;
+}
+
+#loader {
+  height: 100vh;
+  width: 100vw;
+  background-color: #4c586f;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 9999999999999;
 }

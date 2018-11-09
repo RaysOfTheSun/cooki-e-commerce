@@ -1,5 +1,15 @@
-$(document).ready(function () {
+$(window).ready(()=>{
+    $('.body-content').hide();
+});
 
+$(window).on('load', function () {
+    $('#loader').delay(600).fadeOut();
+    $('.body-content').show();
+    $('#notch').toggleClass('nav-notch-hidden');
+    $('#landing-text').toggleClass('hidden');
+});
+
+$(document).ready(function () {
     // footer stuff
     let mql = window.matchMedia("screen and (max-width: 723px)");
     mediaqueryresponse(mql); // call listener function explicitly at run time
@@ -7,9 +17,11 @@ $(document).ready(function () {
 
     function mediaqueryresponse(mql) {
         if (mql.matches) {
+            $('#notch').removeClass('nav-notch');
             $(".taber").attr("data-toggle", "collapse");
             $('.collapse').collapse("hide");
         } else {
+            $('#notch').addClass('nav-notch');
             $('.collapse').collapse("show");
             $("[data-toggle='collapse']").removeAttr("data-toggle");
         }
@@ -27,7 +39,7 @@ $(document).ready(function () {
             }
         });
 
-        $('.near-sidebar.active').on('click', (e) => {
+        $('.near-sidebar.active').on('click', () => {
             $('#cart-side.active').toggleClass('active');
             $('.near-sidebar.active').toggleClass('active');
         });

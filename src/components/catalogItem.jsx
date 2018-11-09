@@ -8,16 +8,12 @@ export class CatalogItem extends React.Component {
     render() {
         return (
             <td>
-                <div className={'card border'}>
-                    <div className={'card-header'}>
-                        <p className={'font-weight-light mb-0 text-center'}>{this.props.name}</p>
+                <div className='ml-5 mr-5'>
+                    <img className={"card-img-top image-200-200 card-item-image"} src={"./images/01.png"} alt={"Card image cap"} />
+                    <div className={'d-flex justify-content-center align-items-center flex-column h-100'}>
+                        <h3 className={'font-weight-light mb-0 text-center'}>{this.props.name}</h3>
+                        <p className={'text-extra-small'}>{this.props.description}</p>
                     </div>
-                    <img className={"card-img-top image-200-200"} src={"./images/01.png"} alt={"Card image cap"} />
-                        <div className={'card-body'}>
-                            <div className={'row d-flex align-items-center h-100'}>
-                                <p className={'lead'}>{this.props.description}</p>
-                            </div>
-                        </div>
                 </div>
             </td>
     )
