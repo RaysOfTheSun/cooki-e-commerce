@@ -28,6 +28,18 @@
   height: 60vh;
 }
 
+#engagement-banner{
+  background-color: #f3f3f5;
+}
+
+#news-banner {
+  background-image: url('../../../dist/app/images/mail02-T.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: 60vh;
+  box-shadow: 1px 10px 10px 5px gray;
+}
+
 .card-item-image {
   transition: border-width 0.2s ease-in-out;
   border: 10px solid white;
@@ -38,4 +50,19 @@
 
 .hidden {
   opacity: 0;
+}
+
+.link-arrow {
+  margin-left: 10px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+a {
+  &.text-plain {
+    &:hover {
+      .link-arrow {
+        margin-left: 20px;
+      }
+    }
+  }
 }

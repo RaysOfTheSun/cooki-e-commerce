@@ -41,6 +41,7 @@ export class Catalog extends React.Component {
     }
 
     render() {
+        console.log(this.state.products);
         return (
             <table className={'table table-borderless'}>
                 {

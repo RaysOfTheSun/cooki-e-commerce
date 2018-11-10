@@ -27,6 +27,13 @@
   }
 }
 
+.w-25-100{
+  width: 25%;
+  @include respond-to(smartphones){
+    width: 100%;
+  }
+}
+
 .image-500-200 {
   width: auto;
   height: 500px;

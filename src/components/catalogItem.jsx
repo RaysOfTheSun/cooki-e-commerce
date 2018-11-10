@@ -18,6 +18,6 @@ export class CatalogItem extends React.Component {
                     </div>
                 </a>
             </td>
-    )
+        )
     }
-    }
+}

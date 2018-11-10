@@ -37,3 +37,12 @@
     background-color: $kinda-blue;
   }
 }
+
+.border-thin-grey {
+  border: thin solid grey;
+  transition: border-color 0.3s ease-in-out;
+  &:active, &:focus {
+    outline: none;
+    border-color: white;
+  }
+}
