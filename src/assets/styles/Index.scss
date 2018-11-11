@@ -26,6 +26,9 @@
   background-image: url('../../../dist/app/images/cw04-T.jpg');
   background-size: cover;
   height: 60vh;
+  @include respond-to(smartphones){
+    height: 70vh;
+  }
 }
 
 #engagement-banner{
@@ -38,6 +41,9 @@
   background-size: cover;
   height: 60vh;
   box-shadow: 1px 10px 10px 5px gray;
+  @include respond-to(smartphones) {
+    height: 70vh;
+  }
 }
 
 .card-item-image {
