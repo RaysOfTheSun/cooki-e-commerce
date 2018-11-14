@@ -6,6 +6,7 @@ body {
 }
 
 footer {
+  background-color: white;
   width: 100%;
   height: 500px;
   position: fixed;
@@ -132,4 +133,8 @@ a {
       }
     }
   }
+}
+
+.bottom-shadow {
+  box-shadow: 1px 10px 10px 5px gray;
 }

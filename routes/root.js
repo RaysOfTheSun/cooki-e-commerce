@@ -19,8 +19,8 @@ router.get('/get-products/everyday', (request, response)=>{
     });
 });
 
-router.get('/catalog', (request, response)=>{
-   response.render('catalog');
+router.get('/products', (request, response)=>{
+   response.render('products');
 });
 
 

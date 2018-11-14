@@ -28,7 +28,7 @@
 }
 
 .w-25-100{
-  width: 25%;
+  width: 25% !important;
   @include respond-to(smartphones){
     width: 100%;
   }
@@ -53,6 +53,14 @@
   height: 200px;
 }
 
+.image-300-200 {
+  width: auto;
+  height: 300px;
+  @include respond-to(smartphones){
+    height: 200px;
+  }
+}
+
 .image-350-270 {
   width: 350px;
   height: auto;
@@ -60,6 +68,11 @@
     width: 270px;
     height: auto;
   }
+}
+
+.image-400-200 {
+  width: auto;
+  height: 400px;
 }
 
 .flex-mobile-column {
@@ -76,4 +89,8 @@
   @include respond-to(smartphones){
     margin-bottom: 5px;
   }
+}
+
+.p-90 {
+  padding: 90px;
 }
