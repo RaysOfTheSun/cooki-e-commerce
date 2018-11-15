@@ -136,5 +136,6 @@ a {
 }
 
 .bottom-shadow {
-  box-shadow: 1px 10px 10px 5px gray;
+  /*x, y, blur, spread*/
+  box-shadow: 0 10px 20px 2px gray;
 }

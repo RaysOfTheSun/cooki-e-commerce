@@ -20,7 +20,7 @@ router.get('/get-products/everyday', (request, response)=>{
 });
 
 router.get('/products', (request, response)=>{
-   response.render('products');
+    response.render('products');
 });
 
 

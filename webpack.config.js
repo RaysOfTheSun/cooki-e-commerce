@@ -6,7 +6,7 @@ module.exports = {
     mode: "production",
     entry: {
         main: "./src/app.js",
-        rmain: ["./src/components/cartSidebar.jsx"],
+        rmain: ["./src/components/cartSidebar.jsx", "./src/components/navbar.jsx"],
         rindex: ["./src/components/catalog.jsx", "./src/components/cardCatalog.jsx",
             "./src/components/cardCatalogItem.jsx"]
     },

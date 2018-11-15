@@ -40,7 +40,6 @@
   -webkit-background-size: cover;
   background-size: cover;
   height: 60vh;
-  box-shadow: 1px 10px 10px 5px gray;
   @include respond-to(smartphones) {
     height: 70vh;
   }

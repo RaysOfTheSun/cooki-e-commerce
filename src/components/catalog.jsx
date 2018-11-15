@@ -41,23 +41,18 @@ export class Catalog extends React.Component {
     }
 
     render() {
-        console.log(this.state.products);
         return (
-            <table className={'table table-borderless'}>
-                {
-                    this.state.products.map(productCollection => (
-                            <tr>
-                                {
-                                    productCollection.map(product => (
-                                        <CatalogItem name={product.name} description={product.desc} image={product.image}/>
-                                    ))
+            this.state.products.map(productCollection => (
+                    <div className={'d-flex justify-content-center align-items-center flex-mobile-column'}>
+                        {
+                            productCollection.map(product => (
+                                <CatalogItem name={product.name} description={product.desc} image={product.image}/>
+                            ))
 
-                                }
-                            </tr>
-                        )
-                    )
-                }
-            </table>
+                        }
+                    </div>
+                )
+            )
         )
     }
 }

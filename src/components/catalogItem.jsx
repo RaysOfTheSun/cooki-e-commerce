@@ -7,7 +7,7 @@ export class CatalogItem extends React.Component {
 
     render() {
         return (
-            <td>
+            <div className={'d-flex justify-content-center align-items-center flex-column'}>
                 <a href={'#'} className={'text-plain'}>
                     <div className='ml-3 mr-3'>
                         <img className={"card-img-top image-350-270 card-item-image mb-3"} src={this.props.image} alt={"Card image cap"} />
@@ -17,7 +17,7 @@ export class CatalogItem extends React.Component {
                         </div>
                     </div>
                 </a>
-            </td>
+            </div>
         )
     }
 }
