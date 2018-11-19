@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import {CatalogItem} from "./catalogItem.jsx";
+import CatalogItem from "./catalogItem.jsx";
 
 export class Catalog extends React.Component {
     constructor(props) {
@@ -42,13 +42,13 @@ export class Catalog extends React.Component {
 
     render() {
         return (
-            this.state.products.map(productCollection => (
-                    <div className={'d-flex justify-content-center align-items-center flex-mobile-column'}>
+            this.state.products.map((productCollection, i) => (
+                    <div className={i >= 1 ? 'd-flex justify-content-center align-items-center flex-mobile-column mobile-hidden':
+                        'd-flex justify-content-center align-items-center flex-mobile-column' }>
                         {
                             productCollection.map(product => (
                                 <CatalogItem name={product.name} description={product.desc} image={product.image}/>
                             ))
-
                         }
                     </div>
                 )

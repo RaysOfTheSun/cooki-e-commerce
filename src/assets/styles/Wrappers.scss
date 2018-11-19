@@ -28,7 +28,7 @@
 }
 
 .w-25-100{
-  width: 25% !important;
+  width: 25%;
   @include respond-to(smartphones){
     width: 100%;
   }
@@ -93,4 +93,10 @@
 
 .p-90 {
   padding: 90px;
+}
+
+.mobile-hidden {
+  @include respond-to(smartphones){
+    display: none !important;
+  }
 }

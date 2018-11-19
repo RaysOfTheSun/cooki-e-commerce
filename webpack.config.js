@@ -8,7 +8,7 @@ module.exports = {
         main: "./src/app.js",
         rmain: ["./src/components/cartSidebar.jsx", "./src/components/navbar.jsx"],
         rindex: ["./src/components/catalog.jsx", "./src/components/cardCatalog.jsx",
-            "./src/components/cardCatalogItem.jsx"]
+            "./src/components/cardCatalogItem.jsx", "./src/components/productBanner.jsx", "./src/components/newsBanner.jsx"]
     },
     output: {
         path: path.join(DIST_DIR, "app"),
