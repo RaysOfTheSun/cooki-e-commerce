@@ -17,11 +17,9 @@ $(document).ready(function () {
 
     function mediaqueryresponse(mql) {
         if (mql.matches) {
-            $('#notch').removeClass('nav-notch');
             $(".taber").attr("data-toggle", "collapse");
             $('.collapse').collapse("hide");
         } else {
-            $('#notch').addClass('nav-notch');
             $('.collapse').collapse("show");
             $("[data-toggle='collapse']").removeAttr("data-toggle");
         }
