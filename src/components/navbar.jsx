@@ -52,7 +52,7 @@ export default class Navbar extends React.Component {
                     <ul className="nav navbar-nav ml-auto">
                         <li className="nav-item"><a className="nav-link pb-4 pt-4" href=""><i
                             className="fas fa-user"></i></a></li>
-                        <li className="nav-item"><a className="nav-link pb-4 pt-4" href=""><i
+                        <li className="nav-item" id={'cart-button'}><a className="nav-link pb-4 pt-4" href={'#'}><i
                             className="fas fa-shopping-cart"></i></a></li>
                     </ul>
                 </div>

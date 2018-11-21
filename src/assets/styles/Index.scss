@@ -8,7 +8,7 @@
 
 #landing-inner {
   width: 50%;
-  @include respond-to(smartphones){
+  @include respond-to(smartphones) {
     width: 100%;
   }
 }
@@ -26,13 +26,26 @@
   background-image: url('../../../dist/app/images/cw04-T.jpg');
   background-size: cover;
   height: 60vh;
-  @include respond-to(smartphones){
+  @include respond-to(smartphones) {
     height: 70vh;
   }
 }
 
-#engagement-banner{
+#engagement-banner {
   background-color: #f3f3f5;
+  overflow: hidden;
+  position: relative;
+}
+
+#engagement-container {
+  transition: transform 0.3s ease-in-out;
+  @include respond-to(smartphones){
+    -webkit-transform: translate3d(270px, 0, 0);
+    -moz-transform: translate3d(270px, 0, 0);
+    -ms-transform: translate3d(270px, 0, 0);
+    -o-transform: translate3d(270px, 0, 0);
+    transform: translate3d(270px, 0, 0);
+  }
 }
 
 #news-banner {
@@ -48,6 +61,7 @@
 .card-item-image {
   transition: border-width 0.2s ease-in-out;
   border: 10px solid white;
+
   &:hover {
     border: 5px solid white;
   }
@@ -86,4 +100,24 @@ a {
   align-self: stretch;
   flex: 1 0 0;
   color: white;
+}
+
+.nav-arrow {
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  width: 10vw;
+  z-index: 1;
+  background-color: transparent;
+  @include respond-to(desktops){
+    display: none;
+  }
+}
+
+#engagement-nav-backward {
+  left: 0;
+}
+
+#engagement-nav-forward {
+  right: 0;
 }
