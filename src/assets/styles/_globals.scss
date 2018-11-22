@@ -25,6 +25,7 @@ $kinda-green: #ebeae8;
 $white-white: #f7f7f7;
 $material-darker-black: #202020;
 $transparent: rgba(0, 0, 0, 0.7);
+$cookie-brown: #97552E;
 
 /* open-sans-regular - latin */
 @font-face {
@@ -93,8 +94,9 @@ $font-family-roboto-slab: "Roboto Slab", serif;
 
 
 $small-screen-start: 320px;
-$small-screen-end: 800px;
-$medium-screen: 723px;
+$small-screen-end: 767px;
+$medium-screen-start: 768px;
+$medium-screen-end: 1024px;
 $big-screen: 1365px;
 
 @mixin respond-to($media) {
@@ -103,7 +105,7 @@ $big-screen: 1365px;
       @content
     }
   } @else if ($media == tablets) {
-    @media only screen and (min-width: $medium-screen + 1) and (max-width: $big-screen) {
+    @media only screen and (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
       @content
     }
   } @else if($media == desktops){

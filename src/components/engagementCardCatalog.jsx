@@ -1,8 +1,8 @@
 import React from 'react'
 import {render} from 'react-dom';
-import CardCatalogItem from './cardCatalogItem.jsx';
+import EngagementCardCatalogItem from './engagementCardCatalogItem.jsx';
 
-const CardCatalog = () => {
+const EngagementCardCatalog = () => {
     const items = [
         {
             name: 'Collaboration',
@@ -27,7 +27,7 @@ const CardCatalog = () => {
         <div className={'d-flex justify-content-center align-items-center'}>
             {
                 items.map(item => (
-                    <CardCatalogItem name={item.name} desc={item.desc} image={item.image}/>
+                    <EngagementCardCatalogItem name={item.name} desc={item.desc} image={item.image}/>
                 ))
             }
         </div>
@@ -35,4 +35,4 @@ const CardCatalog = () => {
 
 };
 
-render(<CardCatalog/>, document.getElementById('engagement-container'));
+render(<EngagementCardCatalog/>, document.getElementById('engagement-container'));

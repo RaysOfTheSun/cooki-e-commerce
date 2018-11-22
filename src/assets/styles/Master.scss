@@ -28,7 +28,7 @@ footer {
 
   p {
     &.lead {
-      color: $cookie-monster-blue;
+      color: $cookie-brown;
       text-transform: uppercase;
     }
   }
@@ -44,6 +44,7 @@ footer {
 
 a {
   color: $kinda-blue;
+
   &:hover {
     text-decoration: none;
   }
@@ -94,10 +95,14 @@ a {
   border-bottom-right-radius: 40px;
   top: 0;
   padding: 0;
-  @include respond-to(smartphones){
+  @include respond-to(smartphones) {
     margin-left: 0;
     margin-right: 0;
     padding: 10px;
+  }
+  @include respond-to(tablets) {
+    margin-left: 0;
+    margin-right: 0;
   }
 }
 
@@ -132,6 +137,7 @@ a {
       }
     }
   }
+
   &:hover {
     a {
       &.nav-link {

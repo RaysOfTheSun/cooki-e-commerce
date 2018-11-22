@@ -77,10 +77,19 @@
 
 .flex-mobile-column {
   width: 50%;
-  flex-shrink: 1;
+  flex-direction: row;
   @include respond-to(smartphones){
-    width: 50%;
     flex-direction: column;
+  }
+  @include respond-to(tablets){
+    flex-direction: column;
+  }
+}
+
+.flex-tablet-row {
+  flex-direction: column;
+  @include respond-to(tablets){
+    flex-direction: row;
   }
 }
 

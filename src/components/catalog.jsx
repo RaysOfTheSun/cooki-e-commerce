@@ -43,7 +43,7 @@ export class Catalog extends React.Component {
     render() {
         return (
             this.state.products.map((productCollection, i) => (
-                    <div className={i >= 1 ? 'd-flex justify-content-center align-items-center flex-mobile-column mobile-hidden':
+                    <div className={i > 0 ? 'd-flex justify-content-center align-items-center flex-mobile-column mobile-hidden':
                         'd-flex justify-content-center align-items-center flex-mobile-column' }>
                         {
                             productCollection.map(product => (

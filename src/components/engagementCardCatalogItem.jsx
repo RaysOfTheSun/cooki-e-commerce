@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CardCatalogItem = ({name, image, desc})=>{
+const EngagementCardCatalogItem = ({name, image, desc})=>{
     return (
         <div className={'card mx-3 border-0 d-flex justify-content-center image-350-270'}>
             <img src={image} className={'card-img-top image-350-270'}/>
@@ -13,4 +13,4 @@ const CardCatalogItem = ({name, image, desc})=>{
     );
 };
 
-export default CardCatalogItem;
+export default EngagementCardCatalogItem;

@@ -5,14 +5,16 @@ $(window).on('load', function () {
     $('.body-content').show();
     $('#notch').toggleClass('nav-notch-hidden'); // have the navigation bar slide down from the top
     $('#landing-text').toggleClass('hidden'); // fade out the landing div's text
-    
+
     // handle the navigation of the engagement cards on a smaller viewport
     $('#engagement-nav-backward').on('click', function () {
+        // make sure the user can't scroll passed the first item in the list
         currSeekWidth = (currSeekWidth + 270) > 270 ? 270 : currSeekWidth + 270;
         $('#engagement-container').css({'transform': `translate3d(${currSeekWidth}px, 0 , 0)`});
     });
 
     $('#engagement-nav-forward').on('click', function () {
+        // make sure the user can't scroll past the last item in the list
         currSeekWidth = (currSeekWidth - 270) >= -270 ? currSeekWidth - 270 : -270;
         $('#engagement-container').css({'transform': `translate3d(${currSeekWidth}px, 0 ,0)`});
     });
