@@ -32,6 +32,9 @@ export default class Navbar extends React.Component {
                 <button className="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-nav">
                     <span className="navbar-toggler-icon"></span>
                 </button>
+                <a href="/"
+                   className="navbar-brand mx-auto d-block text-center order-lg-1 w-25 text-cookie text-emphasize-medium font-weight-bold">Cookie
+                    Stop</a>
                 <div className="navbar-collapse collapse dual-nav w-50 order-1 order-md-0 ">
                     <ul className="navbar-nav">
                         <li className={`nav-item ${this.makeActive('home')}`}>
@@ -45,9 +48,6 @@ export default class Navbar extends React.Component {
                         </li>
                     </ul>
                 </div>
-                <a href="/"
-                   className="navbar-brand mx-auto d-block text-center order-0 order-md-1 w-25 text-cookie text-emphasize-medium font-weight-bold">Cookie
-                    Stop</a>
                 <div className="navbar-collapse collapse dual-nav w-50 order-2">
                     <ul className="nav navbar-nav ml-auto">
                         <li className="nav-item"><a className="nav-link pb-4 pt-4" href=""><i

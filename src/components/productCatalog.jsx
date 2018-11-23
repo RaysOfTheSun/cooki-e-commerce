@@ -1,8 +1,8 @@
 import React from 'react';
 import {render} from 'react-dom';
-import CatalogItem from "./catalogItem.jsx";
+import ProductCatalogItem from "./productCatalogItem.jsx";
 
-export class Catalog extends React.Component {
+export class ProductCatalog extends React.Component {
     constructor(props) {
         super(props);
         this.state = {products: []};
@@ -47,7 +47,7 @@ export class Catalog extends React.Component {
                         'd-flex justify-content-center align-items-center flex-mobile-column' }>
                         {
                             productCollection.map(product => (
-                                <CatalogItem name={product.name} desc={product.desc} image={product.image}/>
+                                <ProductCatalogItem name={product.name} desc={product.desc} image={product.image}/>
                             ))
                         }
                     </div>
@@ -57,4 +57,4 @@ export class Catalog extends React.Component {
     }
 }
 
-render(<Catalog/>, document.getElementById('everyday-container'));
+render(<ProductCatalog/>, document.getElementById('everyday-container'));

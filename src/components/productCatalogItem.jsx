@@ -1,6 +1,6 @@
 import React from 'react';
 
-const CatalogItem = ({image, name, desc})=>{
+const ProductCatalogItem = ({image, name, desc})=>{
     return (
         <div className={'d-flex justify-content-center align-items-center flex-column'}>
             <a href={'#'} className={'text-plain'}>
@@ -16,4 +16,4 @@ const CatalogItem = ({image, name, desc})=>{
     );
 };
 
-export default CatalogItem;
+export default ProductCatalogItem;

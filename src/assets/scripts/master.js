@@ -19,11 +19,11 @@ $(window).ready(function () {
     });
 
     // footer stuff
-    let mql = window.matchMedia("screen and (max-width: 723px)");
-    mediaqueryresponse(mql); // call listener function explicitly at run time
-    mql.addEventListener('change', mediaqueryresponse);  // attach listener function to listen in on state changes
+    let mql = window.matchMedia("screen and (max-width: 767px)");
+    mediaQueryResponse(mql); // call listener function explicitly at run time
+    mql.addEventListener('change', mediaQueryResponse);  // attach listener function to listen in on state changes
 
-    function mediaqueryresponse(mql) {
+    function mediaQueryResponse(mql) {
         if (mql.matches) {
             $(".taber").attr("data-toggle", "collapse");
             $('.panel-collapse').collapse("hide");
