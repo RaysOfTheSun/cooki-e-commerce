@@ -47,7 +47,7 @@ export class Catalog extends React.Component {
                         'd-flex justify-content-center align-items-center flex-mobile-column' }>
                         {
                             productCollection.map(product => (
-                                <CatalogItem name={product.name} description={product.desc} image={product.image}/>
+                                <CatalogItem name={product.name} desc={product.desc} image={product.image}/>
                             ))
                         }
                     </div>

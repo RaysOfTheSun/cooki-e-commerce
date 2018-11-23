@@ -54,7 +54,8 @@
   background-size: cover;
   height: 60vh;
   @include respond-to(smartphones) {
-    height: 70vh;
+    height: 75vh;
+    padding: 15px;
   }
 }
 
@@ -67,7 +68,7 @@
   }
 }
 
-.hidden {
+.opacity-0 {
   opacity: 0;
 }
 

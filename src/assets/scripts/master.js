@@ -1,10 +1,9 @@
-// since everything is all loaded up, set all the stuff up
-$(window).on('load', function () {
+$(window).ready(function () {
+    $('.no-flash').removeClass('no-flash');
     let currSeekWidth = 270;
-    $('#loader').delay(300).fadeOut();
-    $('.body-content').show();
+    $('#loader').delay(3000).fadeOut();
     $('#notch').toggleClass('nav-notch-hidden'); // have the navigation bar slide down from the top
-    $('#landing-text').toggleClass('hidden'); // fade out the landing div's text
+    $('#landing-text').toggleClass('opacity-0'); // fade out the landing div's text
 
     // handle the navigation of the engagement cards on a smaller viewport
     $('#engagement-nav-backward').on('click', function () {

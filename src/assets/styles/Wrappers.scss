@@ -27,6 +27,12 @@
   }
 }
 
+.pad-sm-0 {
+  @include respond-to(smartphones){
+    padding: 0 !important;
+  }
+}
+
 .w-25-100{
   width: 25%;
   @include respond-to(smartphones){
@@ -96,7 +102,7 @@
 .shrinkable {
   min-width: 0;
   @include respond-to(smartphones){
-    margin-bottom: 5px;
+    margin-bottom: 10px;
   }
 }
 
@@ -108,4 +114,8 @@
   @include respond-to(smartphones){
     display: none !important;
   }
+}
+
+.content-hidden {
+  display: none;
 }

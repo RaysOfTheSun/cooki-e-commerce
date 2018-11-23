@@ -113,8 +113,8 @@ a {
 #loader {
   height: 100vh;
   width: 100vw;
-  background-color: #4c586f;
-  color: white;
+  background-color: white;
+  color: $cookie-brown;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,4 +154,28 @@ a {
 
 #cart-button {
   cursor: pointer;
+}
+
+.google-item {
+  font-size: 3rem;
+  &:nth-child(1) {
+    animation: bounce 0.4s ease-in 0s infinite alternate;
+  }
+  &:nth-child(2) {
+    animation: bounce 0.4s ease-in 1s infinite alternate;
+  }
+  &:nth-child(3) {
+    animation: bounce 0.4s ease-in 2s infinite alternate;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    // color: nth($colors, random(length($colors)));
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    // color: nth($colors, random(length($colors)));
+    transform: translate3d(0, 15px, 0);
+  }
 }
