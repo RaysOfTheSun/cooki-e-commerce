@@ -56,7 +56,7 @@
   background-size: cover;
   height: auto;
   padding: 30px;
-  @include respond-to(tablet-landscape-up) {
+  @include respond-to(desktop-up) {
     height: 60vh;
   }
 }
