@@ -108,15 +108,18 @@ a {
   @include respond-to(big-desktop-up){
     margin-left: 20rem;
     margin-right: 20rem;
+    padding: 0;
   }
   @include respond-to(tablet-portrait-up) {
     margin-left: 5rem;
     margin-right: 5rem;
+    padding: 5px;
   }
 
   @include respond-to(desktop-up) {
     margin-left: 10rem;
     margin-right: 10rem;
+    padding: 0;
   }
 }
 

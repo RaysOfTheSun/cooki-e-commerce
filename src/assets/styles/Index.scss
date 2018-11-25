@@ -8,7 +8,7 @@
 
 #landing-inner {
   width: 100%;
-  @include respond-to(desktop-up){
+  @include respond-to(desktop-up) {
     width: 50%;
   }
 }
@@ -41,7 +41,7 @@
 
 #engagement-container {
   transition: transform 0.3s ease-in-out;
-  @include respond-to(smartphones){
+  @include respond-to(smartphones) {
     -webkit-transform: translate3d(270px, 0, 0);
     -moz-transform: translate3d(270px, 0, 0);
     -ms-transform: translate3d(270px, 0, 0);
@@ -93,16 +93,34 @@ a {
   background-size: cover;
   background: url("../../../dist/app/images/cw07-T.jpg") center;
   align-self: stretch;
-  flex: 1 0 0;
   color: white;
+  margin-left: 0;
+  margin-top: 30px;
+  @include respond-to(desktop-up) {
+    margin-left: 30px;
+    margin-top: 0;
+  }
+}
+
+#partner-banner {
+  margin: 10px;
 }
 
 #serve-cookies {
   background-size: cover;
   background: url("../../../dist/app/images/cw06-T.jpg") center;
   align-self: stretch;
-  flex: 1 0 0;
   color: white;
+  margin-right: 0;
+  margin-top: 30px;
+  @include respond-to(desktop-up) {
+    margin-right: 30px;
+    margin-top: 0;
+  }
+}
+
+#products-header {
+  margin-top: 7rem;
 }
 
 .nav-arrow {
@@ -112,7 +130,7 @@ a {
   width: 10vw;
   z-index: 1;
   background-color: transparent;
-  @include respond-to(desktops){
+  @include respond-to(desktops) {
     display: none;
   }
 }

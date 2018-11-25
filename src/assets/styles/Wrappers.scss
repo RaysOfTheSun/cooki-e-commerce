@@ -42,10 +42,10 @@
   @include respond-to(tablet-portrait-up) {
     width: 70%;
   }
-  @include respond-to(desktop-up){
+  @include respond-to(desktop-up) {
     width: 50%;
   }
-  @include respond-to(big-desktop-up){
+  @include respond-to(big-desktop-up) {
     width: 25%;
   }
 }
@@ -63,9 +63,12 @@
   height: 100px;
 }
 
-.image-200-200 {
+.image-200-150 {
   width: auto;
-  height: 200px;
+  height: 150px;
+  @include respond-to(tablet-potrait-up) {
+    height: 200px;
+  }
 }
 
 .image-300-200 {
@@ -84,22 +87,30 @@
   }
 }
 
-.image-400-200 {
+.image-cover {
+  object-fit: cover;
+  width: 100%;
+}
+
+.image-475-250 {
   width: auto;
-  height: 400px;
+  height: 250px;
+  @include respond-to(tablet-portrait-up) {
+    height: 475px;
+  }
 }
 
 .flex-mobile-column {
-  width: 50%;
+  //width: 50%;
   flex-direction: column;
-  @include respond-to(desktop-up){
+  @include respond-to(desktop-up) {
     flex-direction: row;
   }
 }
 
 .c-flex-column {
   flex-direction: row;
-  @include respond-to(desktop-up){
+  @include respond-to(desktop-up) {
     flex-direction: column;
   }
 }
@@ -110,13 +121,6 @@
 //    flex-direction: row;
 //  }
 //}
-
-.m-10-10 {
-  margin-bottom: 10px;
-  @include respond-to(desktop-up) {
-    min-width: 0;
-  }
-}
 
 .p-90 {
   padding: 90px;
