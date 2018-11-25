@@ -3,7 +3,7 @@ import {render} from 'react-dom';
 
 const ServiceBanner = () => {
     return (
-        <div className={'d-flex justify-content-center align-items-center flex-column'}>
+        <div className={'d-flex justify-content-center align-items-center flex-column w-75-100'}>
             <div className="container d-flex justify-content-center align-items-center flex-column mb-2"
                  id={'products-header'}>
                 <p className="text-emphasize-large font-weight-bold mb-4">Products</p>

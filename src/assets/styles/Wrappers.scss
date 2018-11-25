@@ -50,6 +50,13 @@
   }
 }
 
+.w-75-100 {
+  width: 100%;
+  @include respond-to(tablet-portrait-up){
+    width: 75%;
+  }
+}
+
 .image-500-200 {
   height: 200px;
   width: auto;
@@ -114,13 +121,6 @@
     flex-direction: column;
   }
 }
-
-//.flex-tablet-row {
-//  flex-direction: column;
-//  @include respond-to(tablets) {
-//    flex-direction: row;
-//  }
-//}
 
 .p-90 {
   padding: 90px;
