@@ -8,7 +8,8 @@ module.exports = {
         main: "./src/app.js",
         rmain: ["./src/components/cartSidebar.jsx", "./src/components/navbar.jsx"],
         rindex: ["./src/components/productCatalog.jsx", "./src/components/engagementCardCatalog.jsx",
-            "./src/components/engagementCardCatalogItem.jsx", "./src/components/productBanner.jsx", "./src/components/newsBanner.jsx"]
+            "./src/components/engagementCardCatalogItem.jsx", "./src/components/productBanner.jsx", "./src/components/newsBanner.jsx"],
+        rProducts : ['./src/components/serviceBanner.jsx']
     },
     output: {
         path: path.join(DIST_DIR, "app"),
