@@ -9,7 +9,7 @@ const ServiceBanner = () => {
                 <p className="text-emphasize-large font-weight-bold mb-4">Products</p>
                 <p className="w-25-70-100 text-center">
                     From flavorful menu creations to grab-and-go innovations, you won't believe what's being crafted in
-                    Cookie Stop ovens. Your guests will love the endless, better-for-you possibilities.
+                    Cookie Stop's ovens. You and your guests will love the endless, better-for-you possibilities.
                 </p>
             </div>
             <div className="d-flex justify-content-center align-items-center flex-mobile-column container p-0 my-3">
