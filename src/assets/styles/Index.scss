@@ -1,60 +1,144 @@
 @import "globals";
 
-.first-banner {
-  background-color: $cyber;
-  color: $dijon;
+#landing-banner {
+  min-height: 90vh;
+  background-image: url('../../../dist/app/images/cw03-T.jpg');
+  background-size: cover;
 }
 
-.torn-paper-cyber {
-  height: 5vh;
-  width: 100vw;
-  background: $cyber;
-  -webkit-clip-path: polygon(
-                  0% -2%,
-                  0% 97%,
-                  2% 95%,
-                  6% 99%,
-                  12% 88%,
-                  18% 92%,
-                  27% 90%,
-                  31% 97%,
-                  39% 91%,
-                  47% 95%,
-                  60% 83%,
-                  62% 81%,
-                  69% 93%,
-                  72% 96%,
-                  79% 87%,
-                  100% 99%,
-                  100% 0%
-  );
-  clip-path: polygon(
-                  0% -2%,
-                  0% 97%,
-                  2% 95%,
-                  6% 99%,
-                  12% 88%,
-                  18% 92%,
-                  27% 90%,
-                  31% 97%,
-                  39% 91%,
-                  47% 95%,
-                  60% 83%,
-                  62% 81%,
-                  69% 93%,
-                  72% 96%,
-                  79% 87%,
-                  100% 99%,
-                  100% -18%
-  );
-}
-
-.fourth-banner {
-  background-color: $dirty-white;
-  box-shadow: 0 10px 30px -5px gray;
-  height: 40vh;
-
-  @include respond-to(smartphones) {
-    height: 32vh;
+#landing-inner {
+  width: 100%;
+  @include respond-to(desktop-up) {
+    width: 50%;
   }
+}
+
+#everyday-cookies {
+  background-color: $dirty-white;
+  min-height: 80vh;
+}
+
+#landing-text {
+  transition: opacity 3s ease-in-out;
+}
+
+#product-banner {
+  background-image: url('../../../dist/app/images/cw04-T.jpg');
+  background-size: cover;
+  height: auto;
+  padding: 30px;
+  @include respond-to(tablet-landscape-up) {
+    height: 60vh;
+    padding: 0;
+  }
+}
+
+#engagement-banner {
+  background-color: #f3f3f5;
+  overflow: hidden;
+  position: relative;
+}
+
+#engagement-container {
+  transition: transform 0.3s ease-in-out;
+  @include respond-to(smartphones) {
+    -webkit-transform: translate3d(270px, 0, 0);
+    -moz-transform: translate3d(270px, 0, 0);
+    -ms-transform: translate3d(270px, 0, 0);
+    -o-transform: translate3d(270px, 0, 0);
+    transform: translate3d(270px, 0, 0);
+  }
+}
+
+#news-banner {
+  background-image: url('../../../dist/app/images/mail02-T.jpg');
+  -webkit-background-size: cover;
+  background-size: cover;
+  height: auto;
+  padding: 30px;
+  @include respond-to(desktop-up) {
+    height: 60vh;
+  }
+}
+
+.card-item-image {
+  transition: border-width 0.2s ease-in-out;
+  border: 10px solid white;
+
+  &:hover {
+    border: 5px solid white;
+  }
+}
+
+.opacity-0 {
+  opacity: 0;
+}
+
+.link-arrow {
+  margin-left: 10px;
+  transition: margin-left 0.3s ease-in-out;
+}
+
+a {
+  &.text-plain {
+    &:hover {
+      .link-arrow {
+        margin-left: 20px;
+      }
+    }
+  }
+}
+
+#serve-ice {
+  background-size: cover;
+  background: url("../../../dist/app/images/cw07-T.jpg") center;
+  align-self: stretch;
+  color: white;
+  margin-left: 0;
+  margin-top: 30px;
+  @include respond-to(desktop-up) {
+    margin-left: 30px;
+    margin-top: 0;
+  }
+}
+
+#partner-banner {
+  margin: 10px;
+}
+
+#serve-cookies {
+  background-size: cover;
+  background: url("../../../dist/app/images/cw06-T.jpg") center;
+  align-self: stretch;
+  color: white;
+  margin-right: 0;
+  margin-top: 30px;
+  @include respond-to(desktop-up) {
+    margin-right: 30px;
+    margin-top: 0;
+  }
+}
+
+#products-header {
+  margin-top: 7rem;
+}
+
+.nav-arrow {
+  cursor: pointer;
+  position: absolute;
+  height: 100%;
+  width: 10vw;
+  z-index: 1;
+  background-color: transparent;
+  @include respond-to(desktops) {
+    display: none;
+  }
+}
+
+#engagement-nav-backward {
+  left: 0;
+}
+
+#engagement-nav-forward {
+  right: 0;
 }

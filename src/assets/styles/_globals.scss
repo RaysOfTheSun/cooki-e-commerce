@@ -1,7 +1,9 @@
-@import '../../../node_modules/font-awesome/css/font-awesome.css';
+@import '../../../node_modules/@fortawesome/fontawesome-free/css/all.min.css';
 @import '../../../node_modules/bootstrap/dist/css/bootstrap.css';
 @import url('https://fonts.googleapis.com/css?family=Fira+Sans');
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Roboto+Slab');
+
 
 $pink: #ff9683;
 $light-blue: #9be5f3;
@@ -22,6 +24,8 @@ $dirty-white: #f3f3f5;
 $kinda-green: #ebeae8;
 $white-white: #f7f7f7;
 $material-darker-black: #202020;
+$transparent: rgba(0, 0, 0, 0.7);
+$cookie-brown: #97552E;
 
 /* open-sans-regular - latin */
 @font-face {
@@ -31,18 +35,30 @@ $material-darker-black: #202020;
   src: url("../fonts/open-sans-v15-latin-regular.eot");
   /* IE9 Compat Modes */
   src: local("Open Sans Regular"), local("OpenSans-Regular"),
-  url("../fonts/open-sans-v15-latin-regular.eot?#iefix")
-  format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/open-sans-v15-latin-regular.woff2")
-  format("woff2"),
+  url("../fonts/open-sans-v15-latin-regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+  url("../fonts/open-sans-v15-latin-regular.woff2") format("woff2"),
     /* Super Modern Browsers */
   url("../fonts/open-sans-v15-latin-regular.woff") format("woff"),
-    /* Modern Browsers */ url("../fonts/open-sans-v15-latin-regular.ttf")
-  format("truetype"),
+    /* Modern Browsers */
+  url("../fonts/open-sans-v15-latin-regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-  url("../fonts/open-sans-v15-latin-regular.svg#OpenSans")
-  format("svg");
+  url("../fonts/open-sans-v15-latin-regular.svg#OpenSans") format("svg");
   /* Legacy iOS */
+}
+
+/* roboto-slab-regular - latin */
+@font-face {
+  font-family: 'Roboto Slab';
+  font-style: normal;
+  font-weight: 400;
+  src: url("../fonts/roboto-slab-v7-latin-regular.eot"); /* IE9 Compat Modes */
+  src: local("Roboto Slab Regular"), local('RobotoSlab-Regular'),
+  url("../fonts/roboto-slab-v7-latin-regular.eot?#iefix") format('embedded-opentype'), /* IE6-IE8 */
+  url("../fonts/roboto-slab-v7-latin-regular.woff2") format('woff2'), /* Super Modern Browsers */
+  url("../fonts/roboto-slab-v7-latin-regular.woff") format('woff'), /* Modern Browsers */
+  url("../fonts/roboto-slab-v7-latin-regular.ttf") format('truetype'), /* Safari, Android, iOS */
+  url("../fonts/roboto-slab-v7-latin-regular.svg#RobotoSlab") format('svg');
 }
 
 /* francois-one-regular - latin */
@@ -53,17 +69,15 @@ $material-darker-black: #202020;
   src: url("../fonts/francois-one-v11-latin-regular.eot");
   /* IE9 Compat Modes */
   src: local("Francois One Regular"), local("FrancoisOne-Regular"),
-  url("../fonts/francois-one-v11-latin-regular.eot?#iefix")
-  format("embedded-opentype"),
-    /* IE6-IE8 */ url("../fonts/francois-one-v11-latin-regular.woff2")
-  format("woff2"),
+  url("../fonts/francois-one-v11-latin-regular.eot?#iefix") format("embedded-opentype"),
+    /* IE6-IE8 */
+  url("../fonts/francois-one-v11-latin-regular.woff2") format("woff2"),
     /* Super Modern Browsers */
   url("../fonts/francois-one-v11-latin-regular.woff") format("woff"),
-    /* Modern Browsers */ url("../fonts/francois-one-v11-latin-regular.ttf")
-  format("truetype"),
+    /* Modern Browsers */
+  url("../fonts/francois-one-v11-latin-regular.ttf") format("truetype"),
     /* Safari, Android, iOS */
-  url("../fonts/francois-one-v11-latin-regular.svg#FrancoisOne")
-  format("svg");
+  url("../fonts/francois-one-v11-latin-regular.svg#FrancoisOne") format("svg");
   /* Legacy iOS */
 }
 
@@ -76,17 +90,41 @@ $material-darker-black: #202020;
 $font-family-open-sans: "Open Sans", sans-serif;
 $font-family-KR: KR;
 $font-family-francois: "Francois One", sans-serif;
+$font-family-roboto-slab: "Roboto Slab", serif;
 
-$small-screen: 320px;
-$medium-screen: 723px;
+
+$small-screen-start: 320px;
+$small-screen-end: 767px;
+$medium-screen-start: 768px;
+$medium-screen-end: 1024px;
 $big-screen: 1365px;
 
-@mixin respond-to($media) {
-  @if ($media == smartphones) {
-    @media only screen and (min-width: $small-screen) and (max-width: $medium-screen) {@content}
-  }
-  @else if($media == tablets) {
-    @media only screen and (min-width: $medium-screen + 1) and (max-width: $big-screen)  {@content}
+@mixin respond-to($range) {
+  $phone-upper-boundary: 600px;
+  $tablet-portrait-upper-boundary: 900px;
+  $tablet-landscape-upper-boundary: 1200px;
+  $desktop-upper-boundary: 1800px;
+
+  @if $range == phone-only {
+    @media (max-width: #{$phone-upper-boundary - 1}) {
+      @content;
+    }
+  } @else if ($range == tablet-portrait-up) {
+    @media (min-width: $phone-upper-boundary) {
+      @content;
+    }
+  } @else if ($range == tablet-landscape-up) {
+    @media (min-width: $tablet-portrait-upper-boundary) {
+      @content;
+    }
+  } @else if ($range == desktop-up) {
+    @media (min-width: $tablet-landscape-upper-boundary) {
+      @content;
+    }
+  } @else if ($range == big-desktop-up) {
+    @media (min-width: $desktop-upper-boundary) {
+      @content;
+    }
   }
 }
 

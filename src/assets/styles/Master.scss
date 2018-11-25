@@ -1,48 +1,52 @@
 @import "globals";
 
 body {
-  font-family: $font-family-francois;
+  font-family: $font-family-roboto-slab;
   background-color: $dirty-white;
 }
 
 footer {
+  background-color: white;
   width: 100%;
-  height: 500px;
-  position: fixed;
-  bottom: 0;
-  z-index: -1;
-  overflow: hidden;
-  color: black;
-  padding-top: 50px;
+  height: auto;
+  z-index: 1;
+  position: relative;
+  padding-top: 30px;
 
-  ul {
+  @include respond-to(desktop-up) {
+    height: 500px;
+    position: fixed;
+    bottom: 0;
+    z-index: -1;
+    overflow: hidden;
+    color: black;
+    padding-top: 50px;
+  }
+
+
+  & ul {
     padding: 0;
     list-style: none;
     line-height: 2em;
 
-    li {
+    & li {
       font-family: $font-family-open-sans;
     }
   }
 
-  p {
+  & p {
     &.lead {
-      color: $cookie-monster-blue;
+      color: $cookie-brown;
       text-transform: uppercase;
     }
   }
 
-  @include respond-to(smartphones) {
-    width: 100%;
-    height: auto;
-    z-index: 1;
-    position: relative;
-    padding-top: 30px;
-  }
+
 }
 
 a {
   color: $kinda-blue;
+
   &:hover {
     text-decoration: none;
   }
@@ -54,34 +58,145 @@ a {
   background-color: white;
   z-index: 1;
   position: relative;
-  margin-bottom: 500px;
+  margin-bottom: 1px;
 
-  @include respond-to(smartphones) {
-    margin-bottom: 1px;
+  @include respond-to(desktop-up) {
+    margin-bottom: 500px;
   }
 }
 
 .taber {
-  @include respond-to(smartphones) {
-    border-bottom: 1px solid #ccc;
-    cursor: pointer;
-    padding-top: 1.5vh;
+  border-bottom: 1px solid #ccc;
+  cursor: pointer;
+  padding-top: 1.5vh;
 
+  p {
+    &:after {
+      content: "-";
+      float: right;
+    }
+  }
+
+  &.collapsed {
     p {
       &:after {
-        content: "-";
+        content: "+";
         float: right;
       }
     }
+  }
 
-    &.collapsed {
-      p {
-        &:after {
-          content: "+";
-          float: right;
-        }
+  @include respond-to(desktop-up) {
+    border-bottom: none;
+    & p {
+      &:after {
+        content: '';
+        float: initial;
       }
     }
   }
 }
 
+.nav-notch {
+  margin-left: 0;
+  margin-right: 0;
+  transition: top 2s ease-in-out;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  top: 0;
+  padding: 10px;
+  @include respond-to(big-desktop-up){
+    margin-left: 20rem;
+    margin-right: 20rem;
+    padding: 0;
+  }
+  @include respond-to(tablet-portrait-up) {
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding: 5px;
+  }
+
+  @include respond-to(desktop-up) {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    padding: 0;
+  }
+}
+
+.nav-notch-hidden {
+  top: -150px;
+}
+
+#loader {
+  height: 100vh;
+  width: 100vw;
+  background-color: white;
+  color: $cookie-brown;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 9999999999999;
+  pointer-events: none;
+}
+
+a {
+  &.nav-link {
+    border-bottom: 5px solid white;
+    transition: border-bottom-color 0.2s ease-in-out;
+  }
+}
+
+.nav-item {
+  &.active {
+    a {
+      &.nav-link {
+        border-bottom-color: black;
+      }
+    }
+  }
+
+  &:hover {
+    a {
+      &.nav-link {
+        border-bottom-color: black;
+      }
+    }
+  }
+}
+
+.bottom-shadow {
+  /*x, y, blur, spread*/
+  box-shadow: 0 10px 20px 2px gray;
+}
+
+#cart-button {
+  cursor: pointer;
+}
+
+.google-item {
+  font-size: 3rem;
+
+  &:nth-child(1) {
+    animation: bounce 0.4s ease-in 0s infinite alternate;
+  }
+
+  &:nth-child(2) {
+    animation: bounce 0.4s ease-in 1s infinite alternate;
+  }
+
+  &:nth-child(3) {
+    animation: bounce 0.4s ease-in 2s infinite alternate;
+  }
+}
+
+@keyframes bounce {
+  0% {
+    // color: nth($colors, random(length($colors)));
+    transform: translate3d(0, 0, 0);
+  }
+  100% {
+    // color: nth($colors, random(length($colors)));
+    transform: translate3d(0, 15px, 0);
+  }
+}

@@ -5,7 +5,7 @@ import {CartSidebarItem} from './cartSidebarItem.jsx';
 export class CartSidebar extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {items: []};
+        this.state = {products: []};
     }
 
     GetCartItems() {
