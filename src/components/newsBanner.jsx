@@ -5,7 +5,7 @@ const NewsBanner = () => {
     return (
         <div className={'d-flex justify-content-center align-items-center flex-column text-white flex-grow-1'}>
             <p className="text-emphasize-medium font-weight-bold">Sign up for our newsletter</p>
-            <div className="my-md-4 my-lg-4 my-sm-2 text-center w-25-50-100">
+            <div className="my-md-4 my-lg-4 my-sm-2 text-center w-25-70-100">
                 <p>Get insider access to news around the innovations, unique cooking techniques, culinary concepts,
                     insights, and more.</p>
             </div>

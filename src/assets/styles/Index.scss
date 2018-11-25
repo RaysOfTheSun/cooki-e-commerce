@@ -7,9 +7,9 @@
 }
 
 #landing-inner {
-  width: 50%;
-  @include respond-to(smartphones) {
-    width: 100%;
+  width: 100%;
+  @include respond-to(desktop-up){
+    width: 50%;
   }
 }
 
@@ -25,9 +25,11 @@
 #product-banner {
   background-image: url('../../../dist/app/images/cw04-T.jpg');
   background-size: cover;
-  height: 60vh;
-  @include respond-to(smartphones) {
-    height: 70vh;
+  height: auto;
+  padding: 30px;
+  @include respond-to(tablet-landscape-up) {
+    height: 60vh;
+    padding: 0;
   }
 }
 
@@ -52,10 +54,10 @@
   background-image: url('../../../dist/app/images/mail02-T.jpg');
   -webkit-background-size: cover;
   background-size: cover;
-  height: 60vh;
-  @include respond-to(smartphones) {
-    height: 75vh;
-    padding: 15px;
+  height: auto;
+  padding: 30px;
+  @include respond-to(tablet-landscape-up) {
+    height: 60vh;
   }
 }
 

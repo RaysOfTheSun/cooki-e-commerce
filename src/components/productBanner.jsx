@@ -4,7 +4,7 @@ import {render} from 'react-dom';
 const ProductBanner = () => {
     return (
         <div className={'d-flex justify-content-center align-items-center flex-mobile-column w-100'}>
-            <div className="text-white text-center w-25-50-100 order-1">
+            <div className="text-white text-center w-25-70-100 order-1">
                 <p className="text-emphasize-medium font-weight-bold">Cookies you will surely love</p>
                 <p className="text-muted mt-4">Some cookies are made for a special reason</p>
                 <input type="button"

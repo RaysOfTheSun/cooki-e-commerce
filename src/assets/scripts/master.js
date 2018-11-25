@@ -1,7 +1,9 @@
 $(window).ready(function () {
-    $('.no-flash').removeClass('no-flash');
     let currSeekWidth = 270;
-    $('#loader').delay(3000).fadeOut();
+    $('.no-flash').removeClass('no-flash');
+    $('#loader').delay(3000).fadeOut(()=>{
+        $("html, body").animate({scrollTop: 0}, 400);
+    });
     $('#notch').toggleClass('nav-notch-hidden'); // have the navigation bar slide down from the top
     $('#landing-text').toggleClass('opacity-0'); // fade out the landing div's text
 

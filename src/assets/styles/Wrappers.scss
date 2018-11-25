@@ -16,36 +16,45 @@
   padding: 100px;
 }
 
-.-mt-30{
+.-mt-30 {
   margin-top: -30px;
 }
 
 .m-5-1r {
-  margin: 5rem;
-  @include respond-to(smartphones) {
-    margin: 1rem;
+  margin: 1rem;
+  @include respond-to(desktop-up) {
+    margin: 5rem;
   }
 }
 
+.m-10-10 {
+  margin: 10px;
+}
+
 .pad-sm-0 {
-  @include respond-to(smartphones){
+  @include respond-to(phone-only) {
     padding: 0 !important;
   }
 }
 
-.w-25-100{
-  width: 25%;
-  @include respond-to(smartphones){
-    width: 100%;
+.w-25-70-100 {
+  width: 100%;
+  @include respond-to(tablet-portrait-up) {
+    width: 70%;
+  }
+  @include respond-to(desktop-up){
+    width: 50%;
+  }
+  @include respond-to(big-desktop-up){
+    width: 25%;
   }
 }
 
 .image-500-200 {
+  height: 200px;
   width: auto;
-  height: 500px;
-  @include respond-to(smartphones) {
-    width: auto;
-    height: 200px;
+  @include respond-to(desktop-up) {
+    height: 500px;
   }
 }
 
@@ -60,19 +69,18 @@
 }
 
 .image-300-200 {
+  height: 200px;
   width: auto;
-  height: 300px;
-  @include respond-to(smartphones){
-    height: 200px;
+  @include respond-to(desktop-up) {
+    height: 300px;
   }
 }
 
 .image-350-270 {
-  width: 350px;
+  width: 270px;
   height: auto;
-  @include respond-to(smartphones){
-    width: 270px;
-    height: auto;
+  @include respond-to(desktop-up) {
+    width: 350px;
   }
 }
 
@@ -83,26 +91,30 @@
 
 .flex-mobile-column {
   width: 50%;
-  flex-direction: row;
-  @include respond-to(smartphones){
-    flex-direction: column;
-  }
-  @include respond-to(tablets){
-    flex-direction: column;
-  }
-}
-
-.flex-tablet-row {
   flex-direction: column;
-  @include respond-to(tablets){
+  @include respond-to(desktop-up){
     flex-direction: row;
   }
 }
 
-.shrinkable {
-  min-width: 0;
-  @include respond-to(smartphones){
-    margin-bottom: 10px;
+.c-flex-column {
+  flex-direction: row;
+  @include respond-to(desktop-up){
+    flex-direction: column;
+  }
+}
+
+//.flex-tablet-row {
+//  flex-direction: column;
+//  @include respond-to(tablets) {
+//    flex-direction: row;
+//  }
+//}
+
+.m-10-10 {
+  margin-bottom: 10px;
+  @include respond-to(desktop-up) {
+    min-width: 0;
   }
 }
 
@@ -111,7 +123,7 @@
 }
 
 .mobile-hidden {
-  @include respond-to(smartphones){
+  @include respond-to(phone-only) {
     display: none !important;
   }
 }
