@@ -108,7 +108,7 @@ $big-screen: 1365px;
     @media only screen and (min-width: $medium-screen-start) and (max-width: $medium-screen-end) {
       @content
     }
-  } @else if($media == desktops){
+  } @else if($media == bigger tablets){
     @media only screen and (min-width: $big-screen) {
       @content
     }

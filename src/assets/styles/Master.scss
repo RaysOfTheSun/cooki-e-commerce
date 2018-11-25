@@ -68,7 +68,26 @@ a {
     border-bottom: 1px solid #ccc;
     cursor: pointer;
     padding-top: 1.5vh;
+    p {
+      &:after {
+        content: "-";
+        float: right;
+      }
+    }
 
+    &.collapsed {
+      p {
+        &:after {
+          content: "+";
+          float: right;
+        }
+      }
+    }
+  }
+  @include respond-to(tablets){
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    padding-top: 1.5vh;
     p {
       &:after {
         content: "-";
@@ -101,8 +120,14 @@ a {
     padding: 10px;
   }
   @include respond-to(tablets) {
-    margin-left: 0;
-    margin-right: 0;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    padding: 10px;
+  }
+
+  @include respond-to(bigger tablets){
+    margin-left: 10rem;
+    margin-right: 10rem;
   }
 }
 

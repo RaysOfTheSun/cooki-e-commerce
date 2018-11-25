@@ -19,7 +19,7 @@ $(window).ready(function () {
     });
 
     // footer stuff
-    let mql = window.matchMedia("screen and (max-width: 767px)");
+    let mql = window.matchMedia("screen and (max-width: 1024px)");
     mediaQueryResponse(mql); // call listener function explicitly at run time
     mql.addEventListener('change', mediaQueryResponse);  // attach listener function to listen in on state changes
 
