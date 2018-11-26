@@ -1,7 +1,10 @@
 $(window).ready(function () {
     let currSeekWidth = 270;
+    let currIndicator = 0;
+    let prevIndicator = -1;
+    let $indicators = $('.indicator');
     $('.no-flash').removeClass('no-flash');
-    $('#loader').delay(3000).fadeOut(()=>{
+    $('#loader').delay(3000).fadeOut(() => {
         $("html, body").animate({scrollTop: 0}, 400);
     });
     $('#notch').toggleClass('nav-notch-hidden'); // have the navigation bar slide down from the top
@@ -11,12 +14,20 @@ $(window).ready(function () {
     $('#engagement-nav-backward').on('click', function () {
         // make sure the user can't scroll passed the first item in the list
         currSeekWidth = (currSeekWidth + 270) > 270 ? 270 : currSeekWidth + 270;
+        currIndicator = currIndicator - 1 > 0 ? currIndicator - 1 : 0;
+        prevIndicator = currIndicator < $($indicators).length ? currIndicator + 1 : currIndicator;
+        $($indicators[prevIndicator]).removeClass('active');
+        $($indicators[currIndicator]).addClass('active');
         $('#engagement-container').css({'transform': `translate3d(${currSeekWidth}px, 0 , 0)`});
     });
 
     $('#engagement-nav-forward').on('click', function () {
         // make sure the user can't scroll past the last item in the list
         currSeekWidth = (currSeekWidth - 270) >= -270 ? currSeekWidth - 270 : -270;
+        currIndicator = currIndicator < $($indicators).length - 1 ? currIndicator + 1 : currIndicator;
+        prevIndicator = currIndicator - 1 > 0 ? currIndicator - 1 : 0;
+        $($indicators[prevIndicator]).removeClass('active');
+        $($indicators[currIndicator]).addClass('active');
         $('#engagement-container').css({'transform': `translate3d(${currSeekWidth}px, 0 ,0)`});
     });
 
@@ -29,6 +40,7 @@ $(window).ready(function () {
         if (mql.matches) {
             $(".taber").attr("data-toggle", "collapse");
             $('.panel-collapse').collapse("hide");
+            $($indicators[0]).toggleClass('active');
         } else {
             $('#engagement-container').css({'transform': ''});
             $('.panel-collapse').collapse("show");
