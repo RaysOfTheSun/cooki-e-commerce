@@ -1,6 +1,5 @@
 import React from 'react'
 import {render} from 'react-dom';
-import EngagementCardCatalogItem from './engagementCardCatalogItem.jsx';
 
 const EngagementCardCatalog = () => {
     const items = [
@@ -27,12 +26,19 @@ const EngagementCardCatalog = () => {
         <div className={'d-flex justify-content-center align-items-center'}>
             {
                 items.map(item => (
-                    <EngagementCardCatalogItem name={item.name} desc={item.desc} image={item.image}/>
+                    <div className={'card mx-3 border-0 d-flex justify-content-center image-350-270'}>
+                        <img src={item.image} className={'card-img-top image-350-270'} alt={item.name}/>
+                        <div className={'card-body mb-4'}>
+                            <h4 className={'font-weight-bold my-3'}>{item.name}</h4>
+                            <p className={'text-extra-small mb-3'}>{item.desc}</p>
+                            <a className={'text-plain'} href={'#'}>{`See more`}
+                                <i className={'fas fa-arrow-right link-arrow'}/></a>
+                        </div>
+                    </div>
                 ))
             }
         </div>
     );
-
 };
 
 render(<EngagementCardCatalog/>, document.getElementById('engagement-container'));

@@ -4,7 +4,7 @@ let router = express.Router();
 
 let connString = "mongodb://localhost:27017/";
 
-router.get('/index', (request, response, next) => {
+router.get('/', (request, response, next) => {
     response.render('index');
 });
 

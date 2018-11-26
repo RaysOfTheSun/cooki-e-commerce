@@ -1,4 +1,6 @@
 $(window).ready(function () {
+    let mql = window.matchMedia("screen and (max-width: 1024px)");
+    let mobileMql = window.matchMedia(('only screen and (max-width: 599px'));
     let currSeekWidth = 270;
     let currIndicator = 0;
     let prevIndicator = -1;
@@ -9,6 +11,8 @@ $(window).ready(function () {
     });
     $('#notch').toggleClass('nav-notch-hidden'); // have the navigation bar slide down from the top
     $('#landing-text').toggleClass('opacity-0'); // fade out the landing div's text
+
+    mediaQueryResponse(mql); // call listener function explicitly at run time
 
     // handle the navigation of the engagement cards on a smaller viewport
     $('#engagement-nav-backward').on('click', function () {
@@ -32,15 +36,15 @@ $(window).ready(function () {
     });
 
     // footer stuff
-    let mql = window.matchMedia("screen and (max-width: 1024px)");
-    mediaQueryResponse(mql); // call listener function explicitly at run time
     mql.addEventListener('change', mediaQueryResponse);  // attach listener function to listen in on state changes
 
     function mediaQueryResponse(mql) {
         if (mql.matches) {
+            // currIndicator = 1;
+            // prevIndicator = 0;
             $(".taber").attr("data-toggle", "collapse");
             $('.panel-collapse').collapse("hide");
-            $($indicators[0]).toggleClass('active');
+            $($indicators[currIndicator]).toggleClass('active');
         } else {
             $('#engagement-container').css({'transform': ''});
             $('.panel-collapse').collapse("show");
