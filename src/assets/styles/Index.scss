@@ -46,7 +46,7 @@
   -ms-transform: translate3d(270px, 0, 0);
   -o-transform: translate3d(270px, 0, 0);
   transform: translate3d(270px, 0, 0);
-  @include respond-to(desktop-up) {
+  @include respond-to(tablet-portrait-up) {
     -webkit-transform: translate3d(0, 0, 0);
     -moz-transform: translate3d(0, 0, 0);
     -ms-transform: translate3d(0, 0, 0);
@@ -135,7 +135,7 @@ a {
   width: 10vw;
   z-index: 1;
   background-color: transparent;
-  @include respond-to(desktops) {
+  @include respond-to(tablet-landscape-up) {
     display: none;
   }
 }
@@ -146,13 +146,6 @@ a {
 
 #engagement-nav-forward {
   right: 0;
-}
-
-#engagement-indicators {
-  display: flex;
-  @include respond-to(desktop-up){
-    display: none;
-  }
 }
 
 .indicator {
@@ -166,5 +159,9 @@ a {
 
   &.active {
     background-color: $cookie-brown;
+  }
+
+  @include respond-to(tablet-landscape-up){
+    display: none;
   }
 }
