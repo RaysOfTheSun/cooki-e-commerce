@@ -33,7 +33,7 @@ export default class Navbar extends React.Component {
                     <span className="navbar-toggler-icon"></span>
                 </button>
                 <a href="/"
-                   className="navbar-brand mx-auto d-block text-center order-lg-1 w-25 text-cookie text-emphasize-medium font-weight-bold">Cookie
+                   className="navbar-brand mx-auto d-block text-center order-lg-0 order-md-0 order-xl-1 w-25 text-cookie text-emphasize-medium font-weight-bold">Cookie
                     Stop</a>
                 <div className="navbar-collapse collapse dual-nav w-50 order-1 order-md-0 ">
                     <ul className="navbar-nav">
