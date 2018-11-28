@@ -16,3 +16,10 @@ exports.GetCookiesByCategory = (req, res) => {
         res.send(result);
     })
 };
+
+exports.GetCookie = (req, res) => {
+    collection.find({'name': req.params.cookie}, (err, result)=>{
+        if(err) throw err;
+        res.send(result);
+    });
+};
