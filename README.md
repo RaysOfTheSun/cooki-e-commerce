@@ -14,9 +14,9 @@ Once all that is taken care of, follow the steps below to set up the project and
    * __stylesheets__: There are various stylesheets found in the _src/assets/styles_ directory. Each stylesheet is named after the component of the application that it is styling. To modify general style rules, make adjustments to the `globals` stylesheet. 
 3. Once all desired edits are compeleted, on your terminal, run `npm run-script build` to build the webpack bundle used by the project.
 4. Start up the server by running `npm start` or `node server` using your terminal.
-5. View the application by navigating to `http://localhost:[port number]/index`. Where `port number` is the value you passed to _listen_ in __server.js__. Alternatively, it is __3000__ by default.
+5. View the application by navigating to `http://localhost:[port number]`. Where `port number` is the value you passed to _listen_ in __server.js__. Alternatively, it is __3000__ by default.
 
 # Notes
 * At the making of this project, the current version of Node.js is _8.11.3_
-* Big thanks to the owners of all the images I have used in this project.
 * Big thanks to the creator of the [`KR Bite Me font`](https://www.dafont.com/kr-bite-me.font?text=Cookie+stop).
+* Big thanks to the wonderful people at [unsplash](https://unsplash.com/) for their awesome images!
