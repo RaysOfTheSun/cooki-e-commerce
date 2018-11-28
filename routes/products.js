@@ -1,4 +1,3 @@
-import dotenv from 'dotenv';
 let express = require('express');
 let router = express.Router();
 // set up dotenv
