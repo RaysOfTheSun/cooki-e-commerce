@@ -1,9 +1,10 @@
 # About The Project
-`cooki-e-commerce` is a web app built using a bunch of javascript frameworks or web technologies such as `react`, `node` and `expressJS` to sell a variety of cookies for an imaginary business with the name of "Cookie Stop".
+`cooki-e-commerce` is a web app built using the power of javascript and web technologies such as `react`, `node` and `expressJS` to sell a variety of cookies for an imaginary business with the name of "Cookie Stop".
 
 # Set it Up
 In case you want to play around with the project on your own machine, you would have to:
 * Install the latest version of [`node.js`](https://nodejs.org/en/) 
+* Install the latest version of [`mongodb`](https://www.mongodb.com/download-center/community)
 * Open up a terminal window and navigate to the directory where the project is stored
 
 Once all that is taken care of, follow the steps below to set up the project and have it running.
