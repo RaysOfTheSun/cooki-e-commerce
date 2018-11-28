@@ -2,7 +2,8 @@
 
 #landing-banner {
   min-height: 90vh;
-  background-image: url('../../../dist/app/images/cw03-T.jpg');
+  background-image: url('https://images.unsplash.com/photo-1543365268-463f48b3704a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=' +
+    '75c5df1043b38984e968aec83450a750&auto=format&fit=crop&w=1950&q=80');
   background-size: cover;
 }
 
@@ -23,7 +24,7 @@
 }
 
 #product-banner {
-  background-image: url('../../../dist/app/images/cw04-T.jpg');
+  background-image: url('https://i.imgur.com/Upmqm1g.jpg');
   background-size: cover;
   height: auto;
   padding: 30px;
@@ -41,17 +42,23 @@
 
 #engagement-container {
   transition: transform 0.3s ease-in-out;
-  @include respond-to(smartphones) {
-    -webkit-transform: translate3d(270px, 0, 0);
-    -moz-transform: translate3d(270px, 0, 0);
-    -ms-transform: translate3d(270px, 0, 0);
-    -o-transform: translate3d(270px, 0, 0);
-    transform: translate3d(270px, 0, 0);
+  -webkit-transform: translate3d(270px, 0, 0);
+  -moz-transform: translate3d(270px, 0, 0);
+  -ms-transform: translate3d(270px, 0, 0);
+  -o-transform: translate3d(270px, 0, 0);
+  transform: translate3d(270px, 0, 0);
+  @include respond-to(tablet-landscape-up) {
+    -webkit-transform: translate3d(0, 0, 0);
+    -moz-transform: translate3d(0, 0, 0);
+    -ms-transform: translate3d(0, 0, 0);
+    -o-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 #news-banner {
-  background-image: url('../../../dist/app/images/mail02-T.jpg');
+  background-image: url('https://images.unsplash.com/photo-1543366883-b1051ec69cff?ixlib=' +
+    'rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=bf5fe4b00f0a604e755e1fdc3aff7de8&auto=format&fit=crop&w=1350&q=80');
   -webkit-background-size: cover;
   background-size: cover;
   height: auto;
@@ -91,7 +98,7 @@ a {
 
 #serve-ice {
   background-size: cover;
-  background: url("../../../dist/app/images/cw07-T.jpg") center;
+  background: url('https://i.imgur.com/8EbsUyR.jpg') center;
   align-self: stretch;
   color: white;
   margin-left: 0;
@@ -103,12 +110,12 @@ a {
 }
 
 #partner-banner {
-  margin: 10px;
+  margin: 18px 18px 36px 18px;
 }
 
 #serve-cookies {
   background-size: cover;
-  background: url("../../../dist/app/images/cw06-T.jpg") center;
+  background: url('https://i.imgur.com/Uzf1qyU.jpg') center;
   align-self: stretch;
   color: white;
   margin-right: 0;
@@ -130,7 +137,7 @@ a {
   width: 10vw;
   z-index: 1;
   background-color: transparent;
-  @include respond-to(desktops) {
+  @include respond-to(tablet-landscape-up) {
     display: none;
   }
 }
@@ -141,4 +148,22 @@ a {
 
 #engagement-nav-forward {
   right: 0;
+}
+
+.indicator {
+  transition: background-color 0.3s ease-in-out;
+  width: 12px;
+  height: 12px;
+  margin: 2px;
+  background-color: white;
+  border: 1.5px solid $cookie-brown;
+  border-radius: 350px;
+
+  &.active {
+    background-color: $cookie-brown;
+  }
+
+  @include respond-to(tablet-landscape-up){
+    display: none;
+  }
 }

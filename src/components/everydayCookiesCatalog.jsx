@@ -1,8 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom';
-import ProductCatalogItem from "./productCatalogItem.jsx";
 
-export class ProductCatalog extends React.Component {
+export class EverydayCookiesCatalog extends React.Component {
     constructor(props) {
         super(props);
         this.state = {products: []};
@@ -43,11 +42,24 @@ export class ProductCatalog extends React.Component {
     render() {
         return (
             this.state.products.map((productCollection, i) => (
-                    <div className={i > 0 ? 'd-flex justify-content-center align-items-center flex-mobile-column mobile-hidden':
-                        'd-flex justify-content-center align-items-center flex-mobile-column' }>
+                    <div
+                        className={i > 0 ? 'd-flex justify-content-center align-items-center flex-mobile-column mobile-hidden' :
+                            'd-flex justify-content-center align-items-center flex-mobile-column'}>
                         {
                             productCollection.map(product => (
-                                <ProductCatalogItem name={product.name} desc={product.desc} image={product.image}/>
+                                <div className={'d-flex justify-content-center align-items-center flex-column'}>
+                                    <a href={'#'} className={'text-plain'}>
+                                        <div className='ml-3 mr-3'>
+                                            <img className={"card-img-top image-350-270 card-item-image mb-3"} src={product.image}
+                                                 alt={"Card image cap"}/>
+                                            <div
+                                                className={'d-flex justify-content-center align-items-center flex-column h-100'}>
+                                                <h4 className={'font-weight-light mb-1 text-center'}>{product.name}</h4>
+                                                <p className={'text-extra-small text-muted'}>{product.desc}</p>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
                             ))
                         }
                     </div>
@@ -57,4 +69,4 @@ export class ProductCatalog extends React.Component {
     }
 }
 
-render(<ProductCatalog/>, document.getElementById('everyday-container'));
+render(<EverydayCookiesCatalog/>, document.getElementById('everyday-container'));
