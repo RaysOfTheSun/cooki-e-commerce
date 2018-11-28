@@ -38,7 +38,7 @@ export default class Navbar extends React.Component {
                 <div className="navbar-collapse collapse dual-nav w-50 order-1 order-md-0 ">
                     <ul className="navbar-nav">
                         <li className={`nav-item ${this.makeActive('home')}`}>
-                            <a className="nav-link pb-4 pt-4" href="/index" data-loc={'home'} onClick={this.clickHandler}>Home</a>
+                            <a className="nav-link pb-4 pt-4" href="/" data-loc={'home'} onClick={this.clickHandler}>Home</a>
                         </li>
                         <li className={`nav-item ${this.makeActive('products')}`}>
                             <a className="nav-link pb-4 pt-4" href="/products" data-loc={'products'} onClick={this.clickHandler}>Products</a>
