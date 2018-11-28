@@ -26,7 +26,7 @@ app.use('/get-products', getProductRoutes);
 // where we'll be getting our assets
 app.use(express.static('./dist/app/'));
 
-app.listen(3000, () => {
-    console.log(`The application is live at ${ip.address()}:3000`);
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`The application is live at ${ip.address()}:${process.env.PORT}`);
     console.log('Access the application on your current device by going to localhost:3000');
 });
