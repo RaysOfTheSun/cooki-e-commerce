@@ -13,6 +13,15 @@ const cookieSchema = new Schema({
     },
     category : {
         type: 'string'
+    },
+    serving: {
+        type: 'string'
+    },
+    ingredients: {
+        type: Schema.Types.String
+    },
+    nutriFacts: {
+        type: Schema.Types.Mixed
     }
 });
 

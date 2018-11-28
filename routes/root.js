@@ -9,6 +9,9 @@ router.get('/products', (request, response) => {
     response.render('products');
 });
 
+router.get('/cookies', (request, response)=>{
+    response.render('cookies');
+});
 
 router.post('/', (req, res) => {
     console.log('A POST has been made!');

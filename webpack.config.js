@@ -9,7 +9,8 @@ module.exports = {
         rmain: ["./src/components/cartSidebar.jsx", "./src/components/navbar.jsx"],
         rindex: ["./src/components/everydayCookiesCatalog.jsx", "./src/components/engagementCardCatalog.jsx",
             "./src/components/productBanner.jsx", "./src/components/newsBanner.jsx"],
-        rProducts : ['./src/components/serviceBanner.jsx']
+        rProducts : ['./src/components/serviceBanner.jsx'],
+        rProduct: ['./src/components/productContainer.jsx']
     },
     output: {
         path: path.join(DIST_DIR, "app"),
