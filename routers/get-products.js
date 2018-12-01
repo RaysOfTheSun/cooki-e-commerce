@@ -8,7 +8,10 @@ mongoose.Promise = global.Promise;
 let string = 'mongodb://127.0.0.1:27017/cookieStop';
 mongoose.connect(process.env.MONGODB || string, {useNewUrlParser: true});
 
-router.get('/:category', controller.GetCookiesByCategory);
+router.get('/cookie/:cookie', controller.GetCookie);
+router.get('/category/:category', controller.GetCookiesByCategoryBasic);
 router.get('/', controller.GetAllCookies);
+router.get('/basic', controller.GetCookieBasic);
+router.get('/cookie-products', controller.GetCookieProductsBasic);
 
 module.exports = router;

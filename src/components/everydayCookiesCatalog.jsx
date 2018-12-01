@@ -10,7 +10,7 @@ export class EverydayCookiesCatalog extends React.Component {
     }
 
     GetCatalogItems() {
-        fetch('/get-products/everyday', {method: 'GET'})
+        fetch('/get-products/basic', {method: 'GET'})
             .then(res => res.json())
             .then(items => this.GroupCollection(items));
     }

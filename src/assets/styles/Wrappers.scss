@@ -139,3 +139,98 @@
 .p-relative {
   position: relative;
 }
+
+.p-absolute {
+  position: absolute;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+.nav-arrow {
+  position: absolute;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  height: 100%;
+  width: 10vw;
+  z-index: 1;
+}
+
+.arrow {
+  transition: transform 300ms ease-in-out;
+  position: absolute;
+  background-color: $cookie-brown;
+  cursor: pointer;
+  &:hover {
+    transform: translate3d(0, 0, 0) scale(1.2) !important;
+  }
+  &.inactive {
+    opacity: 0.5;
+  }
+}
+
+.pos-left {
+  left: 0;
+}
+
+.pos-right {
+  right: 0;
+}
+
+#arrow-forward {
+  transform: translate3d(100%, 0, 0);
+}
+#arrow-backward {
+  transform: translate3d(-100%, 0, 0);
+}
+
+#product-container {
+  transition: transform 500ms ease-in-out;
+  padding: 0 70px;
+  height: 400px;
+  width: 100%;
+}
+
+#product-slide {
+  &:hover {
+    .arrow {
+      transform: translate3d(0,0,0);
+    }
+  }
+}
+
+.item {
+  transition: filter 300ms ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100%;
+  filter: brightness(30%);
+  padding: 0 70px;
+  /*shift each item if we have an even number of itemCount*/
+
+
+  & img {
+    max-height: 100%;
+  }
+
+  &.active {
+    filter: none;
+  }
+}
+
+.item-shift {
+  transform: translate3d(-50%, 0, 0);
+}
+
+.wrap-top-50 {
+  padding-top: 50px;
+}
+
+.wrap-top-100 {
+  padding-top: 100px;
+}
