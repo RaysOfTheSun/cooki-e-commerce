@@ -234,3 +234,18 @@
 .wrap-top-100 {
   padding-top: 100px;
 }
+
+.product-desc {
+  transition: opacity 300ms ease-in-out;
+  opacity: 0;
+  &.active {
+    opacity: 1;
+  }
+}
+
+.w-70 {
+  width: 70%;
+  @include respond-to('tablet-portrait-up'){
+    width: 40%;
+  }
+}

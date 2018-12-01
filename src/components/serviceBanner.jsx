@@ -13,7 +13,7 @@ const ServiceBanner = () => {
                 </p>
             </div>
             <div className="d-flex justify-content-center align-items-center flex-mobile-column container p-0 my-3">
-                <div id="serve-cookies" className="justify-content-center align-items-center
+                <div id="serve-cookies" className="d-flex justify-content-center align-items-center
              flex-column text-center wrap-20">
                     <img src="./images/cb01-S.png" className="image-200-150 mt-4" alt={''}/>
                     <h2 className="font-weight-bold mt-5 mb-3">Cookies</h2>
@@ -24,10 +24,10 @@ const ServiceBanner = () => {
                         good
                         for your health.
                     </p>
-                    <input type="button" value="Cookies"
-                           className="form-control-lg text-extra-small rounded-0 border-0 m-2 w-50 font-weight-bold bg-white text-dark"/>
-                    <input type="button" value="Download spec sheet"
-                           className="form-control-lg text-extra-small rounded-0 border-0 m-2 w-50 font-weight-bold bg-white text-dark"/>
+                    <a href={'products/cookies'} className="form-control form-control-lg p-3 w-50 text-extra-small m-2 rounded-0 border-0
+                        font-weight-bold bg-white text-dark">Cookies</a>
+                    <a href={'products/cookies'} className="form-control form-control-lg p-3 w-50 text-extra-small m-2 rounded-0 border-0
+                        font-weight-bold bg-white text-dark">Download spec sheet</a>
                 </div>
                 <div id="serve-ice"
                      className="d-flex justify-content-center align-items-center flex-column text-center wrap-20">
@@ -42,10 +42,10 @@ const ServiceBanner = () => {
                         ready
                         and take a bite!
                     </p>
-                    <input type="button" value="Cookie sandwiches"
-                           className="form-control-lg text-extra-small rounded-0 border-0 m-2 w-50 font-weight-bold bg-white text-dark"/>
-                    <input type="button" value="Download spec sheet"
-                           className="form-control-lg text-extra-small rounded-0 border-0 m-2 w-50 font-weight-bold bg-white text-dark"/>
+                    <a href={'products/cookies'} className="form-control form-control-lg p-3 w-50 text-extra-small m-2 rounded-0 border-0
+                        font-weight-bold bg-white text-dark">Cookie Sandwiches</a>
+                    <a href={'products/cookies'} className="form-control form-control-lg p-3 w-50 text-extra-small m-2 rounded-0 border-0
+                        font-weight-bold bg-white text-dark">Download spec sheet</a>
                 </div>
             </div>
             <div id={'partner-banner'}

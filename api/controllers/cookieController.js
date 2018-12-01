@@ -35,7 +35,7 @@ exports.GetCookieBasic = (req, res) => {
 
 // get all the cookies. But, only include their name, full description and actual image
 exports.GetCookieProductsBasic = (req, res) => {
-    collection.find({}, 'name imageActual desc', (err, cookie) => {
+    collection.find({}, 'name imageActual descFull', (err, cookie) => {
         if (err) throw err;
         res.send(cookie);
     });
