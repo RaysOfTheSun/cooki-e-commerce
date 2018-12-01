@@ -7,7 +7,7 @@ export default class ProductSlide extends React.Component {
         // the containerRef of our items
         this.containerRef = React.createRef();
         // initialize our state
-        this.state = {currSeek: 0, currItem: 0};
+        this.state = {currSeek: 0, currItem: 0, reachedEnd: false};
         // bind our event handlers
         this.SlideForward = this.SlideForward.bind(this);
         this.SlideBackward = this.SlideBackward.bind(this);
@@ -40,32 +40,38 @@ export default class ProductSlide extends React.Component {
     }
 
     SlideForward() {
-        this.ToggleLights(this.currItem, this.currItem + 1 >= this.itemCount ?
-            this.currItem : (this.currItem += 1));
-        this.setState((currState) => {
-            return {
-                currSeek: (currState.currSeek - this.seekWidth) > this.minSeek ?
-                    (currState.currSeek - this.seekWidth) : this.minSeek,
-                currItem: this.currItem
-            }
-        }, () => {
-            this.containerRef.current.setAttribute('style', `transform:translate3d(${this.state.currSeek}px, 0, 0)`);
-            this.props.onItemChange(this.state.currItem);
-        });
+        if (this.state.currItem < this.itemCount - 1) {
+            this.ToggleLights(this.currItem, this.currItem + 1 >= this.itemCount ?
+                this.currItem : (this.currItem += 1));
+            this.setState((currState) => {
+                return {
+                    currSeek: (currState.currSeek - this.seekWidth) > this.minSeek ?
+                        (currState.currSeek - this.seekWidth) : this.minSeek,
+                    currItem: this.currItem,
+                    reachedEnd: this.currItem > this.itemCount
+                }
+            }, () => {
+                this.containerRef.current.setAttribute('style', `transform:translate3d(${this.state.currSeek}px, 0, 0)`);
+                this.props.onItemChange(this.state.currItem);
+            });
+        }
     };
 
     SlideBackward() {
-        this.ToggleLights(this.currItem, this.currItem - 1 >= 0 ? (this.currItem -= 1) : 0);
-        this.setState((currState) => {
-            return {
-                currSeek: currState.currSeek + this.seekWidth < this.maxSeek ?
-                    (currState.currSeek += this.seekWidth) : this.maxSeek,
-                currItem: this.currItem
-            }
-        }, () => {
-            this.containerRef.current.setAttribute('style', `transform:translate3d(${this.state.currSeek}px, 0, 0)`);
-            this.props.onItemChange(this.state.currItem);
-        });
+        if (!this.state.reachedEnd) {
+            this.ToggleLights(this.currItem, this.currItem - 1 >= 0 ? (this.currItem -= 1) : 0);
+            this.setState((currState) => {
+                return {
+                    currSeek: currState.currSeek + this.seekWidth < this.maxSeek ?
+                        (currState.currSeek += this.seekWidth) : this.maxSeek,
+                    currItem: this.currItem,
+                    reachedEnd: this.currItem <= 0
+                }
+            }, () => {
+                this.containerRef.current.setAttribute('style', `transform:translate3d(${this.state.currSeek}px, 0, 0)`);
+                this.props.onItemChange(this.state.currItem);
+            });
+        }
     };
 
     ToggleLights(oldPos, newPos) {
