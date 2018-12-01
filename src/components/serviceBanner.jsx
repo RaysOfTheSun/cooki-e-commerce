@@ -15,7 +15,7 @@ const ServiceBanner = () => {
             <div className="d-flex justify-content-center align-items-center flex-mobile-column container p-0 my-3">
                 <div id="serve-cookies" className="d-flex justify-content-center align-items-center
              flex-column text-center wrap-20">
-                    <img src="./images/cb01-S.png" className="image-200-150 mt-4" alt={''}/>
+                    <img src="/images/cb01-S.png" className="image-200-150 mt-4" alt={''}/>
                     <h2 className="font-weight-bold mt-5 mb-3">Cookies</h2>
                     <p className="mb-5">
                         Cookie Stop's cookies are made with so much love that you can feel it in every bite! Not only
@@ -62,7 +62,7 @@ const ServiceBanner = () => {
                         better-for-you flavors to your customers.
                     </p>
                     <a href={'#'} className="form-control form-control-lg p-3 w-70 text-extra-small m-2 rounded-0 border-0
-                        font-weight-bold bg-white text-dark">Contact us</a>
+                        font-weight-bold bg-dark text-white">Contact us</a>
                 </div>
             </div>
         </div>
