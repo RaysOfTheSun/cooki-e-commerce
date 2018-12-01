@@ -96,8 +96,8 @@ export default class ProductSlide extends React.Component {
         this.container = this.containerRef.current;
         return (
             <div className={'d-flex justify-content-center align-items-center'} id={'product-slide'}>
-                <div className={'nav-arrow pos-left'} onClick={this.SlideBackward}>
-                  <span className="wrap-20 arrow pos-left" id="arrow-backward">
+                <div className={'nav-arrow pos-left'}>
+                  <span className="wrap-20 arrow pos-left" id="arrow-backward" onClick={this.SlideBackward}>
                     <i className="fas fa-arrow-left"/>
                   </span>
                 </div>
@@ -112,8 +112,8 @@ export default class ProductSlide extends React.Component {
                         ))
                     }
                 </div>
-                <div className="nav-arrow pos-right" id="arrow-forward-container" onClick={this.SlideForward}>
-                  <span className="wrap-20 arrow pos-right" id="arrow-forward">
+                <div className="nav-arrow pos-right" id="arrow-forward-container">
+                  <span className="wrap-20 arrow pos-right" id="arrow-forward" onClick={this.SlideForward}>
                     <i className="fas fa-arrow-right"/>
                   </span>
                 </div>
