@@ -24,9 +24,9 @@ const ServiceBanner = () => {
                         good
                         for your health.
                     </p>
-                    <a href={'products/cookies'} className="form-control form-control-lg p-3 w-70 text-extra-small m-2 rounded-0 border-0
+                    <a href={'products/cookies'} className="form-control form-control-lg p-3 w-40-70 text-extra-small m-2 rounded-0 border-0
                         font-weight-bold bg-white text-dark">Cookies</a>
-                    <a href={'products/cookies'} className="form-control form-control-lg p-3 w-70 text-extra-small m-2 rounded-0 border-0
+                    <a href={'products/cookies'} className="form-control form-control-lg p-3 w-40-70 text-extra-small m-2 rounded-0 border-0
                         font-weight-bold bg-white text-dark">Download spec sheet</a>
                 </div>
                 <div id="serve-ice"
@@ -42,9 +42,9 @@ const ServiceBanner = () => {
                         ready
                         and take a bite!
                     </p>
-                    <a href={'products/cookies'} className="form-control form-control-lg p-3 w-70 text-extra-small m-2 rounded-0 border-0
+                    <a href={'products/cookies'} className="form-control form-control-lg p-3 w-40-70 text-extra-small m-2 rounded-0 border-0
                         font-weight-bold bg-white text-dark">Cookie Sandwiches</a>
-                    <a href={'products/cookies'} className="form-control form-control-lg p-3 w-70 text-extra-small m-2 rounded-0 border-0
+                    <a href={'products/cookies'} className="form-control form-control-lg p-3 w-40-70 text-extra-small m-2 rounded-0 border-0
                         font-weight-bold bg-white text-dark">Download spec sheet</a>
                 </div>
             </div>
@@ -61,7 +61,7 @@ const ServiceBanner = () => {
                         Seeking menu inspiration or on-the-go options? Team up with our bakers to bring dynamic,
                         better-for-you flavors to your customers.
                     </p>
-                    <a href={'#'} className="form-control form-control-lg p-3 w-70 text-extra-small m-2 rounded-0 border-0
+                    <a href={'#'} className="form-control form-control-lg p-3 w-40-70 text-extra-small m-2 rounded-0 border-0
                         font-weight-bold bg-dark text-white">Contact us</a>
                 </div>
             </div>

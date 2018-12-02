@@ -6,6 +6,10 @@ export default class ProductSlide extends React.Component {
         super(props);
         // the containerRef of our items
         this.containerRef = React.createRef();
+        // a reference to our left arrow
+        this.leftArrow = undefined;
+        // a reference to our right arrow
+        this.rightArrow = undefined;
         // initialize our state
         this.state = {currSeek: 0, currItem: 0, reachedEnd: false};
         // bind our event handlers
@@ -13,6 +17,8 @@ export default class ProductSlide extends React.Component {
         this.SlideBackward = this.SlideBackward.bind(this);
         this.ToggleLights = this.ToggleLights.bind(this);
         this.fadeInDescriptionText = this.fadeInDescriptionText.bind(this);
+        this.ToggleArrows = this.ToggleArrows.bind(this);
+        // this.ToggleRightArrow = this.ToggleRightArrow.bind(this);
         // this.ToggleCaption = this.ToggleCaption.bind(this);
     }
 
@@ -51,9 +57,11 @@ export default class ProductSlide extends React.Component {
                     reachedEnd: this.currItem > this.itemCount
                 }
             }, () => {
+                this.ToggleArrows();
                 this.containerRef.current.setAttribute('style', `transform:translate3d(${this.state.currSeek}px, 0, 0)`);
                 this.props.onItemChange(this.state.currItem);
             });
+            this.leftArrow ? this.leftArrow.classList.remove('inactive') : ''
         }
     };
 
@@ -68,11 +76,29 @@ export default class ProductSlide extends React.Component {
                     reachedEnd: this.currItem <= 0
                 }
             }, () => {
+                this.ToggleArrows();
                 this.containerRef.current.setAttribute('style', `transform:translate3d(${this.state.currSeek}px, 0, 0)`);
                 this.props.onItemChange(this.state.currItem);
             });
         }
     };
+
+
+    ToggleArrows() {
+        this.leftArrow = !this.leftArrow ? document.querySelector('#arrow-backward') : this.leftArrow;
+        if (this.leftArrow && this.state.reachedEnd) {
+            this.leftArrow.classList.add('inactive');
+        } else if (this.leftArrow) {
+            this.leftArrow.classList.remove('inactive');
+        }
+
+        this.rightArrow = !this.rightArrow ? document.querySelector('#arrow-forward') : this.rightArrow;
+        if (this.rightArrow && this.state.currItem < (this.itemCount - 1)) {
+            this.rightArrow.classList.remove('inactive');
+        } else if (this.rightArrow) {
+            this.rightArrow.classList.add('inactive');
+        }
+    }
 
     ToggleLights(oldPos, newPos) {
         // there is no way that I know of to grab dynamically created DOM elements before they are actually
