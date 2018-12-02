@@ -1,6 +1,5 @@
 $(window).ready(function () {
     let mql = window.matchMedia("screen and (max-width: 1024px)");
-    let mobileMql = window.matchMedia(('only screen and (max-width: 599px'));
     let currSeekWidth = 270;
     let currIndicator = 0;
     let prevIndicator = -1;

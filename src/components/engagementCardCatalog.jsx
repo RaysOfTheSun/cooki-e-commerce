@@ -23,22 +23,32 @@ const EngagementCardCatalog = () => {
         }];
 
     return (
-        <div className={'d-flex justify-content-center align-items-center'}>
-            {
-                items.map(item => (
-                    <div className={'card mx-3 border-0 d-flex justify-content-center image-350-270'}>
-                        <img src={item.image} className={'card-img-top image-350-270'} alt={item.name}/>
-                        <div className={'card-body mb-4'}>
-                            <h4 className={'font-weight-bold my-3'}>{item.name}</h4>
-                            <p className={'text-extra-small mb-3'}>{item.desc}</p>
-                            <a className={'text-plain'} href={'#'}>{`See more`}
-                                <i className={'fas fa-arrow-right link-arrow'}/></a>
+        <div className={'d-flex justify-content-center align-items-center flex-column wrap-30'}>
+            <h3 className={'w-40-100 text-center pl-2 pr-2'}>This is magic in the making</h3>
+            <div id="engagement-nav-backward" className="nav-arrow"/>
+            <div id="engagement-nav-forward" className="nav-arrow"/>
+            <div className={'d-flex justify-content-center align-items-center wrap-30'} id={'engagement-container'}>
+                {
+                    items.map(item => (
+                        <div className={'card mx-3 border-0 d-flex justify-content-center image-350-270'}>
+                            <img src={item.image} className={'card-img-top image-350-270'} alt={item.name}/>
+                            <div className={'card-body mb-4'}>
+                                <h4 className={'font-weight-bold my-3'}>{item.name}</h4>
+                                <p className={'text-extra-small mb-3'}>{item.desc}</p>
+                                <a className={'text-plain'} href={'#'}>{`See more`}
+                                    <i className={'fas fa-arrow-right link-arrow'}/></a>
+                            </div>
                         </div>
-                    </div>
-                ))
-            }
+                    ))
+                }
+            </div>
+            <div className="d-flex justify-content-center align-content-center" id="engagement-indicators">
+                <div className="indicator"/>
+                <div className="indicator"/>
+                <div className="indicator"/>
+            </div>
         </div>
     );
 };
 
-render(<EngagementCardCatalog/>, document.getElementById('engagement-container'));
+render(<EngagementCardCatalog/>, document.getElementById('engagement-banner'));
