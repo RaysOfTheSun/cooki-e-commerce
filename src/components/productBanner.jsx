@@ -11,7 +11,7 @@ const ProductBanner = () => {
                        className="btn btn-lg btn-light p-3 px-4 mt-3 text-extra-small rounded-0 font-weight-bold"
                        value="See Our Cookie Sandwiches"/>
             </div>
-            <img src="http://cdn.shopify.com/s/files/1/0713/2387/products/Thick_Mint_grande.png?v=1537559462"
+            <img src="https://i.imgur.com/YKwGPRd.png"
                  className="image-350-270 mx-5"/>
         </div>
     );

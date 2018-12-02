@@ -57,6 +57,13 @@
   }
 }
 
+.w-40-70 {
+  width: 70%;
+  @include respond-to('tablet-portrait-up'){
+    width: 40%;
+  }
+}
+
 .image-500-200 {
   height: 200px;
   width: auto;
@@ -138,4 +145,21 @@
 
 .p-relative {
   position: relative;
+}
+
+.p-absolute {
+  position: absolute;
+}
+
+.overflow-hidden {
+  overflow: hidden;
+}
+
+
+.wrap-top-50 {
+  padding-top: 50px;
+}
+
+.wrap-top-100 {
+  padding-top: 100px;
 }

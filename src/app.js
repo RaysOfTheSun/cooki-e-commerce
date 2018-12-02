@@ -9,6 +9,7 @@ import './assets/styles/Master.scss';
 import './assets/styles/TextShades.scss';
 import './assets/styles/Typography.scss';
 import './assets/styles/Wrappers.scss';
+import './assets/styles/Products.scss';
 
 import $ from 'jquery';
 window.jQuery = $;
