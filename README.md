@@ -18,6 +18,7 @@ Once all that is taken care of, follow the steps below to set up the project and
 5. View the application by navigating to `http://localhost:[port number]`. Where `port number` is the value you passed to _listen_ in __server.js__. Alternatively, it is __3000__ by default.
 
 # Notes
+* Source code from branches other than `master`still need to be cleaned up.
 * At the making of this project, the current version of Node.js is _8.11.3_
 * Big thanks to the creator of the [`KR Bite Me font`](https://www.dafont.com/kr-bite-me.font?text=Cookie+stop).
 * Big thanks to the wonderful people at [unsplash](https://unsplash.com/) for their awesome images!
