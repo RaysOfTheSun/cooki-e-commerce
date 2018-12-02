@@ -86,13 +86,14 @@ export default class ProductSlide extends React.Component {
 
     ToggleArrows() {
         this.leftArrow = !this.leftArrow ? document.querySelector('#arrow-backward') : this.leftArrow;
+        this.rightArrow = !this.rightArrow ? document.querySelector('#arrow-forward') : this.rightArrow;
+
         if (this.leftArrow && this.state.reachedEnd) {
             this.leftArrow.classList.add('inactive');
         } else if (this.leftArrow) {
             this.leftArrow.classList.remove('inactive');
         }
 
-        this.rightArrow = !this.rightArrow ? document.querySelector('#arrow-forward') : this.rightArrow;
         if (this.rightArrow && this.state.currItem < (this.itemCount - 1)) {
             this.rightArrow.classList.remove('inactive');
         } else if (this.rightArrow) {
