@@ -32,7 +32,6 @@ const EngagementCardCatalog = () => {
         indicators = !indicators ? document.querySelectorAll('.indicator') : indicators;
         engagementContainer = !engagementContainer ? document.querySelector('#engagement-container') :
             engagementContainer;
-        console.log(indicators);
     };
 
     const SlideBackward = () => {
@@ -65,8 +64,8 @@ const EngagementCardCatalog = () => {
             <div id="engagement-nav-forward" className="nav-arrow" onClick={SlideForward}/>
             <div className={'d-flex justify-content-center align-items-center wrap-30'} id={'engagement-container'}>
                 {
-                    items.map(item => (
-                        <div className={'card mx-3 border-0 d-flex justify-content-center image-350-270'}>
+                    items.map((item, index) => (
+                        <div className={'card mx-3 border-0 d-flex justify-content-center image-350-270'} key={index}>
                             <img src={item.image} className={'card-img-top image-350-270'} alt={item.name}/>
                             <div className={'card-body mb-4'}>
                                 <h4 className={'font-weight-bold my-3'}>{item.name}</h4>

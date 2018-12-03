@@ -18,7 +18,7 @@ export class EverydayCookiesCatalog extends React.Component {
     GroupCollection(collection) {
         let product_collection = [];
         let product_collections = [];
-        // In case our number of products is not evenly divisible by 4,
+        // In case our number of products is not evenly divisible by 3,
         // put the items that will not make the cut into a separate array
         let leftOver = collection.length % 3;
         let leftOvers = collection.slice(collection.length - leftOver, collection.length);
