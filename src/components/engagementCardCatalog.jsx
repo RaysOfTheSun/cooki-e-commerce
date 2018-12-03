@@ -22,11 +22,47 @@ const EngagementCardCatalog = () => {
                 'rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=19a634e222acbab9ab119199eace21e8&auto=format&fit=crop&w=634&q=80'
         }];
 
+    let indicators = undefined;
+    let engagementContainer = undefined;
+    let currIndicator = 0;
+    let prevIndicator = -1;
+    let currSeekWidth = 270;
+
+    const GetElements = () => {
+        indicators = !indicators ? document.querySelectorAll('.indicator') : indicators;
+        engagementContainer = !engagementContainer ? document.querySelector('#engagement-container') :
+            engagementContainer;
+        console.log(indicators);
+    };
+
+    const SlideBackward = () => {
+        GetElements();
+        // make sure the user can't scroll passed the first item in the list
+        currSeekWidth = (currSeekWidth + 270) > 270 ? 270 : currSeekWidth + 270;
+        currIndicator = currIndicator - 1 > 0 ? currIndicator - 1 : 0;
+        prevIndicator = currIndicator < indicators.length ? currIndicator + 1 : currIndicator;
+        indicators[prevIndicator].classList.remove('active');
+        indicators[currIndicator].classList.add('active');
+        engagementContainer.setAttribute('style', `transform:translate3d(${currSeekWidth}px, 0 , 0)`);
+    };
+
+    const SlideForward = () => {
+        GetElements();
+        // make sure the user can't scroll past the last item in the list
+        currSeekWidth = (currSeekWidth - 270) >= -270 ? currSeekWidth - 270 : -270;
+        currIndicator = currIndicator < indicators.length - 1 ? currIndicator + 1 : currIndicator;
+        prevIndicator = currIndicator - 1 > 0 ? currIndicator - 1 : 0;
+        indicators[prevIndicator].classList.remove('active');
+        indicators[currIndicator].classList.add('active');
+        engagementContainer.setAttribute('style', `transform:translate3d(${currSeekWidth}px, 0 , 0)`);
+    };
+
+
     return (
         <div className={'d-flex justify-content-center align-items-center flex-column wrap-30'}>
             <h3 className={'w-40-100 text-center pl-2 pr-2'}>This is magic in the making</h3>
-            <div id="engagement-nav-backward" className="nav-arrow"/>
-            <div id="engagement-nav-forward" className="nav-arrow"/>
+            <div id="engagement-nav-backward" className="nav-arrow" onClick={SlideBackward}/>
+            <div id="engagement-nav-forward" className="nav-arrow" onClick={SlideForward}/>
             <div className={'d-flex justify-content-center align-items-center wrap-30'} id={'engagement-container'}>
                 {
                     items.map(item => (
@@ -43,7 +79,7 @@ const EngagementCardCatalog = () => {
                 }
             </div>
             <div className="d-flex justify-content-center align-content-center" id="engagement-indicators">
-                <div className="indicator"/>
+                <div className="indicator active"/>
                 <div className="indicator"/>
                 <div className="indicator"/>
             </div>
