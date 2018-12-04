@@ -13,5 +13,6 @@ router.get('/category/:category', controller.GetCookiesByCategoryBasic);
 router.get('/', controller.GetAllCookies);
 router.get('/basic', controller.GetCookieBasic);
 router.get('/cookie-products', controller.GetCookieProductsBasic);
+router.get('/cookie-products/info', controller.GetInfo);
 
 module.exports = router;

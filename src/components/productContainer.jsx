@@ -13,9 +13,13 @@ class ProductContainer extends React.Component {
     }
 
     GetCookieInfos() {
+        // TODO: look into promises and async/await
         fetch('/get-products/cookie-products', {method: 'GET'})
             .then(res => res.json())
             .then(cookie => this.setState({cookies: cookie, currItem: Math.floor(cookie.length / 2)}));
+        fetch('/get-products/cookie-products/info')
+            .then(res => res.json())
+            .then(infos => this.setState({cookieInfos: infos}))
     }
 
     onHandleChange(newItem) {
@@ -23,13 +27,14 @@ class ProductContainer extends React.Component {
     }
 
     render() {
+        console.log(this.state);
         let title = this.state.cookies[this.state.currItem] ? this.state.cookies[this.state.currItem].name : '';
         let description = this.state.cookies[this.state.currItem] ? this.state.cookies[this.state.currItem].descFull : '';
         return (
             <div className={'d-flex justify-content-center align-items-center flex-column p-relative overflow-hidden'}>
                 <ProductSlide products={this.state.cookies} onItemChange={this.onHandleChange}/>
                 <ProductDescription title={title} description={description} class={'d-flex justify-content-center ' +
-                    'align-items-center flex-column product-desc active'} />
+                'align-items-center flex-column product-desc active'}/>
             </div>
         )
     }
