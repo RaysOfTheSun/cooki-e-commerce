@@ -26,10 +26,8 @@
 
 .text-emphasize-small {
   font-size: 1rem;
-  line-height: 1rem;
   @include respond-to(tablet-landscape-up) {
     font-size: 1.2rem;
-    line-height: 1.2rem;
   }
 }
 

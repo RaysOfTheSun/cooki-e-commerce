@@ -9,8 +9,8 @@ module.exports = {
         main: ["./src/components/cartSidebar.jsx", "./src/components/navbar.jsx", "./src/master.js"],
         index: ["./src/components/everydayCookiesCatalog.jsx", "./src/components/engagementCardCatalog.jsx",
             "./src/components/productBanner.jsx", "./src/components/newsBanner.jsx", "./src/index.js"],
-        products : ['./src/components/serviceBanner.jsx'],
-        cookies: ['./src/components/productContainer.jsx', './src/products.js']
+        products : ['./src/components/serviceBanner.jsx',  './src/products.js'],
+        cookies: ['./src/components/productContainer.jsx', './src/cookies.js']
     },
     output: {
         path: path.join(DIST_DIR, "app"),

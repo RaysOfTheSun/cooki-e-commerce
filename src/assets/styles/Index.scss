@@ -96,40 +96,6 @@ a {
   }
 }
 
-#serve-ice {
-  background-size: cover;
-  background: url('https://i.imgur.com/8EbsUyR.jpg') center;
-  align-self: stretch;
-  color: white;
-  margin-left: 0;
-  margin-top: 30px;
-  @include respond-to(desktop-up) {
-    margin-left: 30px;
-    margin-top: 0;
-  }
-}
-
-#partner-banner {
-  margin: 18px 18px 36px 18px;
-}
-
-#serve-cookies {
-  background-size: cover;
-  background: url('https://i.imgur.com/Uzf1qyU.jpg') center;
-  align-self: stretch;
-  color: white;
-  margin-right: 0;
-  margin-top: 30px;
-  @include respond-to(desktop-up) {
-    margin-right: 30px;
-    margin-top: 0;
-  }
-}
-
-#products-header {
-  margin-top: 7rem;
-}
-
 .nav-arrow {
   cursor: pointer;
   position: absolute;
