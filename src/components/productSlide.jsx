@@ -32,7 +32,7 @@ export default class ProductSlide extends React.Component {
             this.currItem = Math.floor(this.itemCount / 2);
             // gotta figure out how to get this thing dynamically
             // this is based on the width of each item including its padding/margins
-            this.seekWidth = 444.06;
+            this.seekWidth = 492;
             // the maximum number of itemCount to the left of the collection is
             // always half of it regardless if it's odd or even
             this.maxSeek = this.seekWidth * Math.floor(this.itemCount / 2);
@@ -131,7 +131,7 @@ export default class ProductSlide extends React.Component {
                     <i className="fas fa-arrow-left"/>
                   </span>
                 </div>
-                <div id={'product-container'} className={'d-flex justify-content-center align-items-center p-5'}
+                <div id={'product-container'} className={'d-flex justify-content-center align-items-center p-4'}
                      ref={this.containerRef}>
                     {
                         this.props.products.map((item, index) => (

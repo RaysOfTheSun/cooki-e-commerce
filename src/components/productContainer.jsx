@@ -46,7 +46,7 @@ class ProductContainer extends React.Component {
         let ingredients = this.GetFromState('cookieInfos', this.state.currItem, 'ingredients');
         let points = this.GetFromState('cookieInfos', this.state.currItem, 'points');
         return (
-            <div className={'d-flex justify-content-center align-items-center flex-column p-relative overflow-hidden'}>
+            <div className={'d-flex justify-content-center align-items-center flex-column'}>
                 <ProductSlide products={this.state.cookies} onItemChange={this.onHandleChange}/>
                 <ProductDescription title={title} description={description}/>
                 <ProductInfo info={nutriFacts} serving={serving} ingredients={ingredients} points={points}/>

@@ -174,3 +174,10 @@
 .wrap-top-100 {
   padding-top: 100px;
 }
+
+.pad-big-5 {
+  padding: 1rem;
+  @include respond-to(tablet-portrait-up) {
+    padding: 3rem;
+  }
+}

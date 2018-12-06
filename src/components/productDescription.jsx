@@ -11,8 +11,8 @@ const ProductDescription = ({title, description}) => {
 
     return (
         <div className={'product-desc d-flex justify-content-center align-items-center flex-column wrap-20'}>
-            <p className={'text-emphasize-large font-weight-bold color-cookie'}>{title}</p>
-            <h4 className={'w-40-100 text-center text-emphasize-small'}>{description}</h4>
+            <p className={'text-emphasize-large font-weight-bold color-cookie mb-3'}>{title}</p>
+            <h4 className={'w-40-100 text-center text-emphasize-small mt-3 mb-3'}>{description}</h4>
             {MakeActive()}
         </div>
     )
