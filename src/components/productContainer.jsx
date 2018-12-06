@@ -44,12 +44,12 @@ class ProductContainer extends React.Component {
         let nutriFacts = this.GetFromState('cookieInfos', this.state.currItem, 'nutriFacts');
         let serving = this.GetFromState('cookieInfos', this.state.currItem, 'serving');
         let ingredients = this.GetFromState('cookieInfos', this.state.currItem, 'ingredients');
-
+        let points = this.GetFromState('cookieInfos', this.state.currItem, 'points');
         return (
             <div className={'d-flex justify-content-center align-items-center flex-column p-relative overflow-hidden'}>
                 <ProductSlide products={this.state.cookies} onItemChange={this.onHandleChange}/>
                 <ProductDescription title={title} description={description}/>
-                <ProductInfo info={nutriFacts} serving={serving} ingredients={ingredients}/>
+                <ProductInfo info={nutriFacts} serving={serving} ingredients={ingredients} points={points}/>
             </div>
         )
     }

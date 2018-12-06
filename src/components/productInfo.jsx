@@ -1,14 +1,25 @@
 import React from 'react';
 
-const ProductInfo = ({info, serving, ingredients},) => {
+const ProductInfo = ({info, serving, ingredients, points},) => {
 
-    if (ingredients && serving && info) {
+    if (ingredients && serving && info && points) {
         return (
             <div className={'container d-flex justify-content-center align-items-center flex-mobile-column'}>
-                <div
-                    className={'d-flex justify-content-center align-items-center flex-column flex-grow-50 align-self-start m-3 pb-5'}>
-                    <h3 className={'align-self-start font-weight-bold'}>Ingredients</h3>
-                    <p className={'pt-3'}>{ingredients}</p>
+                <div className={'d-flex justify-content-center align-items-center flex-column'}>
+                    <div
+                        className={'d-flex justify-content-center align-items-center flex-column flex-grow-50 align-self-start'}>
+                        <h3 className={'align-self-start font-weight-bold'}>Ingredients</h3>
+                        <p className={'pt-3'}>{ingredients}</p>
+                    </div>
+                    <div className={'d-flex justify-content-center align-items-center flex-column flex-grow-50 align-self-start pt-5 pb-5'}>
+                        <ul>
+                            {
+                                points.map((point, index) => (
+                                    <li className={'mb-2 mt-2'} key={index}>{point}</li>
+                                ))
+                            }
+                        </ul>
+                    </div>
                 </div>
                 <div className={'d-flex justify-content-center align-items-center flex-column flex-grow-50 m-3'}>
                     <h3 className={'align-self-start font-weight-bold'}>Nutritional Information</h3>

@@ -22,6 +22,9 @@ const cookieSchema = new Schema({
     },
     nutriFacts: {
         type: Schema.Types.Mixed
+    },
+    points: {
+        type: Schema.Types.Mixed
     }
 });
 

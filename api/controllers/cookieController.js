@@ -43,7 +43,7 @@ exports.GetCookieProductsBasic = (req, res) => {
 
 // get all cookies. But, only include additional facts
 exports.GetInfo = (req, res) => {
-    collection.find({}, 'name ingredients serving nutriFacts', (err, cookie) => {
+    collection.find({}, 'name ingredients serving nutriFacts points', (err, cookie) => {
         if (err) throw err;
         res.send(cookie);
     });
