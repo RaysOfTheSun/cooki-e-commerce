@@ -34,6 +34,7 @@ class ProductContainer extends React.Component {
     }
 
     GetFromState(stateItem, index, key) {
+        // make sure there is something in the state before attempting to retrieve the specified key and its value
         return this.state[stateItem][index] ? (this.state[stateItem][index])[key] : undefined;
     }
 
@@ -43,6 +44,7 @@ class ProductContainer extends React.Component {
         let nutriFacts = this.GetFromState('cookieInfos', this.state.currItem, 'nutriFacts');
         let serving = this.GetFromState('cookieInfos', this.state.currItem, 'serving');
         let ingredients = this.GetFromState('cookieInfos', this.state.currItem, 'ingredients');
+
         return (
             <div className={'d-flex justify-content-center align-items-center flex-column p-relative overflow-hidden'}>
                 <ProductSlide products={this.state.cookies} onItemChange={this.onHandleChange}/>
