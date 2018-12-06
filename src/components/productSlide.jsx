@@ -131,6 +131,11 @@ export default class ProductSlide extends React.Component {
                     <i className="fas fa-arrow-left"/>
                   </span>
                 </div>
+                <div className="nav-arrow pos-right" id="arrow-forward-container">
+                  <span className="wrap-20 arrow pos-right" id="arrow-forward" onClick={this.SlideForward}>
+                    <i className="fas fa-arrow-right"/>
+                  </span>
+                </div>
                 <div id={'product-container'} className={'d-flex justify-content-center align-items-center p-4'}
                      ref={this.containerRef}>
                     {
@@ -141,11 +146,6 @@ export default class ProductSlide extends React.Component {
                             </div>
                         ))
                     }
-                </div>
-                <div className="nav-arrow pos-right" id="arrow-forward-container">
-                  <span className="wrap-20 arrow pos-right" id="arrow-forward" onClick={this.SlideForward}>
-                    <i className="fas fa-arrow-right"/>
-                  </span>
                 </div>
             </div>
         );

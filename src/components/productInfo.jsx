@@ -4,7 +4,7 @@ const ProductInfo = ({info, serving, ingredients, points},) => {
 
     if (ingredients && serving && info && points) {
         return (
-            <div className={'container d-flex justify-content-around align-items-center flex-mobile-column'}>
+            <div className={'cookie-container d-flex justify-content-around align-items-center flex-mobile-column'}>
                 <div className={'d-flex justify-content-center align-items-center align-self-start flex-column pad-big-5'}>
                     <div
                         className={'d-flex justify-content-center align-items-center flex-column flex-grow-50 align-self-start border-bottom-cookie pb-5'}>
@@ -42,7 +42,7 @@ const ProductInfo = ({info, serving, ingredients, points},) => {
                         {
                             Object.keys(info).map((key, index) => (
                                 <tr key={index}>
-                                    <td>{key}</td>
+                                    <td>{key === 'totalFat' ? 'total fat' : key}</td>
                                     <td>{info[key]}</td>
                                 </tr>
                             ))
