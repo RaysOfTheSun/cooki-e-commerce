@@ -1,10 +1,22 @@
 @import "globals";
 
 .product-desc {
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 0.4s linear;
   opacity: 0;
+  & p {
+    opacity: 0;
+  }
+  & h4 {
+    opacity: 0;
+  }
   &.active {
     opacity: 1;
+    & p {
+      opacity: 1;
+    }
+    & h4 {
+      opacity: 1;
+    }
   }
 }
 

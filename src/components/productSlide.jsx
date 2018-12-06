@@ -1,4 +1,5 @@
 import React from 'react'
+import $ from 'jquery';
 
 export default class ProductSlide extends React.Component {
     constructor(props) {
@@ -17,6 +18,7 @@ export default class ProductSlide extends React.Component {
         this.ToggleLights = this.ToggleLights.bind(this);
         this.fadeInDescriptionText = this.fadeInDescriptionText.bind(this);
         this.ToggleArrows = this.ToggleArrows.bind(this);
+        this.fadeInDescriptionText = this.fadeInDescriptionText.bind(this);
         // this.ToggleRightArrow = this.ToggleRightArrow.bind(this);
         // this.ToggleCaption = this.ToggleCaption.bind(this);
     }
@@ -108,12 +110,14 @@ export default class ProductSlide extends React.Component {
         (this.itemCollection[oldPos]).classList.toggle("active");
         (this.itemCollection[newPos]).classList.toggle("active");
         this.fadeInDescriptionText();
-        setTimeout(this.fadeInDescriptionText, 300);
     };
 
     fadeInDescriptionText() {
-        document.querySelector('.product-desc').classList.toggle('active');
-    }
+        this.descr = document.querySelector('#product-desc');
+        if (this.descr) {
+            this.descr.classList.remove('active');
+        }
+``    }
 
     render() {
         let itemCssClass = this.itemCount % 2 === 0 ?

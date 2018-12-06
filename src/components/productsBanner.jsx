@@ -1,13 +1,13 @@
 import React from 'react';
 import {render} from 'react-dom';
 
-const ServiceBanner = () => {
+const ProductsBanner = () => {
     return (
         <div className={'d-flex justify-content-center align-items-center flex-column w-75-100'}>
             <div className="container d-flex justify-content-center align-items-center flex-column mb-2"
                  id={'products-header'}>
                 <p className="text-emphasize-large font-weight-bold mb-4">Products</p>
-                <p className="w-25-70-100 text-center">
+                <p className="w-40-100 text-center">
                     From flavorful menu creations to grab-and-go innovations, you won't believe what's being crafted in
                     Cookie Stop's ovens. You and your guests will love the endless, better-for-you possibilities.
                 </p>
@@ -69,4 +69,4 @@ const ServiceBanner = () => {
     );
 };
 
-render(<ServiceBanner/>, document.querySelector('#title-banner'));
+render(<ProductsBanner/>, document.querySelector('#title-banner'));

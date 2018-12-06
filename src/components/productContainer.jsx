@@ -12,6 +12,7 @@ class ProductContainer extends React.Component {
         this.onHandleChange = this.onHandleChange.bind(this);
         this.GetFromState = this.GetFromState.bind(this);
         this.GetCookieInfos();
+        this.descr = undefined;
     }
 
     GetCookieInfos() {
@@ -26,6 +27,9 @@ class ProductContainer extends React.Component {
     }
 
     onHandleChange(newItem) {
+        this.descr = !this.descr ?
+            document.querySelector('.product-desc') : this.descr;
+        this.descr.classList.remove('active');
         this.setState({currItem: newItem});
     }
 
@@ -42,8 +46,7 @@ class ProductContainer extends React.Component {
         return (
             <div className={'d-flex justify-content-center align-items-center flex-column p-relative overflow-hidden'}>
                 <ProductSlide products={this.state.cookies} onItemChange={this.onHandleChange}/>
-                <ProductDescription title={title} description={description} class={'d-flex justify-content-center ' +
-                'align-items-center flex-column product-desc active'}/>
+                <ProductDescription title={title} description={description}/>
                 <ProductInfo info={nutriFacts} serving={serving} ingredients={ingredients}/>
             </div>
         )
