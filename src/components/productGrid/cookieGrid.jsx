@@ -43,12 +43,12 @@ class CookieGrid extends React.Component {
     }
 }
 
-let everydayCookies = document.querySelector('#everyday-cookies') ? document.querySelector('#everyday-cookies') : undefined;
-let viewOtherProducts = document.querySelector('#other-products') ? document.querySelector('#other-products') : undefined;
+let everydayCookies = document.querySelector('#everyday-cookies') || undefined;
+let viewOtherProducts = document.querySelector('#other-products') || undefined;
 let componentProps = {
     title: everydayCookies ? 'Your everyday cookies' : "Cookies you'll love",
     limit: !everydayCookies
 };
 
 render(<CookieGrid title={componentProps.title}
-                   limit={componentProps.limit}/>, everydayCookies ? everydayCookies : viewOtherProducts);
+                   limit={componentProps.limit}/>, everydayCookies || viewOtherProducts);

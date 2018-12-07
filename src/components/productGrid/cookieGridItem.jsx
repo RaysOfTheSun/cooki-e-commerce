@@ -8,7 +8,7 @@ const CookieGridItem = ({title, products, showButton}) => {
     return (
         <div className={'d-flex justify-content-center align-items-center flex-column'}>
             <h3>{title}</h3>
-            <div className={'py-md-4 py-sm-2 d-flex justify-content-center align-items-center c-flex-column'}>
+            <div className={'py-4 d-flex justify-content-center align-items-center c-flex-column'}>
                 {
                     products.map((productCollection, i) => (
                             <div
