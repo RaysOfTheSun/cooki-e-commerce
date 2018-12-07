@@ -6,11 +6,11 @@ module.exports = {
     mode: "production",
     entry: {
         vendor: "./src/vendor.js",
-        main: ["./src/components/cartSidebar.jsx", "./src/components/navbar.jsx", "./src/master.js"],
-        index: ["./src/components/everydayCookiesCatalog.jsx", "./src/components/engagementCardCatalog.jsx",
-            "./src/components/productBanner.jsx", "./src/components/newsBanner.jsx", "./src/index.js"],
-        products : ['./src/components/productsBanner.jsx',  './src/products.js'],
-        cookies: ['./src/components/productContainer.jsx', './src/cookies.js']
+        main: ["./src/components/cartSidebar/cartSidebar.jsx", "./src/components/navbar/navbar.jsx", "./src/master.js"],
+        index: ["./src/components/productGrid/cookieGrid.jsx", "./src/components/engagementCatalog/engagementCardCatalog.jsx",
+            "./src/components/featuredProductBanner/featuredProductBanner.jsx", "./src/components/newsBanner/newsBanner.jsx", "./src/index.js"],
+        products : ['./src/components/productsBanner/productsBanner.jsx',  './src/products.js'],
+        cookies: ['./src/components/productSlide/productContainer.jsx', "./src/components/productGrid/cookieGrid.jsx", './src/cookies.js']
     },
     output: {
         path: path.join(DIST_DIR, "app"),

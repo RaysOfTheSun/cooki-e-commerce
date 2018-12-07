@@ -68,15 +68,6 @@
   }
 }
 
-.card-item-image {
-  transition: border-width 0.2s ease-in-out;
-  border: 10px solid white;
-
-  &:hover {
-    border: 5px solid white;
-  }
-}
-
 .opacity-0 {
   opacity: 0;
 }
