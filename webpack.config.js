@@ -5,11 +5,11 @@ let DIST_DIR = path.resolve(__dirname, "./dist");
 module.exports = {
     mode: "production",
     entry: {
-        vendor: "./src/vendor.js",
+        vendor: ["./src/vendor.js"],
         main: ["./src/components/cartSidebar/cartSidebar.jsx", "./src/components/navbar/navbar.jsx", "./src/master.js"],
         index: ["./src/components/productGrid/cookieGrid.jsx", "./src/components/engagementCatalog/engagementCardCatalog.jsx",
             "./src/components/featuredProductBanner/featuredProductBanner.jsx", "./src/components/newsBanner/newsBanner.jsx", "./src/index.js"],
-        products : ['./src/components/productsBanner/productsBanner.jsx',  './src/products.js'],
+        products: ['./src/components/productsBanner/productsBanner.jsx', './src/products.js'],
         cookies: ['./src/components/productSlide/productContainer.jsx', "./src/components/productGrid/cookieGrid.jsx", './src/cookies.js']
     },
     output: {
@@ -23,7 +23,8 @@ module.exports = {
                 loader: "babel-loader",
                 include: SRC_DIR,
                 options: {
-                    presets: ["react", "es2015", "stage-2"]
+                    plugins: ['transform-runtime'],
+                    presets: ["react", "env"]
                 }
             },
             {
@@ -31,7 +32,8 @@ module.exports = {
                 loader: "babel-loader",
                 include: path.join(SRC_DIR, "components"),
                 options: {
-                    presets: ["react", "es2015", "stage-2"]
+                    plugins: ['transform-runtime'],
+                    presets: ["react", "env"]
                 }
             },
             {

@@ -1,10 +1,10 @@
-import React from 'react';
+import React, {Component} from 'react';
 import {render} from 'react-dom';
 import ProductSlide from './productSlide.jsx';
 import ProductDescription from './productDescription.jsx';
 import ProductInfo from './productInfo.jsx';
 
-class ProductContainer extends React.Component {
+class ProductContainer extends Component {
     constructor(props) {
         super(props);
         this.state = {cookies: [], cookieInfos: [], currItem: 0};
@@ -15,15 +15,13 @@ class ProductContainer extends React.Component {
         this.descr = undefined;
     }
 
-    GetCookieInfos() {
-        // TODO: look into promises and async/await
-        // I don't think this is the best and cleanest way to get these information from the server
-        fetch('/get-products/cookie-products', {method: 'GET'})
-            .then(res => res.json())
-            .then(cookie => this.setState({cookies: cookie, currItem: Math.floor(cookie.length / 2)}));
-        fetch('/get-products/cookie-products/info')
-            .then(res => res.json())
-            .then(infos => this.setState({cookieInfos: infos}))
+    async GetCookieInfos() {
+        let [cookies, infos] = await Promise.all([
+            fetch('/get-products/cookie-products', {method: 'GET'}).then(res => res.json()),
+            fetch('/get-products/cookie-products/info').then(res => res.json())
+        ]);
+
+        this.setState({cookies: cookies, cookieInfos: infos});
     }
 
     onHandleChange(newItem) {
