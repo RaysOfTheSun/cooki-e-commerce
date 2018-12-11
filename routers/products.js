@@ -4,7 +4,7 @@ router.get('/', (req, res)=>{
     res.render('products')
 });
 
-router.get('/cookies', (req, res)=>{
+router.get('/cookies/overview', (req, res)=>{
     res.render('cookies');
 });
 

@@ -16,7 +16,7 @@ const ProductsBanner = () => {
     };
 
     return (
-        <div className={'d-flex justify-content-center align-items-center flex-column w-75-100'}>
+        <div className={'d-flex justify-content-center align-items-center flex-column w-75-100 p-3'}>
             <div className="container d-flex justify-content-center align-items-center flex-column mb-2"
                  id={'products-header'}>
                 <p className="text-emphasize-large font-weight-bold mb-4">Products</p>
@@ -32,6 +32,7 @@ const ProductsBanner = () => {
                                    primaryButtonText={'Cookies'}
                                    secondaryButtonText={'Download spec sheet'}
                                    description={descriptions.cookies}
+                                   primaryButtonLink={'products/cookies/overview'}
                                    id={'serve-cookies'}/>
                 <ProductBannerItem size={'regular'}
                                    image={'https://babcockhalldairystore.wisc.edu/wp-content/uploads' +

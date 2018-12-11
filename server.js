@@ -32,5 +32,5 @@ app.use('/products', require('./routers/products'));
 // listen for connections and other requests
 app.listen(process.env.PORT || 3000, () => {
     console.log(`The application is live at ${ip.address()}:${process.env.PORT || 3000}`);
-    console.log('Access the application on your current device by going to localhost:3000');
+    console.log(`Access the application on your current device by going to ${process.env.PORT || 'localhost:3000'}`);
 });

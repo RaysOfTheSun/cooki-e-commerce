@@ -5,7 +5,6 @@ let DIST_DIR = path.resolve(__dirname, "./dist");
 module.exports = {
     mode: "production",
     entry: {
-        vendor: ["./src/vendor.js"],
         main: ["./src/components/cartSidebar/cartSidebar.jsx", "./src/components/navbar/navbar.jsx", "./src/master.js"],
         index: ["./src/components/productGrid/cookieGrid.jsx", "./src/components/engagementCatalog/engagementCardCatalog.jsx",
             "./src/components/featuredProductBanner/featuredProductBanner.jsx", "./src/components/newsBanner/newsBanner.jsx", "./src/index.js"],
@@ -15,6 +14,11 @@ module.exports = {
     output: {
         path: path.join(DIST_DIR, "app"),
         filename: "[name].js"
+    },
+    optimization: {
+      splitChunks: {
+          chunks: "all"
+      }
     },
     module: {
         rules: [

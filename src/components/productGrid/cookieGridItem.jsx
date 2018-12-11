@@ -2,7 +2,7 @@ import React from 'react';
 
 const CookieGridItem = ({title, products, showButton}) => {
     let button = <input type="button"
-                        className="btn btn-lg btn-dark text-extra-small p-3 px-4 -mt-30 font-weight-bold rounded-0"
+                        className="btn btn-lg btn-dark text-extra-small p-3 px-4 font-weight-bold rounded-0"
                         value="See Our Cookies"/>;
 
     return (

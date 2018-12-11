@@ -1,6 +1,10 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
-const ProductBannerItem = ({size, title, image, description, primaryButtonText, secondaryButtonText, id}) => {
+const ProductBannerItem = ({
+                               size, title, image, description, primaryButtonText, secondaryButtonText, id,
+                               primaryButtonLink, secondaryButtonLink
+                           }) => {
     if (size === 'regular') {
         return (
             <div id={id}
@@ -8,9 +12,9 @@ const ProductBannerItem = ({size, title, image, description, primaryButtonText, 
                 <img src={image} className='image-200-150 mt-4' alt={title}/>
                 <h2 className='font-weight-bold mt-5 mb-3'>{title}</h2>
                 <p className='mb-5'>{description}</p>
-                <a href={'products/cookies'} className='form-control form-control-lg p-3 w-40-70 text-extra-small m-2 rounded-0 border-0
+                <a href={primaryButtonLink} className='form-control form-control-lg p-3 w-40-70 text-extra-small m-2 rounded-0 border-0
                         font-weight-bold bg-white text-dark'>{primaryButtonText}</a>
-                <a href={'products/cookies'} className='form-control form-control-lg p-3 w-40-70 text-extra-small m-2 rounded-0 border-0
+                <a href={secondaryButtonLink} className='form-control form-control-lg p-3 w-40-70 text-extra-small m-2 rounded-0 border-0
                         font-weight-bold bg-white text-dark'>{secondaryButtonText}</a>
             </div>
         )
@@ -23,13 +27,30 @@ const ProductBannerItem = ({size, title, image, description, primaryButtonText, 
                 </div>
                 <div className='d-flex justify-content-center align-items-center flex-column text-center p-5'>
                     <h3 className='font-weight-bold mb-3'>{title}</h3>
-                    <p className={''}>{description}</p>
-                    <a href={'#'} className='form-control form-control-lg p-3 w-40-70 text-extra-small m-2 rounded-0 border-0
+                    <p>{description}</p>
+                    <a href={primaryButtonLink} className='form-control form-control-lg p-3 w-40-70 text-extra-small m-2 rounded-0 border-0
                         font-weight-bold bg-dark text-white'>{primaryButtonText}</a>
                 </div>
             </div>
         )
     }
+};
+
+ProductBannerItem.propTypes = {
+    size: PropTypes.string,
+    title: PropTypes.string,
+    image: PropTypes.string,
+    description: PropTypes.string,
+    primaryButtonText: PropTypes.string,
+    secondaryButtonText: PropTypes.string,
+    id: PropTypes.string,
+    primaryButtonLink: PropTypes.string,
+    secondaryButtonLink: PropTypes.string
+};
+
+ProductBannerItem.defaultProps = {
+    primaryButtonLink: '#',
+    secondaryButtonLink: '#'
 };
 
 export default ProductBannerItem;
