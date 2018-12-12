@@ -44,10 +44,11 @@ class ProductContainer extends Component {
         let serving = this.GetFromState('cookieInfos', this.state.currItem, 'serving');
         let ingredients = this.GetFromState('cookieInfos', this.state.currItem, 'ingredients');
         let points = this.GetFromState('cookieInfos', this.state.currItem, 'points');
+        let pieces = this.GetFromState('cookieInfos', this.state.currItem, 'piece');
         return (
             <div className={'d-flex justify-content-center align-items-center flex-column'}>
                 <ProductSlide products={this.state.cookies} onItemChange={this.onHandleChange}/>
-                <ProductDescription title={title} description={description}/>
+                <ProductDescription title={title} description={description} pieceCount={pieces}/>
                 <ProductInfo info={nutriFacts} serving={serving} ingredients={ingredients} points={points}/>
             </div>
         )

@@ -59,15 +59,33 @@
 
 .w-40-70 {
   width: 70%;
-  @include respond-to('tablet-portrait-up'){
+  @include respond-to(tablet-portrait-up){
     width: 40%;
   }
 }
 
 .w-40-100 {
   width: 100%;
-  @include respond-to('tablet-portrait-up') {
+  @include respond-to(tablet-portrait-up) {
     width: 40%;
+  }
+}
+
+.w-25-100 {
+  width: 25%;
+  @include respond-to(tablet-portrait-up){
+    width: 100%;
+  }
+}
+
+.w-300px {
+  width: 300px;
+}
+
+.m-15-5 {
+  margin: 5px;
+  @include respond-to(desktop-up) {
+    margin: 15px;
   }
 }
 

@@ -25,6 +25,9 @@ const cookieSchema = new Schema({
     },
     points: {
         type: Schema.Types.Mixed
+    },
+    piece: {
+        type: Schema.Types.Number
     }
 });
 

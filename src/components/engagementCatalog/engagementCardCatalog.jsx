@@ -59,7 +59,7 @@ const EngagementCardCatalog = () => {
 
     return (
         <div className={'d-flex justify-content-center align-items-center flex-column wrap-30'}>
-            <h3 className={'w-40-100 text-center pl-2 pr-2'}>This is magic in the making</h3>
+            <h3 className={'w-25-100 text-center pl-2 pr-2'}>This is magic in the making</h3>
             <div id="engagement-nav-backward" className="nav-arrow" onClick={SlideBackward}/>
             <div id="engagement-nav-forward" className="nav-arrow" onClick={SlideForward}/>
             <div className={'d-flex justify-content-center align-items-center wrap-30'} id={'engagement-container'}>

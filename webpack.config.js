@@ -15,11 +15,11 @@ module.exports = {
         path: path.join(DIST_DIR, "app"),
         filename: "[name].js"
     },
-    optimization: {
-      splitChunks: {
-          chunks: "all"
-      }
-    },
+    // optimization: {
+    //   splitChunks: {
+    //       chunks: "all"
+    //   }
+    // },
     module: {
         rules: [
             {
