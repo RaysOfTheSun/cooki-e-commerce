@@ -16,35 +16,38 @@ const ProductsBanner = () => {
     };
 
     return (
-        <div className={'d-flex justify-content-center align-items-center flex-column w-75-100 p-3'}>
-            <div className="container d-flex justify-content-center align-items-center flex-column mb-2"
-                 id={'products-header'}>
+        <div className={'d-flex justify-content-center align-items-center flex-column w-75-100 my-5 mx-3'}>
+            <div className="container d-flex justify-content-center align-items-center flex-column mb-5">
                 <p className="text-emphasize-large font-weight-bold mb-4">Products</p>
-                <p className="w-40-100 text-center">
+                <p className="w-40-70-100 text-center">
                     From flavorful menu creations to grab-and-go innovations, you won't believe what's being crafted in
                     Cookie Stop's ovens. You and your guests will love the endless, better-for-you possibilities.
                 </p>
             </div>
             <div className="d-flex justify-content-center align-items-center flex-mobile-column container p-0 my-3">
-                <ProductBannerItem size={'regular'}
+                <ProductBannerItem style={'card'}
                                    image={'/images/cb01-S.png'}
                                    title={'Cookies'}
                                    primaryButtonText={'Cookies'}
                                    secondaryButtonText={'Download spec sheet'}
                                    description={descriptions.cookies}
                                    primaryButtonLink={'products/cookies/overview'}
+                                   buttonColor={'light'}
                                    id={'serve-cookies'}/>
-                <ProductBannerItem size={'regular'}
+                <ProductBannerItem style={'card'}
                                    image={'https://babcockhalldairystore.wisc.edu/wp-content/uploads' +
                                    '/2017/09/Ice-Cream-Sandwich-transparent-background900x600.png'}
                                    title={'Cookie Sandwiches'}
                                    primaryButtonText={'Cookie Sandwiches'}
                                    secondaryButtonText={'Download spec sheet'}
                                    description={descriptions.cookieSandwiches}
+                                   buttonColor={'light'}
                                    id={'serve-ice'}/>
             </div>
 
             <ProductBannerItem
+                style={'default'}
+                orientation={'landscape'}
                 image={'https://images.unsplash.com/photo-1464979681340-bdd28a61699e?ixlib=rb-0.3.5&ixid=' +
                 'eyJhcHBfaWQiOjEyMDd9&s=9962230a1213bfd754ed20ae96114c04&auto=format&fit=crop&w=1350&q=80'}
                 title={'Partner with us'}

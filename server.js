@@ -28,6 +28,8 @@ app.use('/', require('./routers/root'));
 app.use('/get-products', require('./routers/get-products'));
 // routers used when navigating to pages under the products route
 app.use('/products', require('./routers/products'));
+// routes used when navigating the pages under the collaboration route
+app.use('/collaboration', require('./routers/collaboration'));
 
 // listen for connections and other requests
 app.listen(process.env.PORT || 3000, () => {

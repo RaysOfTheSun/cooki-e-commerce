@@ -71,6 +71,16 @@
   }
 }
 
+.w-40-70-100 {
+  width: 100%;
+  @include respond-to(tablet-portrait-up) {
+    width: 70%;
+  }
+  @include respond-to(desktop-up) {
+    width: 40%;
+  }
+}
+
 .w-25-100 {
   width: 25%;
   @include respond-to(tablet-portrait-up){
@@ -227,4 +237,11 @@
 
 .w-min {
   width: min-content;
+}
+
+.order-1-0 {
+  order: 0;
+  @include respond-to(desktop-up) {
+    order: 1;
+  }
 }

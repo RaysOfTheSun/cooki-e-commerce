@@ -1,7 +1,7 @@
 import React from 'react';
 import {render} from 'react-dom'
 
-export default class Navbar extends React.Component {
+class Navbar extends React.Component {
     constructor(props) {
         super(props);
         this.state = {active: 'home'};
@@ -10,12 +10,14 @@ export default class Navbar extends React.Component {
     }
 
     clickHandler(e){
+        e.preventDefault();
         let target = e.target;
         let currActive = document.querySelector('li.nav-item.active');
         currActive.classList.toggle('active');
         this.setState({active: target.getAttribute('data-loc')}, ()=>{
             localStorage.setItem('active', this.state.active);
         });
+        console.log(localStorage.getItem('active'));
     }
 
     makeActive(target){
@@ -44,7 +46,7 @@ export default class Navbar extends React.Component {
                             <a className="nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2" href="/products" data-loc={'products'} onClick={this.clickHandler}>Products</a>
                         </li>
                         <li className={`nav-item ${this.makeActive('services')}`}>
-                            <a className="nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2" href="#" data-loc={'services'} onClick={this.clickHandler}>Services</a>
+                            <a className="nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2" href="/collaboration" data-loc={'services'} onClick={this.clickHandler}>Collaboration</a>
                         </li>
                     </ul>
                 </div>
