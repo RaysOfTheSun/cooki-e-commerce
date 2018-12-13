@@ -19,7 +19,7 @@ const CookieGridItem = ({title, products, showButton}) => {
                                         <div className={'d-flex justify-content-center align-items-center flex-column'}>
                                             <a href={'#'} className={'text-plain'}>
                                                 <div className='ml-3 mr-3'>
-                                                    <img className={"card-img-top image-350-270 card-item-image mb-3"}
+                                                    <img className={"card-img-top image-350-100p card-item-image mb-3"}
                                                          src={product.image}
                                                          alt={"Card image cap"}/>
                                                     <div

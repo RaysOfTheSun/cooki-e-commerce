@@ -118,6 +118,14 @@
   }
 }
 
+.image-350-100p {
+  width: 100%;
+  height: auto;
+  @include respond-to(desktop-up) {
+    width: 350px;
+  }
+}
+
 .image-350-270 {
   width: 270px;
   height: auto;
