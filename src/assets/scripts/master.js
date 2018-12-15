@@ -38,23 +38,4 @@ $(window).ready(function () {
             $(".taber").removeAttr("data-toggle");
         }
     }
-
-    // global cart sidebar stuff
-    $('#cart-button').on('click', (e) => {
-        $('#cart-side').toggleClass('active');
-        $('.near-sidebar').toggleClass('active');
-        $('#cart-side.active').on('click', (e) => {
-            if (e.target.id === "cart-side") {
-                $('#cart-side.active').toggleClass('active');
-                $('.near-sidebar.active').toggleClass('active');
-            }
-        });
-
-        $('.near-sidebar.active').on('click', () => {
-            $('#cart-side.active').toggleClass('active');
-            $('.near-sidebar.active').toggleClass('active');
-        });
-        e.preventDefault();
-    });
-
 });

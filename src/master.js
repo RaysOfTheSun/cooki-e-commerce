@@ -1,6 +1,5 @@
 import './assets/scripts/master';
 import './assets/styles/BackgroundColors.scss';
-import './assets/styles/CartSidebar.scss';
 import './assets/styles/Master.scss';
 import './assets/styles/Inputs.scss'
 import './assets/styles/TextShades.scss';
