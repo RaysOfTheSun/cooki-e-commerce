@@ -176,6 +176,13 @@
   flex: 1 0 50%;
 }
 
+.flex-grow-50-lg {
+  flex-grow: 0;
+  @include respond-to(desktop-up) {
+    flex: 1 0 50%;
+  }
+}
+
 .p-90 {
   padding: 90px;
 }
@@ -251,5 +258,19 @@
   order: 0;
   @include respond-to(desktop-up) {
     order: 1;
+  }
+}
+
+.no-pointer {
+  pointer-events: none;
+}
+
+.sm-center {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  @include respond-to(desktop-up) {
+    align-items: stretch;
+    text-align: initial;
   }
 }

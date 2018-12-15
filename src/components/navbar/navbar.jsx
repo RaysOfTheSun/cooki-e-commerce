@@ -52,10 +52,9 @@ class Navbar extends React.Component {
                 </div>
                 <div className="navbar-collapse collapse dual-nav w-50 order-2">
                     <ul className="nav navbar-nav ml-auto">
-                        <li className="nav-item"><a className="nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2" href=""><i
-                            className="fas fa-user"></i></a></li>
-                        <li className="nav-item" id={'cart-button'}><a className="nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2" href={'#'}><i
-                            className="fas fa-shopping-cart"></i></a></li>
+                        <li className="nav-item"><a className="nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2" href="#">Contact</a></li>
+                        <li className="nav-item"><a className="nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2" href={'/newsletter'}>Newsletter</a></li>
+                        <li className="nav-item"><a className="nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2" href={'#'}>What's trending</a></li>
                     </ul>
                 </div>
             </div>
