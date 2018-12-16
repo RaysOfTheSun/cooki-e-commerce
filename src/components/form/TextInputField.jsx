@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const InputField = ({label, name, id, usePlaceholder, size}) => {
+const TextInputField = ({label, name, id, usePlaceholder, size}) => {
 
     let sizeClass = size === 'regular' ? 'form-control-lg' : 'text-input-lg';
 
@@ -14,23 +14,23 @@ const InputField = ({label, name, id, usePlaceholder, size}) => {
     } else {
         return (
             <div className={'d-flex justify-content-center align-self-stretch flex-column m-3'}>
-                <label htmlFor={id}>{label}</label>
+                <label htmlFor={id} className={'caps'}>{label}</label>
                 <input type={'text'} id={id}
-                       className={`${sizeClass} rounded-0 bg-transparent text-white border-thin-grey`}/>
+                       className={`${sizeClass} rounded-0 bg-transparent text-white border-thin-grey mt-1`}/>
             </div>
         )
     }
 };
 
-InputField.propTypes = {
-  label: PropTypes.string,
-  name: PropTypes.string,
-  id: PropTypes.string,
-  usePlaceholder: PropTypes.bool
+TextInputField.propTypes = {
+    label: PropTypes.string,
+    name: PropTypes.string,
+    id: PropTypes.string,
+    usePlaceholder: PropTypes.bool
 };
 
-InputField.defaultProps = {
+TextInputField.defaultProps = {
     size: 'regular'
 };
 
-export default InputField;
+export default TextInputField;

@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import InputField from '../form/inputField.jsx';
+import TextInputField from '../form/TextInputField.jsx';
 
 const NewsletterForm = () => {
     return (
@@ -14,12 +14,12 @@ const NewsletterForm = () => {
             </div>
             <div className={'d-flex justify-content-center flex-column flex-grow-50'} id={'main-form'}>
                 <div className={'d-flex justify-content-center flex-mobile-column'}>
-                    <InputField size={'large'} label={'first name'} id={'first-name'} name={'fname'}/>
-                    <InputField size={'large'} label={'last name'} id={'last-name'} name={'lname'}/>
+                    <TextInputField size={'large'} label={'first name'} id={'first-name'} name={'fname'}/>
+                    <TextInputField size={'large'} label={'last name'} id={'last-name'} name={'lname'}/>
                 </div>
                 <div className={'d-flex justify-content-center flex-mobile-column'}>
-                    <InputField size={'large'} label={'e-mail address'} id={'mail'} name={'mail'}/>
-                    <InputField size={'large'} label={'state'} id={'state'} name={'state'}/>
+                    <TextInputField size={'large'} label={'e-mail address'} id={'mail'} name={'mail'}/>
+                    <TextInputField size={'large'} label={'state'} id={'state'} name={'state'}/>
                 </div>
                 <input type={'button'} className={`form-control form-control-lg p-3 w-40-70 text-extra-small m-2 rounded-0 border-0
                         font-weight-bold align-self-center m-5`} value={'Sign up'}/>
