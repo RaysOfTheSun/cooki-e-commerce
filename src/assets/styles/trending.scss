@@ -1,0 +1,33 @@
+@import "globals";
+
+@mixin banner-base() {
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+
+#top-banner {
+  @include banner-base;
+  & > .desc-box {
+    background-image: url("https://i.imgur.com/2WVhKom.png");
+  }
+}
+
+#middle-banner {
+  @include banner-base;
+  & > .desc-box {
+    background-image: url("https://i.imgur.com/ZAbzJSl.png");
+  }
+}
+
+#bottom-banner {
+  @include banner-base;
+  & > .desc-box {
+    background-image: url("https://i.imgur.com/lJH7v8N.png");
+  }
+}
+
+.desc-box {
+  color: white;
+  align-self: stretch;
+  background-size: cover;
+}

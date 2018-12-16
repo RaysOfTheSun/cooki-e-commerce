@@ -27,11 +27,11 @@ const ProductBannerItem = ({
         return (
             <div id={id}
                  className={`container d-flex justify-content-center align-items-center bg-white ${orientationClass} p-0`}>
-                <div className={`d-flex justify-content-center align-items-center ${imgPosClass}`}>
+                <div className={`d-flex justify-content-center align-items-center flex-grow-50 ${imgPosClass}`}>
                     <img src={image} className='image-cover' alt={title}/>
                 </div>
                 <div
-                    className={`d-flex justify-content-center align-items-center flex-column text-center p-5 desc-box ${descBoxPosClass}`}>
+                    className={`d-flex justify-content-center align-items-center flex-column text-center p-5 desc-box flex-grow-50 ${descBoxPosClass}`}>
                     <h3 className='font-weight-bold mb-3'>{title}</h3>
                     <p>{description}</p>
                     <a href={primaryButtonLink} className={`form-control form-control-lg p-3 w-40-70 text-extra-small m-2 rounded-0 border-0

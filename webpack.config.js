@@ -15,7 +15,8 @@ module.exports = {
             './src/cookies.js'],
         collaboration: ['./src/components/collaborationBanner/collaborationBanner.jsx', './src/collaboration.js'],
         newsletter: ['./src/components/newsletter/newsletterForm.jsx', './src/newsletter.js'],
-        contact: ['./src/components/contactForm/contactForm.jsx', './src/contact.js']
+        contact: ['./src/components/contactForm/contactForm.jsx', './src/contact.js'],
+        trending: ['./src/components/trendingBanner/TrendingBanner.jsx', './src/trending.js']
     },
     output: {
         path: path.join(DIST_DIR, "app"),
