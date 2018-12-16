@@ -47,7 +47,7 @@ const Navbar = () => {
                            href={'/newsletter'}>Newsletter</a></li>
                     <li className={`nav-item ${makeActive('trending')}`}>
                         <a className={'nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2'}
-                           href={'#'}>What's trending</a></li>
+                           href={'/trending'}>What's trending</a></li>
                 </ul>
             </div>
         </div>

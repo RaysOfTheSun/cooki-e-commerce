@@ -34,6 +34,8 @@ app.use('/collaboration', require('./routers/collaboration'));
 app.use('/newsletter', require('./routers/newsletter'));
 // routes used when navigating the pages under the contact route
 app.use('/contact', require('./routers/contact'));
+// routes used when navigating the pages under the trending route
+app.use('/trending', require('./routers/trending'));
 
 // listen for connections and other requests
 app.listen(process.env.PORT || 3000, () => {
