@@ -144,6 +144,14 @@
   }
 }
 
+.image-350-100p {
+  height: auto;
+  width: 100%;
+  @include respond-to(desktop-up) {
+    width: 350px;
+  }
+}
+
 .image-cover {
   object-fit: cover;
   width: 100%;

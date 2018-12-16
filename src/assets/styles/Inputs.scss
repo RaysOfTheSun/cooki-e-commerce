@@ -49,4 +49,13 @@
 
 .text-input-lg {
   padding: 17px 25px;
+  min-width: 250px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.caps {
+  font-size: 12px;
+  text-transform: uppercase;
 }

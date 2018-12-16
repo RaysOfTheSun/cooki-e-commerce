@@ -14,7 +14,8 @@ module.exports = {
         cookies: ['./src/components/productSlide/productContainer.jsx', "./src/components/productGrid/cookieGrid.jsx",
             './src/cookies.js'],
         collaboration: ['./src/components/collaborationBanner/collaborationBanner.jsx', './src/collaboration.js'],
-        newsletter: ['./src/components/newsletter/newsletterForm.jsx', './src/newsletter.js']
+        newsletter: ['./src/components/newsletter/newsletterForm.jsx', './src/newsletter.js'],
+        contact: ['./src/components/contactForm/contactForm.jsx', './src/contact.js']
     },
     output: {
         path: path.join(DIST_DIR, "app"),

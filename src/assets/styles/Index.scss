@@ -1,14 +1,24 @@
 @import "globals";
 
 #landing-banner {
-  min-height: 90vh;
+  height: auto;
+  padding: 30% 0;
   background-image: url('https://images.unsplash.com/photo-1543365268-463f48b3704a?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=' +
     '75c5df1043b38984e968aec83450a750&auto=format&fit=crop&w=1950&q=80');
   background-size: cover;
+  @include respond-to(tablet-portrait-up) {
+    padding: 20% 0 20% 0;
+  }
+  @include respond-to(desktop-up) {
+    padding: 10% 0;
+  }
 }
 
 #landing-inner {
   width: 100%;
+  @include respond-to(tablet-portrait-up) {
+    width: 75%;
+  }
   @include respond-to(desktop-up) {
     width: 50%;
   }
@@ -16,7 +26,7 @@
 
 #everyday-cookies {
   background-color: $dirty-white;
-  min-height: 80vh;
+  padding: 10% 0;
 }
 
 #landing-text {
@@ -29,8 +39,7 @@
   height: auto;
   padding: 30px;
   @include respond-to(tablet-landscape-up) {
-    height: 60vh;
-    padding: 0;
+    padding: 10% 0;
   }
 }
 
@@ -64,7 +73,7 @@
   height: auto;
   padding: 30px;
   @include respond-to(desktop-up) {
-    height: 60vh;
+    padding: 10% 0;
   }
 }
 

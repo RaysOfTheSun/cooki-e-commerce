@@ -1,6 +1,6 @@
 import React from 'react';
 import {render} from 'react-dom';
-import InputField from '../form/inputField.jsx';
+import TextInputField from '../form/TextInputField.jsx';
 
 const NewsBanner = () => {
     return (
@@ -11,10 +11,10 @@ const NewsBanner = () => {
                     insights, and more.</p>
             </div>
             <div className="d-flex justify-content-center align-items-center flex-mobile-column">
-                <InputField usePlaceholder={true} label={'First name'}/>
-                <InputField usePlaceholder={true} label={'Last name'}/>
-                <InputField usePlaceholder={true} label={'E-mail Address'}/>
-                <InputField usePlaceholder={true} label={'State'}/>
+                <TextInputField usePlaceholder={true} label={'First name'}/>
+                <TextInputField usePlaceholder={true} label={'Last name'}/>
+                <TextInputField usePlaceholder={true} label={'E-mail Address'}/>
+                <TextInputField usePlaceholder={true} label={'State'}/>
                 <input type="button"
                        className="btn btn-lg btn-light form-control-lg text-extra-small font-weight-bold rounded-0"
                        value="Sign up"/>

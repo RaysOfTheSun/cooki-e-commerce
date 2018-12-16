@@ -1,66 +1,57 @@
 import React from 'react';
-import {render} from 'react-dom'
+import {render} from 'react-dom';
 
-class Navbar extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {active: 'home'};
-        this.makeActive = this.makeActive.bind(this);
-        this.clickHandler = this.clickHandler.bind(this);
-    }
+const Navbar = () => {
 
-    clickHandler(e){
-        e.preventDefault();
-        let target = e.target;
-        let currActive = document.querySelector('li.nav-item.active');
-        currActive.classList.toggle('active');
-        this.setState({active: target.getAttribute('data-loc')}, ()=>{
-            localStorage.setItem('active', this.state.active);
-        });
-        console.log(localStorage.getItem('active'));
-    }
+    const makeActive = (loc) => {
 
-    makeActive(target){
-        if(localStorage.getItem('active') === target){
+        if (location.pathname === '/' && loc === '/') {
+            return 'active';
+        } else if (location.pathname.replace('/', '').startsWith(loc)) {
             return 'active';
         }
 
         return '';
-    }
+    };
 
-    render() {
-        return (
-            <div className="container-fluid mr-5 ml-5">
-                <button className="navbar-toggler" type="button" data-toggle="collapse" data-target=".dual-nav">
-                    <span className="navbar-toggler-icon"></span>
-                </button>
-                <a href="/"
-                   className="navbar-brand mx-auto d-block text-center order-lg-0 order-md-0 order-xl-1 w-25 text-cookie text-emphasize-medium font-weight-bold">Cookie
-                    Stop</a>
-                <div className="navbar-collapse collapse dual-nav w-50 order-1 order-md-0 ">
-                    <ul className="navbar-nav">
-                        <li className={`nav-item ${this.makeActive('home')}`}>
-                            <a className="nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2" href="/" data-loc={'home'} onClick={this.clickHandler}>Home</a>
-                        </li>
-                        <li className={`nav-item ${this.makeActive('products')}`}>
-                            <a className="nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2" href="/products" data-loc={'products'} onClick={this.clickHandler}>Products</a>
-                        </li>
-                        <li className={`nav-item ${this.makeActive('services')}`}>
-                            <a className="nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2" href="/collaboration" data-loc={'services'} onClick={this.clickHandler}>Collaboration</a>
-                        </li>
-                    </ul>
-                </div>
-                <div className="navbar-collapse collapse dual-nav w-50 order-2">
-                    <ul className="nav navbar-nav ml-auto">
-                        <li className="nav-item"><a className="nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2" href="#">Contact</a></li>
-                        <li className="nav-item"><a className="nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2" href={'/newsletter'}>Newsletter</a></li>
-                        <li className="nav-item"><a className="nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2" href={'#'}>What's trending</a></li>
-                    </ul>
-                </div>
+    return (
+        <div className='container-fluid mr-5 ml-5'>
+            <button className={'navbar-toggler'} type={'button'} data-toggle={'collapse'} data-target={'.dual-nav'}>
+                <span className={'navbar-toggler-icon'}></span>
+            </button>
+            <a href={'/'}
+               className='navbar-brand mx-auto d-block text-center order-lg-0 order-md-0 order-xl-1 w-25 text-cookie text-emphasize-medium font-weight-bold'>Cookie
+                Stop</a>
+            <div className={'navbar-collapse collapse dual-nav w-50 order-1 order-md-0'}>
+                <ul className={'navbar-nav'}>
+                    <li className={`nav-item ${makeActive('/')}`}>
+                        <a className={'nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2'} href='/'>Home</a>
+                    </li>
+                    <li className={`nav-item ${makeActive('products')}`}>
+                        <a className={'nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2'}
+                           href={'/products'}>Products</a>
+                    </li>
+                    <li className={`nav-item ${makeActive('collaboration')}`}>
+                        <a className={'nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2'}
+                           href={'/collaboration'}>Collaboration</a>
+                    </li>
+                </ul>
             </div>
-
-        );
-    }
+            <div className={'navbar-collapse collapse dual-nav w-50 order-2'}>
+                <ul className={'nav navbar-nav ml-auto'}>
+                    <li className={`nav-item ${makeActive('contact')}`}>
+                        <a className={'nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2'}
+                           href={'/contact'}>Contact</a></li>
+                    <li className={`nav-item ${makeActive('newsletter')}`}>
+                        <a className={'nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2'}
+                           href={'/newsletter'}>Newsletter</a></li>
+                    <li className={`nav-item ${makeActive('trending')}`}>
+                        <a className={'nav-link pb-lg-4 pb-md-4 pt-md-4 pt-lg-4 pb-sm-2 pt-sm-2'}
+                           href={'#'}>What's trending</a></li>
+                </ul>
+            </div>
+        </div>
+    );
 }
 
-render(<Navbar />, document.getElementById('notch'));
+render(<Navbar/>, document.getElementById('notch'));
