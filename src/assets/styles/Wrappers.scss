@@ -187,7 +187,7 @@
 .flex-grow-50-lg {
   flex-grow: 0;
   @include respond-to(desktop-up) {
-    flex: 1 0 50%;
+    flex: 1 0 40%;
   }
 }
 
