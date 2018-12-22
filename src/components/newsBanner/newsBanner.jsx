@@ -16,7 +16,7 @@ const NewsBanner = () => {
                 <TextInputField usePlaceholder={true} label={'E-mail Address'}/>
                 <TextInputField usePlaceholder={true} label={'State'}/>
                 <input type="button"
-                       className="btn btn-lg btn-light form-control-lg text-extra-small font-weight-bold rounded-0"
+                       className="btn btn-input-lg btn-light text-extra-small font-weight-bold rounded-0"
                        value="Sign up"/>
             </div>
         </div>

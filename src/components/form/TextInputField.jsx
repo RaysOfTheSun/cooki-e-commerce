@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 
 const TextInputField = ({label, name, id, usePlaceholder, size}) => {
 
-    let sizeClass = size === 'regular' ? 'form-control-lg' : 'text-input-lg';
+    let sizeClass = /* size === 'regular' ? 'form-control-lg' : */ 'text-input-lg';
 
     if (usePlaceholder) {
         return (
