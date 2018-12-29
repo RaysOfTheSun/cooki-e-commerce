@@ -16,9 +16,9 @@ export default class ProductSlide extends React.Component {
         this.SlideForward = this.SlideForward.bind(this);
         this.SlideBackward = this.SlideBackward.bind(this);
         this.ToggleLights = this.ToggleLights.bind(this);
-        this.fadeInDescriptionText = this.fadeInDescriptionText.bind(this);
+        this.HideDescriptionText = this.HideDescriptionText.bind(this);
         this.ToggleArrows = this.ToggleArrows.bind(this);
-        this.fadeInDescriptionText = this.fadeInDescriptionText.bind(this);
+        this.HideDescriptionText = this.HideDescriptionText.bind(this);
         // this.ToggleRightArrow = this.ToggleRightArrow.bind(this);
         // this.ToggleCaption = this.ToggleCaption.bind(this);
     }
@@ -109,10 +109,10 @@ export default class ProductSlide extends React.Component {
         if (newPos >= this.itemCount || newPos < 0 || !this.itemCollection) return;
         (this.itemCollection[oldPos]).classList.toggle("active");
         (this.itemCollection[newPos]).classList.toggle("active");
-        this.fadeInDescriptionText();
+        this.HideDescriptionText();
     };
 
-    fadeInDescriptionText() {
+    HideDescriptionText() {
         this.descr = document.querySelector('#product-desc');
         if (this.descr) {
             this.descr.classList.remove('active');

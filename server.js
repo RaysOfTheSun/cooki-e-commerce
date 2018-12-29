@@ -1,16 +1,26 @@
-let express = require('express');
-let path = require('path');
-let favicon = require('serve-favicon');
-let expressLayouts = require('express-ejs-layouts');
-let bodyParser = require('body-parser');
-let cookieParser = require('cookie-parser');
-let ip = require('ip');
-let app = express();
+const express = require('express');
+const path = require('path');
+const favicon = require('serve-favicon');
+const expressLayouts = require('express-ejs-layouts');
+const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const ip = require('ip');
+const app = express();
 
 // set our favicon
 app.use(favicon(path.join(__dirname, 'dist', 'app', 'images', 'favicon.ico')));
 
 // set up our middleware
+/** bodyParser.urlencoded(options)
+ * Parses the text as URL encoded data (which is how browsers tend to send form data from regular forms set to POST)
+ * and exposes the resulting object (containing the keys and values) on req.body
+ */
+app.use(bodyParser.urlencoded({
+    extended: true
+}));
+/**bodyParser.json(options)
+ * Parses the text as JSON and exposes the resulting object on req.body.
+ */
 app.use(bodyParser.json());
 app.use(cookieParser());
 
