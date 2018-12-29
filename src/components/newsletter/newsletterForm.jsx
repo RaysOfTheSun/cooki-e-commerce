@@ -26,7 +26,7 @@ class NewsletterForm extends Component {
             </div>
         );
         this.reg = (
-            <div className={'d-flex justify-content-center flex-column flex-grow-50'} id={'main-form'}
+            <div className={'d-flex justify-content-center align-items-center flex-column flex-grow-50 text-center'} id={'main-form'}
                  style={{height: '585px'}}>
                 <h3>Thank you for registering!</h3>
                 <a className={`form-control form-control-lg p-3 w-40-70 text-extra-small m-2 rounded-0 border-0

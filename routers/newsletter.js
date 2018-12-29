@@ -41,6 +41,7 @@ router.post('/newsletter-signup', async (req, res) => {
                 console.log(`Preview URL: ${nodemailer.getTestMessageUrl(info)}`);
             });
         });
+        res.render('newsletter');
     } catch (e) {
         res.end(e.message || e.toString());
     }
